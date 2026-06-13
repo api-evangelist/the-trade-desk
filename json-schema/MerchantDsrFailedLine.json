@@ -1,0 +1,28 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "MerchantDsrFailedLine",
+  "type": "object",
+  "properties": {
+    "MerchantId": {
+      "type": "string",
+      "nullable": true
+    },
+    "TDID": {
+      "type": "string",
+      "format": "uuid",
+      "nullable": true
+    },
+    "ErrorCode": {
+      "$ref": "#/components/schemas/DsrErrorCode"
+    },
+    "Message": {
+      "type": "string",
+      "nullable": true
+    },
+    "ItemNumber": {
+      "type": "string",
+      "nullable": true
+    }
+  },
+  "additionalProperties": false
+}

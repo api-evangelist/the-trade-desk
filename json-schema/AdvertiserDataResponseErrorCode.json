@@ -1,0 +1,24 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "AdvertiserDataResponseErrorCode",
+  "enum": [
+    "Unknown",
+    "BaseBidCPMMetadataTooLong",
+    "MissingUserId",
+    "UserNotMapped",
+    "Deprecated_MissingCookieMappingPartnerId",
+    "InvalidBidFactor",
+    "DataNameTooLong",
+    "InvalidTtlInMinutes",
+    "InvalidBaseBidCPM",
+    "InvalidDataOwnerId",
+    "InvalidParameterFormat",
+    "TargetingDataCreationLimitExceeded",
+    "TargetingDataCountLimitExceeded",
+    "TenantRestrictionsExternalData",
+    "TargetingDataDisabled",
+    "ItemDeserializationError",
+    "Uid2Error"
+  ],
+  "type": "string"
+}

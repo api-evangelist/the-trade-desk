@@ -1,0 +1,36 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "ThirdPartyDataRequest",
+  "required": [
+    "DataProviderId"
+  ],
+  "type": "object",
+  "properties": {
+    "DataProviderId": {
+      "type": "string"
+    },
+    "Items": {
+      "type": "array",
+      "items": {
+        "$ref": "#/components/schemas/ThirdPartyDataItem"
+      },
+      "nullable": true
+    },
+    "DataLoadTraceId": {
+      "type": "string",
+      "nullable": true
+    },
+    "IsUserIdAlreadyHashed": {
+      "type": "boolean",
+      "default": false
+    },
+    "DataOrigins": {
+      "type": "array",
+      "items": {
+        "$ref": "#/components/schemas/DataOrigin"
+      },
+      "nullable": true
+    }
+  },
+  "additionalProperties": false
+}

@@ -1,0 +1,42 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "OfflineConversionDataServerResponseLine",
+  "type": "object",
+  "properties": {
+    "OrderId": {
+      "type": "string",
+      "nullable": true
+    },
+    "ImpressionId": {
+      "type": "string",
+      "nullable": true
+    },
+    "TDID": {
+      "type": "string",
+      "nullable": true
+    },
+    "TrackingTagId": {
+      "type": "string",
+      "nullable": true
+    },
+    "TimestampUtc": {
+      "type": "string",
+      "format": "date-time"
+    },
+    "ErrorCode": {
+      "$ref": "#/components/schemas/OfflineConversionDataResponseErrorCode"
+    },
+    "Message": {
+      "type": "string",
+      "nullable": true
+    },
+    "ItemNumber": {
+      "type": "string",
+      "nullable": true
+    },
+    "OriginalRequest": {
+      "$ref": "#/components/schemas/OfflineConversionDataItem"
+    }
+  },
+  "additionalProperties": false
+}

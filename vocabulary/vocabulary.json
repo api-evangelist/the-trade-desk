@@ -1,0 +1,506 @@
+{
+  "title": "The Trade Desk API Vocabulary",
+  "description": "Key terms and concepts used in The Trade Desk Data API",
+  "source": "https://raw.githubusercontent.com/thetradedesk/ttd-data-python/main/.speakeasy/out.openapi.yaml",
+  "terms": [
+    {
+      "term": "AdvertiserData",
+      "type": "schema",
+      "description": "",
+      "properties": [
+        "Name",
+        "TimestampUtc",
+        "TtlInMinutes",
+        "BaseBidCPM",
+        "BaseBidCPMMetadata",
+        "BidFactor"
+      ]
+    },
+    {
+      "term": "AdvertiserDataItem",
+      "type": "schema",
+      "description": "",
+      "properties": [
+        "TDID",
+        "DAID",
+        "UID2",
+        "UID2Token",
+        "RampID",
+        "CoreID",
+        "EUID",
+        "EUIDToken",
+        "ID5",
+        "NetID",
+        "FirstID",
+        "MerkuryID",
+        "IqviaPPID",
+        "Data",
+        "CookieMappingPartnerId"
+      ]
+    },
+    {
+      "term": "AdvertiserDataRequest",
+      "type": "schema",
+      "description": "",
+      "properties": [
+        "AdvertiserId",
+        "DataProviderId",
+        "Items",
+        "DataLoadTraceId",
+        "DataOrigins"
+      ]
+    },
+    {
+      "term": "AdvertiserDataResponseErrorCode",
+      "type": "schema",
+      "description": "",
+      "properties": []
+    },
+    {
+      "term": "AdvertiserDataServerResponse",
+      "type": "schema",
+      "description": "",
+      "properties": [
+        "FailedLines"
+      ]
+    },
+    {
+      "term": "AdvertiserDataServerResponseLine",
+      "type": "schema",
+      "description": "",
+      "properties": [
+        "TDID",
+        "DataName",
+        "ErrorCode",
+        "Message",
+        "ItemNumber"
+      ]
+    },
+    {
+      "term": "AdvertiserDsrFailedLine",
+      "type": "schema",
+      "description": "",
+      "properties": [
+        "AdvertiserId",
+        "DataProviderId",
+        "TDID",
+        "ErrorCode",
+        "Message",
+        "ItemNumber"
+      ]
+    },
+    {
+      "term": "AdvertiserDsrRequest",
+      "type": "schema",
+      "description": "",
+      "properties": [
+        "AdvertiserId",
+        "DataProviderId",
+        "Items",
+        "DataLoadTraceId",
+        "RequestType"
+      ]
+    },
+    {
+      "term": "AdvertiserDsrResponse",
+      "type": "schema",
+      "description": "",
+      "properties": [
+        "FailedLines"
+      ]
+    },
+    {
+      "term": "DsrErrorCode",
+      "type": "schema",
+      "description": "",
+      "properties": []
+    },
+    {
+      "term": "MerchantDsrFailedLine",
+      "type": "schema",
+      "description": "",
+      "properties": [
+        "MerchantId",
+        "TDID",
+        "ErrorCode",
+        "Message",
+        "ItemNumber"
+      ]
+    },
+    {
+      "term": "MerchantDsrRequest",
+      "type": "schema",
+      "description": "",
+      "properties": [
+        "MerchantId",
+        "Items",
+        "DataLoadTraceId",
+        "RequestType"
+      ]
+    },
+    {
+      "term": "MerchantDsrResponse",
+      "type": "schema",
+      "description": "",
+      "properties": [
+        "FailedLines"
+      ]
+    },
+    {
+      "term": "OfflineConversionDataItem",
+      "type": "schema",
+      "description": "",
+      "properties": [
+        "TDID",
+        "DAID",
+        "UID2",
+        "UID2Token",
+        "RampID",
+        "EUID",
+        "EUIDToken",
+        "DataProviderUserId",
+        "UserIdArray",
+        "CookieMappingPartnerId",
+        "OrderId",
+        "ImpressionId",
+        "TrackingTagId",
+        "TimestampUtc",
+        "Value",
+        "ValueCurrency",
+        "Country",
+        "Region",
+        "Metro",
+        "City",
+        "MerchantId",
+        "EventName",
+        "LineItems",
+        "PrivacySettings",
+        "TD1",
+        "TD2",
+        "TD3",
+        "TD4",
+        "TD5",
+        "TD6",
+        "TD7",
+        "TD8",
+        "TD9",
+        "TD10"
+      ]
+    },
+    {
+      "term": "OfflineConversionDataRequest",
+      "type": "schema",
+      "description": "",
+      "properties": [
+        "DataProviderId",
+        "UserIdArrayMetadataFormat",
+        "Items",
+        "DataLoadTraceId",
+        "DataOrigins"
+      ]
+    },
+    {
+      "term": "OfflineConversionDataResponseErrorCode",
+      "type": "schema",
+      "description": "",
+      "properties": []
+    },
+    {
+      "term": "OfflineConversionDataServerResponse",
+      "type": "schema",
+      "description": "",
+      "properties": [
+        "FailedLines"
+      ]
+    },
+    {
+      "term": "OfflineConversionDataServerResponseLine",
+      "type": "schema",
+      "description": "",
+      "properties": [
+        "OrderId",
+        "ImpressionId",
+        "TDID",
+        "TrackingTagId",
+        "TimestampUtc",
+        "ErrorCode",
+        "Message",
+        "ItemNumber",
+        "OriginalRequest"
+      ]
+    },
+    {
+      "term": "PartnerDsrDataItem",
+      "type": "schema",
+      "description": "",
+      "properties": [
+        "TDID",
+        "DAID",
+        "UID2",
+        "UID2Token",
+        "RampID",
+        "CoreID",
+        "EUID",
+        "EUIDToken",
+        "ID5",
+        "NetID",
+        "FirstID",
+        "MerkuryID",
+        "IqviaPPID"
+      ]
+    },
+    {
+      "term": "PartnerDsrRequestType",
+      "type": "schema",
+      "description": "",
+      "properties": []
+    },
+    {
+      "term": "RealTimeConversionEventLineItem",
+      "type": "schema",
+      "description": "",
+      "properties": [
+        "item_code",
+        "name",
+        "qty",
+        "price",
+        "cat"
+      ]
+    },
+    {
+      "term": "RealTimeConversionEventsPrivacySetting",
+      "type": "schema",
+      "description": "",
+      "properties": [
+        "privacy_type",
+        "is_applicable",
+        "consent_string"
+      ]
+    },
+    {
+      "term": "StringStringValueTuple",
+      "type": "schema",
+      "description": "",
+      "properties": [
+        "Item1",
+        "Item2"
+      ]
+    },
+    {
+      "term": "ThirdPartyData",
+      "type": "schema",
+      "description": "",
+      "properties": [
+        "Name",
+        "TimestampUtc",
+        "TtlInMinutes"
+      ]
+    },
+    {
+      "term": "ThirdPartyDataItem",
+      "type": "schema",
+      "description": "",
+      "properties": [
+        "DataProviderUserId",
+        "TDID",
+        "DAID",
+        "UID2",
+        "UID2Token",
+        "RampID",
+        "CoreID",
+        "EUID",
+        "EUIDToken",
+        "ID5",
+        "NetID",
+        "FirstID",
+        "MerkuryID",
+        "IqviaPPID",
+        "Data",
+        "CookieMappingPartnerId"
+      ]
+    },
+    {
+      "term": "ThirdPartyDataRequest",
+      "type": "schema",
+      "description": "",
+      "properties": [
+        "DataProviderId",
+        "Items",
+        "DataLoadTraceId",
+        "IsUserIdAlreadyHashed",
+        "DataOrigins"
+      ]
+    },
+    {
+      "term": "ThirdPartyDataResponseErrorCode",
+      "type": "schema",
+      "description": "",
+      "properties": []
+    },
+    {
+      "term": "ThirdPartyDataServerResponse",
+      "type": "schema",
+      "description": "",
+      "properties": [
+        "FailedLines"
+      ]
+    },
+    {
+      "term": "ThirdPartyDataServerResponseLine",
+      "type": "schema",
+      "description": "",
+      "properties": [
+        "DataProviderUserId",
+        "TDID",
+        "DataName",
+        "ErrorCode",
+        "Message",
+        "ItemNumber"
+      ]
+    },
+    {
+      "term": "ThirdPartyDsrFailedLine",
+      "type": "schema",
+      "description": "",
+      "properties": [
+        "DataProviderId",
+        "TDID",
+        "ErrorCode",
+        "Message",
+        "ItemNumber"
+      ]
+    },
+    {
+      "term": "ThirdPartyDsrRequest",
+      "type": "schema",
+      "description": "",
+      "properties": [
+        "DataProviderId",
+        "BrandId",
+        "Items",
+        "DataLoadTraceId",
+        "RequestType"
+      ]
+    },
+    {
+      "term": "ThirdPartyDsrResponse",
+      "type": "schema",
+      "description": "",
+      "properties": [
+        "FailedLines"
+      ]
+    },
+    {
+      "term": "DataOriginType",
+      "type": "schema",
+      "description": "",
+      "properties": []
+    },
+    {
+      "term": "DataOrigin",
+      "type": "schema",
+      "description": "",
+      "properties": [
+        "Id",
+        "Type"
+      ]
+    },
+    {
+      "term": "IngestAdvertiserData",
+      "type": "operation",
+      "description": "Upload first-party data for the specified ID for use in audience targeting.",
+      "path": "/data/advertiser",
+      "method": "POST"
+    },
+    {
+      "term": "IngestThirdPartyData",
+      "type": "operation",
+      "description": "Upload third-party data for the specified data provider for use in audience targeting.",
+      "path": "/data/thirdparty",
+      "method": "POST"
+    },
+    {
+      "term": "IngestOfflineConversionData",
+      "type": "operation",
+      "description": "Upload offline conversion data for the specified data provider.",
+      "path": "/providerapi/offlineconversion",
+      "method": "POST"
+    },
+    {
+      "term": "DataSubjectRequestAdvertiserData",
+      "type": "operation",
+      "description": "Delete IDs shared with The Trade Desk for the specified advertiser ID.",
+      "path": "/data/deletion-optout/advertiser",
+      "method": "POST"
+    },
+    {
+      "term": "DataSubjectRequestMerchantData",
+      "type": "operation",
+      "description": "Delete IDs shared with The Trade Desk via a product catalog for the specified merchant ID.",
+      "path": "/data/deletion-optout/merchant",
+      "method": "POST"
+    },
+    {
+      "term": "DataSubjectRequestThirdPartyData",
+      "type": "operation",
+      "description": "Delete IDs shared with The Trade Desk for the specified data provider ID.",
+      "path": "/data/deletion-optout/thirdparty",
+      "method": "POST"
+    },
+    {
+      "term": "TTD-Auth",
+      "type": "authentication",
+      "description": "Authentication token header used in all The Trade Desk API requests"
+    },
+    {
+      "term": "DSP",
+      "type": "concept",
+      "description": "Demand-Side Platform - a technology platform used to buy digital advertising programmatically"
+    },
+    {
+      "term": "First-Party Data (1PD)",
+      "type": "concept",
+      "description": "Advertiser's own customer data used for audience targeting"
+    },
+    {
+      "term": "Third-Party Data (3PD)",
+      "type": "concept",
+      "description": "External data provider audience segments for targeting"
+    },
+    {
+      "term": "DSR",
+      "type": "concept",
+      "description": "Data Subject Request - deletion and opt-out requests for privacy compliance"
+    },
+    {
+      "term": "CAPI",
+      "type": "concept",
+      "description": "Conversions API - for sending offline conversion events"
+    },
+    {
+      "term": "Offline Conversion",
+      "type": "concept",
+      "description": "Conversion event that happens outside the digital tracking (e.g., in-store purchase) attributed back to ad campaigns"
+    },
+    {
+      "term": "UID2",
+      "type": "concept",
+      "description": "Unified ID 2.0 - a privacy-conscious identifier based on hashed email addresses"
+    },
+    {
+      "term": "EUID",
+      "type": "concept",
+      "description": "European Unified ID - the European counterpart to UID2"
+    },
+    {
+      "term": "Programmatic Advertising",
+      "type": "concept",
+      "description": "Automated buying and selling of digital advertising using real-time data"
+    },
+    {
+      "term": "Audience Segment",
+      "type": "concept",
+      "description": "A group of users with shared attributes for targeted advertising"
+    }
+  ]
+}

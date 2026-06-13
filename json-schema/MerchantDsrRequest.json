@@ -1,0 +1,27 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "MerchantDsrRequest",
+  "type": "object",
+  "properties": {
+    "MerchantId": {
+      "type": "integer",
+      "format": "int64",
+      "nullable": true
+    },
+    "Items": {
+      "type": "array",
+      "items": {
+        "$ref": "#/components/schemas/PartnerDsrDataItem"
+      },
+      "nullable": true
+    },
+    "DataLoadTraceId": {
+      "type": "string",
+      "nullable": true
+    },
+    "RequestType": {
+      "$ref": "#/components/schemas/PartnerDsrRequestType"
+    }
+  },
+  "additionalProperties": false
+}

@@ -1,0 +1,85 @@
+{
+  "@context": {
+    "@version": 1.1,
+    "@vocab": "https://schema.thetradedesk.com/",
+    "schema": "https://schema.org/",
+    "xsd": "http://www.w3.org/2001/XMLSchema#",
+    "ttd": "https://schema.thetradedesk.com/",
+    "AdvertiserData": "ttd:AdvertiserData",
+    "ThirdPartyData": "ttd:ThirdPartyData",
+    "OfflineConversionData": "ttd:OfflineConversionData",
+    "AdvertiserDataRequest": "ttd:AdvertiserDataRequest",
+    "ThirdPartyDataRequest": "ttd:ThirdPartyDataRequest",
+    "OfflineConversionDataRequest": "ttd:OfflineConversionDataRequest",
+    "AdvertiserId": {
+      "@id": "ttd:advertiserId",
+      "@type": "xsd:string"
+    },
+    "ProviderId": {
+      "@id": "ttd:providerId",
+      "@type": "xsd:string"
+    },
+    "Items": {
+      "@id": "ttd:items",
+      "@container": "@list"
+    },
+    "Email": {
+      "@id": "schema:email",
+      "@type": "xsd:string"
+    },
+    "Phone": {
+      "@id": "schema:telephone",
+      "@type": "xsd:string"
+    },
+    "EventName": {
+      "@id": "ttd:eventName",
+      "@type": "xsd:string"
+    },
+    "EventTime": {
+      "@id": "ttd:eventTime",
+      "@type": "xsd:dateTime"
+    },
+    "OrderId": {
+      "@id": "ttd:orderId",
+      "@type": "xsd:string"
+    },
+    "Revenue": {
+      "@id": "schema:price",
+      "@type": "xsd:decimal"
+    },
+    "AdvertiserDsrRequest": "ttd:AdvertiserDsrRequest",
+    "ThirdPartyDsrRequest": "ttd:ThirdPartyDsrRequest",
+    "MerchantDsrRequest": "ttd:MerchantDsrRequest",
+    "TTDAuth": {
+      "@id": "ttd:authToken",
+      "@type": "xsd:string"
+    },
+    "Status": {
+      "@id": "ttd:status",
+      "@type": "xsd:string"
+    },
+    "Message": {
+      "@id": "ttd:message",
+      "@type": "xsd:string"
+    }
+  },
+  "@graph": [
+    {
+      "@id": "ttd:TTDDataAPI",
+      "@type": "schema:WebAPI",
+      "schema:name": "The Trade Desk Data API",
+      "schema:description": "API for uploading first-party and third-party audience data, offline conversions, and privacy-related data subject requests.",
+      "schema:url": "https://partner.thetradedesk.com/v3/portal/data/doc/DataApiReference",
+      "schema:provider": {
+        "@type": "schema:Organization",
+        "schema:name": "The Trade Desk",
+        "schema:url": "https://www.thetradedesk.com"
+      },
+      "schema:documentation": "https://partner.thetradedesk.com/v3/portal/data/doc/DataApiReference",
+      "schema:version": "v0.1",
+      "schema:license": "https://www.thetradedesk.com/general/privacy",
+      "ttd:authenticationMethod": "TTD-Auth header token",
+      "ttd:baseUrl": "https://usw-data.adsrvr.org"
+    }
+  ]
+}

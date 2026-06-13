@@ -1,0 +1,163 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "OfflineConversionDataItem",
+  "required": [
+    "TimestampUtc",
+    "TrackingTagId"
+  ],
+  "type": "object",
+  "properties": {
+    "TDID": {
+      "type": "string",
+      "nullable": true
+    },
+    "DAID": {
+      "type": "string",
+      "nullable": true
+    },
+    "UID2": {
+      "type": "string",
+      "nullable": true
+    },
+    "UID2Token": {
+      "type": "string",
+      "nullable": true
+    },
+    "RampID": {
+      "type": "string",
+      "nullable": true
+    },
+    "EUID": {
+      "type": "string",
+      "nullable": true
+    },
+    "EUIDToken": {
+      "type": "string",
+      "nullable": true
+    },
+    "DataProviderUserId": {
+      "type": "string",
+      "nullable": true
+    },
+    "UserIdArray": {
+      "type": "array",
+      "items": {
+        "maxItems": 2,
+        "minItems": 2,
+        "type": "array",
+        "items": {
+          "type": "string"
+        }
+      },
+      "description": "Array of [type, id] pairs.",
+      "nullable": true
+    },
+    "CookieMappingPartnerId": {
+      "type": "string",
+      "nullable": true
+    },
+    "OrderId": {
+      "type": "string",
+      "nullable": true
+    },
+    "ImpressionId": {
+      "type": "string",
+      "nullable": true
+    },
+    "TrackingTagId": {
+      "type": "string"
+    },
+    "TimestampUtc": {
+      "type": "string",
+      "format": "date-time"
+    },
+    "Value": {
+      "type": "string",
+      "nullable": true
+    },
+    "ValueCurrency": {
+      "type": "string",
+      "nullable": true
+    },
+    "Country": {
+      "type": "string",
+      "nullable": true
+    },
+    "Region": {
+      "type": "string",
+      "nullable": true
+    },
+    "Metro": {
+      "type": "string",
+      "nullable": true
+    },
+    "City": {
+      "type": "string",
+      "nullable": true
+    },
+    "MerchantId": {
+      "type": "string",
+      "nullable": true
+    },
+    "EventName": {
+      "type": "string",
+      "nullable": true
+    },
+    "LineItems": {
+      "type": "array",
+      "items": {
+        "$ref": "#/components/schemas/RealTimeConversionEventLineItem"
+      },
+      "nullable": true
+    },
+    "PrivacySettings": {
+      "type": "array",
+      "items": {
+        "$ref": "#/components/schemas/RealTimeConversionEventsPrivacySetting"
+      },
+      "nullable": true
+    },
+    "TD1": {
+      "type": "string",
+      "nullable": true
+    },
+    "TD2": {
+      "type": "string",
+      "nullable": true
+    },
+    "TD3": {
+      "type": "string",
+      "nullable": true
+    },
+    "TD4": {
+      "type": "string",
+      "nullable": true
+    },
+    "TD5": {
+      "type": "string",
+      "nullable": true
+    },
+    "TD6": {
+      "type": "string",
+      "nullable": true
+    },
+    "TD7": {
+      "type": "string",
+      "nullable": true
+    },
+    "TD8": {
+      "type": "string",
+      "nullable": true
+    },
+    "TD9": {
+      "type": "string",
+      "nullable": true
+    },
+    "TD10": {
+      "type": "string",
+      "nullable": true
+    }
+  },
+  "additionalProperties": false,
+  "x-speakeasy-name-override": "BaseOfflineConversionDataItem"
+}

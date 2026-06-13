@@ -1,0 +1,32 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "ThirdPartyDataServerResponseLine",
+  "type": "object",
+  "properties": {
+    "DataProviderUserId": {
+      "type": "string",
+      "nullable": true
+    },
+    "TDID": {
+      "type": "string",
+      "format": "uuid",
+      "nullable": true
+    },
+    "DataName": {
+      "type": "string",
+      "nullable": true
+    },
+    "ErrorCode": {
+      "$ref": "#/components/schemas/ThirdPartyDataResponseErrorCode"
+    },
+    "Message": {
+      "type": "string",
+      "nullable": true
+    },
+    "ItemNumber": {
+      "type": "string",
+      "nullable": true
+    }
+  },
+  "additionalProperties": false
+}

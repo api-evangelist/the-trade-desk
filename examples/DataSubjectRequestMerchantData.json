@@ -1,0 +1,41 @@
+{
+  "operationId": "DataSubjectRequestMerchantData",
+  "summary": "Delete IDs shared with The Trade Desk via a product catalog for the specified merchant ID.",
+  "method": "POST",
+  "path": "/data/deletion-optout/merchant",
+  "parameters": [
+    {
+      "name": "TTD-Auth",
+      "in": "header",
+      "required": true,
+      "example": "<TTD-Auth>"
+    }
+  ],
+  "requestBody": {
+    "$ref": "#/components/schemas/MerchantDsrRequest",
+    "schema_name": "MerchantDsrRequest"
+  },
+  "responses": {
+    "200": {
+      "description": "Success"
+    },
+    "400": {
+      "description": "Bad Request - Invalid JSON, missing items, merchant not configured, or policy restrictions"
+    },
+    "403": {
+      "description": "Forbidden - Cannot process data subject request for this merchant"
+    },
+    "413": {
+      "description": "Request Entity Too Large - Request size exceeds the allowed limit"
+    },
+    "429": {
+      "description": "Too Many Requests - Rate limit exceeded"
+    },
+    "500": {
+      "description": "Internal Server Error - Unexpected server error"
+    },
+    "503": {
+      "description": "Service Unavailable - Handler disabled or request dropped"
+    }
+  }
+}

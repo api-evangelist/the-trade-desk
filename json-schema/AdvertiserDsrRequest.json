@@ -1,0 +1,30 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "AdvertiserDsrRequest",
+  "type": "object",
+  "properties": {
+    "AdvertiserId": {
+      "type": "string",
+      "nullable": true
+    },
+    "DataProviderId": {
+      "type": "string",
+      "nullable": true
+    },
+    "Items": {
+      "type": "array",
+      "items": {
+        "$ref": "#/components/schemas/PartnerDsrDataItem"
+      },
+      "nullable": true
+    },
+    "DataLoadTraceId": {
+      "type": "string",
+      "nullable": true
+    },
+    "RequestType": {
+      "$ref": "#/components/schemas/PartnerDsrRequestType"
+    }
+  },
+  "additionalProperties": false
+}

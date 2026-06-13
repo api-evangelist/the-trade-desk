@@ -1,0 +1,36 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "AdvertiserDataRequest",
+  "required": [
+    "AdvertiserId"
+  ],
+  "type": "object",
+  "properties": {
+    "AdvertiserId": {
+      "type": "string"
+    },
+    "DataProviderId": {
+      "type": "string",
+      "nullable": true
+    },
+    "Items": {
+      "type": "array",
+      "items": {
+        "$ref": "#/components/schemas/AdvertiserDataItem"
+      },
+      "nullable": true
+    },
+    "DataLoadTraceId": {
+      "type": "string",
+      "nullable": true
+    },
+    "DataOrigins": {
+      "type": "array",
+      "items": {
+        "$ref": "#/components/schemas/DataOrigin"
+      },
+      "nullable": true
+    }
+  },
+  "additionalProperties": false
+}

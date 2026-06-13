@@ -1,0 +1,16 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "StringStringValueTuple",
+  "type": "object",
+  "properties": {
+    "Item1": {
+      "type": "string",
+      "nullable": true
+    },
+    "Item2": {
+      "type": "string",
+      "nullable": true
+    }
+  },
+  "additionalProperties": false
+}

@@ -94,6 +94,8 @@ apis:
         url: https://partner.thetradedesk.com/v3/portal/data/doc/CommerceSolutionsAPI
       - type: DataRates
         url: https://partner.thetradedesk.com/v3/portal/data/doc/DataRatesOverview
+      - type: OpenAPI
+        url: https://raw.githubusercontent.com/api-evangelist/the-trade-desk/refs/heads/main/openapi/ttd-data-api.yaml
   - aid: the-trade-desk:the-trade-desk-real-time-conversions-api
     name: The Trade Desk Real-Time Conversions API
     description: >-

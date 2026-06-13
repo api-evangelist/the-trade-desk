@@ -1,0 +1,41 @@
+{
+  "operationId": "IngestThirdPartyData",
+  "summary": "Upload third-party data for the specified data provider for use in audience targeting.",
+  "method": "POST",
+  "path": "/data/thirdparty",
+  "parameters": [
+    {
+      "name": "TTD-Auth",
+      "in": "header",
+      "required": true,
+      "example": "<TTD-Auth>"
+    }
+  ],
+  "requestBody": {
+    "$ref": "#/components/schemas/ThirdPartyDataRequest",
+    "schema_name": "ThirdPartyDataRequest"
+  },
+  "responses": {
+    "200": {
+      "description": "Success"
+    },
+    "400": {
+      "description": "Bad Request - Invalid JSON, missing items, data provider not configured, or policy restrictions"
+    },
+    "403": {
+      "description": "Forbidden - Cannot create new targeting data for this data provider"
+    },
+    "413": {
+      "description": "Request Entity Too Large - Request size exceeds the allowed limit"
+    },
+    "429": {
+      "description": "Too Many Requests - Rate limit exceeded"
+    },
+    "500": {
+      "description": "Internal Server Error - Unexpected server error"
+    },
+    "503": {
+      "description": "Service Unavailable - Handler disabled or request dropped"
+    }
+  }
+}

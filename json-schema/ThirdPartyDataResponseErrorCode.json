@@ -1,0 +1,21 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "ThirdPartyDataResponseErrorCode",
+  "enum": [
+    "Unknown",
+    "MissingUserId",
+    "UserNotMapped",
+    "DataNameTooLong",
+    "UnauthorisedThirdPartyDataWithBaseBidCPM",
+    "InvalidTtlInMinutes",
+    "InvalidDataOwnerId",
+    "InvalidParameterFormat",
+    "TargetingDataCreationLimitExceeded",
+    "TargetingDataCountLimitExceeded",
+    "TenantRestrictionsExternalData",
+    "TargetingDataDisabled",
+    "ItemDeserializationError",
+    "Uid2Error"
+  ],
+  "type": "string"
+}

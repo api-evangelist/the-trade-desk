@@ -1,0 +1,17 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "OfflineConversionDataResponseErrorCode",
+  "enum": [
+    "Unknown",
+    "MissingOrInvalidTDIDAndImpressionId",
+    "MissingOrInvalidTrackingTagId",
+    "InvalidMerchantId",
+    "ChinaPII",
+    "InvalidTimestamp",
+    "InvalidUserIdTypeOrUserId",
+    "Unauthorized",
+    "ItemDeserializationError",
+    "Uid2Error"
+  ],
+  "type": "string"
+}
