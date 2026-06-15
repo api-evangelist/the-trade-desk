@@ -1,0 +1,922 @@
+"""
+The Trade Desk GraphQL API Schema
+Demand-side platform for programmatic advertising covering campaign management,
+ad groups, targeting, creatives, deals, and reporting across display, video, audio, and CTV.
+"""
+
+# ─── Scalar Types ────────────────────────────────────────────────────────────
+
+scalar DateTime
+scalar Date
+scalar JSON
+scalar BigInt
+scalar Decimal
+
+# ─── Enum Types ──────────────────────────────────────────────────────────────
+
+enum CampaignStatus {
+  ACTIVE
+  INACTIVE
+  PENDING
+  DELETED
+}
+
+enum AdGroupStatus {
+  ACTIVE
+  INACTIVE
+  PENDING
+  DELETED
+}
+
+enum CreativeStatus {
+  ACTIVE
+  INACTIVE
+  PENDING
+  REJECTED
+  DELETED
+}
+
+enum BidStrategy {
+  FIXED_BID
+  CTR_OPTIMIZATION
+  CONVERSION_OPTIMIZATION
+  VIEWABILITY_OPTIMIZATION
+  SPEND_OPTIMIZATION
+  REACH_OPTIMIZATION
+}
+
+enum ChannelType {
+  DISPLAY
+  VIDEO
+  AUDIO
+  NATIVE
+  CONNECTED_TV
+  MOBILE
+  DIGITAL_OUT_OF_HOME
+}
+
+enum CreativeFormat {
+  BANNER
+  VIDEO
+  AUDIO
+  NATIVE
+  RICH_MEDIA
+  HTML5
+}
+
+enum DeviceType {
+  DESKTOP
+  MOBILE
+  TABLET
+  CONNECTED_TV
+  GAME_CONSOLE
+  DIGITAL_OUT_OF_HOME
+}
+
+enum EnvironmentType {
+  WEB
+  APP
+  CTV
+}
+
+enum SupplyVendor {
+  OPENX
+  PUBMATIC
+  MAGNITE
+  INDEX_EXCHANGE
+  XANDR
+  GOOGLE_ADEX
+  APPNEXUS
+  SOVRN
+  UNRULY
+  SPOTX
+}
+
+enum FrequencyCapType {
+  IMPRESSIONS
+  CLICKS
+  CONVERSIONS
+}
+
+enum FrequencyCapInterval {
+  HOURLY
+  DAILY
+  WEEKLY
+  MONTHLY
+  CAMPAIGN_LIFETIME
+}
+
+enum ReportingInterval {
+  HOURLY
+  DAILY
+  WEEKLY
+  MONTHLY
+}
+
+enum AudienceSegmentType {
+  FIRST_PARTY
+  THIRD_PARTY
+  LOOKALIKE
+  CONTEXTUAL
+  BEHAVIORAL
+  RETARGETING
+}
+
+enum TargetingOperator {
+  AND
+  OR
+  NOT
+}
+
+enum DealType {
+  PRIVATE_MARKETPLACE
+  PREFERRED_DEAL
+  PROGRAMMATIC_GUARANTEED
+  OPEN_AUCTION
+}
+
+enum ConversionTrackingMethod {
+  PIXEL
+  SERVER_SIDE
+  MOBILE_SDK
+  OFFLINE
+}
+
+enum ReportMetricType {
+  IMPRESSIONS
+  CLICKS
+  CONVERSIONS
+  SPEND
+  REVENUE
+  CTR
+  VIEWABILITY_RATE
+  COMPLETION_RATE
+  WIN_RATE
+  ECPM
+  CPC
+  CPA
+}
+
+enum SortOrder {
+  ASC
+  DESC
+}
+
+# ─── Core Resource Types ─────────────────────────────────────────────────────
+
+type Advertiser {
+  id: ID!
+  name: String!
+  description: String
+  status: CampaignStatus!
+  partnerId: ID!
+  partner: Partner
+  industryCategory: String
+  defaultCurrencyCode: String!
+  clickThroughUrl: String
+  conversionPixels: [ConversionPixel!]
+  campaigns: CampaignConnection
+  audienceSegments: AudienceSegmentConnection
+  createdAt: DateTime!
+  updatedAt: DateTime!
+}
+
+type Partner {
+  id: ID!
+  name: String!
+  description: String
+  status: CampaignStatus!
+  advertisers: AdvertiserConnection
+  createdAt: DateTime!
+  updatedAt: DateTime!
+}
+
+type Campaign {
+  id: ID!
+  name: String!
+  description: String
+  status: CampaignStatus!
+  advertiserId: ID!
+  advertiser: Advertiser
+  startDate: Date!
+  endDate: Date
+  budget: Budget!
+  dailyBudget: Decimal
+  frequencyCap: FrequencyCap
+  channelTypes: [ChannelType!]
+  adGroups: AdGroupConnection
+  totalSpend: Decimal
+  impressions: BigInt
+  clicks: BigInt
+  conversions: BigInt
+  createdAt: DateTime!
+  updatedAt: DateTime!
+}
+
+type AdGroup {
+  id: ID!
+  name: String!
+  description: String
+  status: AdGroupStatus!
+  campaignId: ID!
+  campaign: Campaign
+  channelType: ChannelType!
+  deviceTypes: [DeviceType!]
+  environments: [EnvironmentType!]
+  bidStrategy: BidStrategy!
+  baseBid: Decimal!
+  maxBid: Decimal
+  dailyBudget: Decimal
+  targeting: TargetingGroup
+  frequencyCap: FrequencyCap
+  creatives: [Creative!]
+  deals: [Deal!]
+  supplyVendors: [SupplyVendor!]
+  geoTargeting: GeoTargeting
+  daypartingSchedule: DaypartingSchedule
+  totalSpend: Decimal
+  impressions: BigInt
+  clicks: BigInt
+  conversions: BigInt
+  createdAt: DateTime!
+  updatedAt: DateTime!
+}
+
+type Creative {
+  id: ID!
+  name: String!
+  status: CreativeStatus!
+  advertiserId: ID!
+  advertiser: Advertiser
+  format: CreativeFormat!
+  channelType: ChannelType!
+  width: Int
+  height: Int
+  assetUrl: String
+  clickThroughUrl: String!
+  impressionTrackingUrls: [String!]
+  thirdPartyPixels: [ThirdPartyPixel!]
+  duration: Int
+  bitRate: Int
+  mimeType: String
+  isThirdPartyServed: Boolean!
+  thirdPartyServerId: String
+  approvalStatus: String
+  rejectionReason: String
+  createdAt: DateTime!
+  updatedAt: DateTime!
+}
+
+type Budget {
+  totalBudgetAmount: Decimal!
+  currencyCode: String!
+  budgetType: String!
+  pacingMode: String
+}
+
+type FrequencyCap {
+  type: FrequencyCapType!
+  maxCount: Int!
+  interval: FrequencyCapInterval!
+}
+
+type TargetingGroup {
+  id: ID!
+  operator: TargetingOperator!
+  audienceSegments: [AudienceSegmentRef!]
+  geoTargets: [GeoTarget!]
+  keywordTargets: [String!]
+  topicTargets: [String!]
+  deviceTargets: [DeviceType!]
+  browserTargets: [String!]
+  languageTargets: [String!]
+  inventoryTargets: [InventoryTarget!]
+}
+
+type AudienceSegmentRef {
+  segmentId: ID!
+  segment: AudienceSegment
+  operator: TargetingOperator
+  bidAdjustmentFactor: Decimal
+}
+
+type AudienceSegment {
+  id: ID!
+  name: String!
+  description: String
+  type: AudienceSegmentType!
+  advertiserId: ID
+  providerId: String
+  providerName: String
+  uniques: BigInt
+  cpmRate: Decimal
+  expirationDays: Int
+  isActive: Boolean!
+  tags: [String!]
+  createdAt: DateTime!
+  updatedAt: DateTime!
+}
+
+type GeoTargeting {
+  included: [GeoTarget!]
+  excluded: [GeoTarget!]
+}
+
+type GeoTarget {
+  id: ID!
+  name: String!
+  type: String!
+  countryCode: String
+  regionCode: String
+  city: String
+  postalCode: String
+  dma: String
+}
+
+type DaypartingSchedule {
+  timezone: String!
+  slots: [DaypartingSlot!]!
+}
+
+type DaypartingSlot {
+  dayOfWeek: Int!
+  startHour: Int!
+  endHour: Int!
+}
+
+type Deal {
+  id: ID!
+  name: String!
+  dealType: DealType!
+  publisherId: String
+  publisherName: String
+  supplyVendor: SupplyVendor
+  floorPrice: Decimal
+  currencyCode: String!
+  startDate: Date
+  endDate: Date
+  isActive: Boolean!
+  channelType: ChannelType
+  availableImpressions: BigInt
+  createdAt: DateTime!
+  updatedAt: DateTime!
+}
+
+type ConversionPixel {
+  id: ID!
+  name: String!
+  advertiserId: ID!
+  trackingMethod: ConversionTrackingMethod!
+  pixelCode: String
+  postbackUrl: String
+  conversionWindowDays: Int!
+  attributionModel: String
+  isActive: Boolean!
+  createdAt: DateTime!
+  updatedAt: DateTime!
+}
+
+type ThirdPartyPixel {
+  url: String!
+  pixelType: String!
+}
+
+type InventoryTarget {
+  domainListId: ID
+  appListId: ID
+  siteId: String
+  appId: String
+}
+
+type BidList {
+  id: ID!
+  name: String!
+  adGroupId: ID!
+  listType: String!
+  adjustmentType: String!
+  entries: [BidListEntry!]!
+  isActive: Boolean!
+  createdAt: DateTime!
+  updatedAt: DateTime!
+}
+
+type BidListEntry {
+  targetingValue: String!
+  bidAdjustment: Decimal!
+}
+
+type ActivityLog {
+  id: ID!
+  entityType: String!
+  entityId: ID!
+  action: String!
+  userId: String
+  changes: JSON
+  timestamp: DateTime!
+  ipAddress: String
+}
+
+type ReportRequest {
+  id: ID!
+  advertiserId: ID!
+  reportType: String!
+  startDate: Date!
+  endDate: Date!
+  interval: ReportingInterval!
+  metrics: [ReportMetricType!]!
+  dimensions: [String!]!
+  filters: JSON
+  status: String!
+  downloadUrl: String
+  createdAt: DateTime!
+  completedAt: DateTime
+}
+
+type ReportRow {
+  date: Date
+  hour: Int
+  campaignId: ID
+  campaignName: String
+  adGroupId: ID
+  adGroupName: String
+  creativeId: ID
+  creativeName: String
+  channelType: ChannelType
+  deviceType: DeviceType
+  impressions: BigInt
+  clicks: BigInt
+  conversions: BigInt
+  spend: Decimal
+  revenue: Decimal
+  ctr: Decimal
+  ecpm: Decimal
+  cpc: Decimal
+  cpa: Decimal
+  viewabilityRate: Decimal
+  completionRate: Decimal
+  winRate: Decimal
+}
+
+type Report {
+  requestId: ID!
+  rows: [ReportRow!]!
+  totalCount: Int!
+  summary: ReportSummary
+}
+
+type ReportSummary {
+  totalImpressions: BigInt!
+  totalClicks: BigInt!
+  totalConversions: BigInt!
+  totalSpend: Decimal!
+  averageCtr: Decimal!
+  averageEcpm: Decimal!
+}
+
+# ─── Connection / Pagination Types ───────────────────────────────────────────
+
+type PageInfo {
+  hasNextPage: Boolean!
+  hasPreviousPage: Boolean!
+  startCursor: String
+  endCursor: String
+}
+
+type AdvertiserConnection {
+  edges: [AdvertiserEdge!]!
+  pageInfo: PageInfo!
+  totalCount: Int!
+}
+
+type AdvertiserEdge {
+  node: Advertiser!
+  cursor: String!
+}
+
+type CampaignConnection {
+  edges: [CampaignEdge!]!
+  pageInfo: PageInfo!
+  totalCount: Int!
+}
+
+type CampaignEdge {
+  node: Campaign!
+  cursor: String!
+}
+
+type AdGroupConnection {
+  edges: [AdGroupEdge!]!
+  pageInfo: PageInfo!
+  totalCount: Int!
+}
+
+type AdGroupEdge {
+  node: AdGroup!
+  cursor: String!
+}
+
+type CreativeConnection {
+  edges: [CreativeEdge!]!
+  pageInfo: PageInfo!
+  totalCount: Int!
+}
+
+type CreativeEdge {
+  node: Creative!
+  cursor: String!
+}
+
+type AudienceSegmentConnection {
+  edges: [AudienceSegmentEdge!]!
+  pageInfo: PageInfo!
+  totalCount: Int!
+}
+
+type AudienceSegmentEdge {
+  node: AudienceSegment!
+  cursor: String!
+}
+
+type DealConnection {
+  edges: [DealEdge!]!
+  pageInfo: PageInfo!
+  totalCount: Int!
+}
+
+type DealEdge {
+  node: Deal!
+  cursor: String!
+}
+
+# ─── Input Types ─────────────────────────────────────────────────────────────
+
+input CreateAdvertiserInput {
+  name: String!
+  description: String
+  partnerId: ID!
+  industryCategory: String
+  defaultCurrencyCode: String!
+  clickThroughUrl: String
+}
+
+input UpdateAdvertiserInput {
+  name: String
+  description: String
+  industryCategory: String
+  defaultCurrencyCode: String
+  clickThroughUrl: String
+  status: CampaignStatus
+}
+
+input CreateCampaignInput {
+  name: String!
+  description: String
+  advertiserId: ID!
+  startDate: Date!
+  endDate: Date
+  budget: BudgetInput!
+  dailyBudget: Decimal
+  frequencyCap: FrequencyCapInput
+  channelTypes: [ChannelType!]
+}
+
+input UpdateCampaignInput {
+  name: String
+  description: String
+  startDate: Date
+  endDate: Date
+  budget: BudgetInput
+  dailyBudget: Decimal
+  frequencyCap: FrequencyCapInput
+  channelTypes: [ChannelType!]
+  status: CampaignStatus
+}
+
+input BudgetInput {
+  totalBudgetAmount: Decimal!
+  currencyCode: String!
+  budgetType: String!
+  pacingMode: String
+}
+
+input FrequencyCapInput {
+  type: FrequencyCapType!
+  maxCount: Int!
+  interval: FrequencyCapInterval!
+}
+
+input CreateAdGroupInput {
+  name: String!
+  description: String
+  campaignId: ID!
+  channelType: ChannelType!
+  deviceTypes: [DeviceType!]
+  environments: [EnvironmentType!]
+  bidStrategy: BidStrategy!
+  baseBid: Decimal!
+  maxBid: Decimal
+  dailyBudget: Decimal
+  targeting: TargetingGroupInput
+  frequencyCap: FrequencyCapInput
+  geoTargeting: GeoTargetingInput
+}
+
+input UpdateAdGroupInput {
+  name: String
+  description: String
+  deviceTypes: [DeviceType!]
+  environments: [EnvironmentType!]
+  bidStrategy: BidStrategy
+  baseBid: Decimal
+  maxBid: Decimal
+  dailyBudget: Decimal
+  targeting: TargetingGroupInput
+  frequencyCap: FrequencyCapInput
+  geoTargeting: GeoTargetingInput
+  status: AdGroupStatus
+}
+
+input TargetingGroupInput {
+  operator: TargetingOperator!
+  audienceSegmentIds: [ID!]
+  geoTargetIds: [ID!]
+  keywordTargets: [String!]
+  deviceTargets: [DeviceType!]
+  browserTargets: [String!]
+  languageTargets: [String!]
+}
+
+input GeoTargetingInput {
+  includedTargetIds: [ID!]
+  excludedTargetIds: [ID!]
+}
+
+input CreateCreativeInput {
+  name: String!
+  advertiserId: ID!
+  format: CreativeFormat!
+  channelType: ChannelType!
+  width: Int
+  height: Int
+  assetUrl: String
+  clickThroughUrl: String!
+  impressionTrackingUrls: [String!]
+  duration: Int
+  mimeType: String
+  isThirdPartyServed: Boolean!
+  thirdPartyServerId: String
+}
+
+input UpdateCreativeInput {
+  name: String
+  clickThroughUrl: String
+  impressionTrackingUrls: [String!]
+  status: CreativeStatus
+}
+
+input CreateAudienceSegmentInput {
+  name: String!
+  description: String
+  type: AudienceSegmentType!
+  advertiserId: ID
+  expirationDays: Int
+  tags: [String!]
+}
+
+input UpdateAudienceSegmentInput {
+  name: String
+  description: String
+  expirationDays: Int
+  isActive: Boolean
+  tags: [String!]
+}
+
+input CreateDealInput {
+  name: String!
+  dealType: DealType!
+  publisherId: String
+  publisherName: String
+  supplyVendor: SupplyVendor
+  floorPrice: Decimal
+  currencyCode: String!
+  startDate: Date
+  endDate: Date
+  channelType: ChannelType
+}
+
+input UpdateDealInput {
+  name: String
+  floorPrice: Decimal
+  startDate: Date
+  endDate: Date
+  isActive: Boolean
+}
+
+input CreateConversionPixelInput {
+  name: String!
+  advertiserId: ID!
+  trackingMethod: ConversionTrackingMethod!
+  postbackUrl: String
+  conversionWindowDays: Int!
+  attributionModel: String
+}
+
+input ReportRequestInput {
+  advertiserId: ID!
+  reportType: String!
+  startDate: Date!
+  endDate: Date!
+  interval: ReportingInterval!
+  metrics: [ReportMetricType!]!
+  dimensions: [String!]!
+  campaignIds: [ID!]
+  adGroupIds: [ID!]
+  creativeIds: [ID!]
+}
+
+input PaginationInput {
+  first: Int
+  after: String
+  last: Int
+  before: String
+}
+
+input CampaignFilterInput {
+  status: CampaignStatus
+  channelTypes: [ChannelType!]
+  startDateFrom: Date
+  startDateTo: Date
+  search: String
+}
+
+input AdGroupFilterInput {
+  status: AdGroupStatus
+  channelType: ChannelType
+  bidStrategy: BidStrategy
+  search: String
+}
+
+input CreativeFilterInput {
+  status: CreativeStatus
+  format: CreativeFormat
+  channelType: ChannelType
+  search: String
+}
+
+input AudienceSegmentFilterInput {
+  type: AudienceSegmentType
+  isActive: Boolean
+  providerId: String
+  search: String
+}
+
+# ─── Query Root ───────────────────────────────────────────────────────────────
+
+type Query {
+  # Partner queries
+  partner(id: ID!): Partner
+  partners(pagination: PaginationInput): AdvertiserConnection
+
+  # Advertiser queries
+  advertiser(id: ID!): Advertiser
+  advertisers(
+    partnerId: ID
+    pagination: PaginationInput
+    search: String
+  ): AdvertiserConnection
+
+  # Campaign queries
+  campaign(id: ID!): Campaign
+  campaigns(
+    advertiserId: ID!
+    filter: CampaignFilterInput
+    pagination: PaginationInput
+    sortBy: String
+    sortOrder: SortOrder
+  ): CampaignConnection
+
+  # Ad Group queries
+  adGroup(id: ID!): AdGroup
+  adGroups(
+    campaignId: ID!
+    filter: AdGroupFilterInput
+    pagination: PaginationInput
+    sortBy: String
+    sortOrder: SortOrder
+  ): AdGroupConnection
+
+  # Creative queries
+  creative(id: ID!): Creative
+  creatives(
+    advertiserId: ID!
+    filter: CreativeFilterInput
+    pagination: PaginationInput
+    sortBy: String
+    sortOrder: SortOrder
+  ): CreativeConnection
+
+  # Audience segment queries
+  audienceSegment(id: ID!): AudienceSegment
+  audienceSegments(
+    advertiserId: ID
+    filter: AudienceSegmentFilterInput
+    pagination: PaginationInput
+  ): AudienceSegmentConnection
+
+  # Deal queries
+  deal(id: ID!): Deal
+  deals(
+    advertiserId: ID
+    dealType: DealType
+    pagination: PaginationInput
+    search: String
+  ): DealConnection
+
+  # Conversion pixel queries
+  conversionPixel(id: ID!): ConversionPixel
+  conversionPixels(advertiserId: ID!): [ConversionPixel!]
+
+  # Bid list queries
+  bidList(id: ID!): BidList
+  bidLists(adGroupId: ID!): [BidList!]
+
+  # Geo target queries
+  geoTargets(search: String, type: String, countryCode: String): [GeoTarget!]
+
+  # Reporting queries
+  reportRequest(id: ID!): ReportRequest
+  reportRequests(advertiserId: ID!, pagination: PaginationInput): [ReportRequest!]
+  report(requestId: ID!): Report
+
+  # Activity log queries
+  activityLogs(
+    entityType: String!
+    entityId: ID!
+    startDate: DateTime
+    endDate: DateTime
+    pagination: PaginationInput
+  ): [ActivityLog!]
+}
+
+# ─── Mutation Root ────────────────────────────────────────────────────────────
+
+type Mutation {
+  # Advertiser mutations
+  createAdvertiser(input: CreateAdvertiserInput!): Advertiser!
+  updateAdvertiser(id: ID!, input: UpdateAdvertiserInput!): Advertiser!
+  deleteAdvertiser(id: ID!): Boolean!
+
+  # Campaign mutations
+  createCampaign(input: CreateCampaignInput!): Campaign!
+  updateCampaign(id: ID!, input: UpdateCampaignInput!): Campaign!
+  deleteCampaign(id: ID!): Boolean!
+  pauseCampaign(id: ID!): Campaign!
+  resumeCampaign(id: ID!): Campaign!
+
+  # Ad Group mutations
+  createAdGroup(input: CreateAdGroupInput!): AdGroup!
+  updateAdGroup(id: ID!, input: UpdateAdGroupInput!): AdGroup!
+  deleteAdGroup(id: ID!): Boolean!
+  pauseAdGroup(id: ID!): AdGroup!
+  resumeAdGroup(id: ID!): AdGroup!
+  addCreativeToAdGroup(adGroupId: ID!, creativeId: ID!): AdGroup!
+  removeCreativeFromAdGroup(adGroupId: ID!, creativeId: ID!): AdGroup!
+  addDealToAdGroup(adGroupId: ID!, dealId: ID!): AdGroup!
+  removeDealFromAdGroup(adGroupId: ID!, dealId: ID!): AdGroup!
+
+  # Creative mutations
+  createCreative(input: CreateCreativeInput!): Creative!
+  updateCreative(id: ID!, input: UpdateCreativeInput!): Creative!
+  deleteCreative(id: ID!): Boolean!
+
+  # Audience segment mutations
+  createAudienceSegment(input: CreateAudienceSegmentInput!): AudienceSegment!
+  updateAudienceSegment(id: ID!, input: UpdateAudienceSegmentInput!): AudienceSegment!
+  deleteAudienceSegment(id: ID!): Boolean!
+
+  # Deal mutations
+  createDeal(input: CreateDealInput!): Deal!
+  updateDeal(id: ID!, input: UpdateDealInput!): Deal!
+  deleteDeal(id: ID!): Boolean!
+
+  # Conversion pixel mutations
+  createConversionPixel(input: CreateConversionPixelInput!): ConversionPixel!
+  updateConversionPixel(id: ID!, isActive: Boolean!): ConversionPixel!
+  deleteConversionPixel(id: ID!): Boolean!
+
+  # Reporting mutations
+  createReportRequest(input: ReportRequestInput!): ReportRequest!
+  cancelReportRequest(id: ID!): Boolean!
+
+  # Bulk operations
+  bulkUpdateCampaignStatus(ids: [ID!]!, status: CampaignStatus!): [Campaign!]!
+  bulkUpdateAdGroupStatus(ids: [ID!]!, status: AdGroupStatus!): [AdGroup!]!
+}
+
+# ─── Subscription Root ────────────────────────────────────────────────────────
+
+type Subscription {
+  campaignStatusChanged(campaignId: ID!): Campaign!
+  reportRequestCompleted(requestId: ID!): ReportRequest!
+  adGroupPerformanceUpdated(adGroupId: ID!): AdGroup!
+}

@@ -1,11 +1,11 @@
 aid: the-trade-desk
 name: The Trade Desk
-description: >-
-  The Trade Desk is a global programmatic advertising platform and demand-side platform (DSP) that
-  enables advertisers, agencies, and media buyers to plan, manage, and optimize digital advertising
-  campaigns across connected TV, display, video, audio, native, and mobile channels. The platform
-  provides REST and GraphQL APIs for managing advertisers, campaigns, ad groups, creatives, targeting,
-  bidding strategies, audience data segments, and campaign performance reporting at scale.
+description: The Trade Desk is a global programmatic advertising platform and demand-side
+  platform (DSP) that enables advertisers, agencies, and media buyers to plan, manage,
+  and optimize digital advertising campaigns across connected TV, display, video,
+  audio, native, and mobile channels. The platform provides REST and GraphQL APIs
+  for managing advertisers, campaigns, ad groups, creatives, targeting, bidding strategies,
+  audience data segments, and campaign performance reporting at scale.
 type: Index
 image: https://kinlane-productions.s3.amazonaws.com/apis-json/apis-json-logo.jpg
 url: https://raw.githubusercontent.com/api-evangelist/the-trade-desk/refs/heads/main/apis.yml
@@ -13,166 +13,166 @@ created: '2026-06-13'
 modified: '2026-06-13'
 specificationVersion: '0.19'
 tags:
-  - Advertising
-  - Programmatic Advertising
-  - DSP
-  - Demand-Side Platform
-  - Campaign Management
-  - Connected TV
-  - Digital Advertising
-  - Marketing
-  - AdTech
+- Advertising
+- Programmatic Advertising
+- DSP
+- Demand-Side Platform
+- Campaign Management
+- Connected TV
+- Digital Advertising
+- Marketing
+- AdTech
 apis:
-  - aid: the-trade-desk:the-trade-desk-platform-api
-    name: The Trade Desk Platform API
-    description: >-
-      The Trade Desk Platform API provides REST and GraphQL interfaces for programmatically managing
-      all aspects of programmatic advertising campaigns. Key resources include advertisers, campaigns,
-      ad groups, creatives, bid lists, frequency caps, activity logs, and targeting configurations.
-      Authentication uses token-based credentials obtained via POST to the /v3/authentication endpoint,
-      with the token passed as a TTD-Auth header or Bearer token in subsequent requests.
-    image: https://kinlane-productions.s3.amazonaws.com/apis-json/apis-json-logo.jpg
-    humanURL: https://partner.thetradedesk.com/v3/portal/api/overview
-    baseURL: https://api.thetradedesk.com/v3
-    tags:
-      - Advertising
-      - Campaign Management
-      - Ad Groups
-      - Creatives
-      - Programmatic
-      - REST
-      - GraphQL
-    properties:
-      - type: Documentation
-        url: https://partner.thetradedesk.com/v3/portal/api/overview
-      - type: GettingStarted
-        url: https://partner.thetradedesk.com/v3/portal/api/doc/ApiPlatformGetStarted
-      - type: Reference
-        url: https://partner.thetradedesk.com/v3/portal/api/doc/ApiReferencePlatform
-      - type: Authentication
-        url: https://partner.thetradedesk.com/v3/portal/api/area/Authentication
-      - type: RateLimits
-        url: https://partner.thetradedesk.com/v3/portal/api/doc/RateLimits
-      - type: UsageGuidelines
-        url: https://partner.thetradedesk.com/v3/portal/api/doc/ApiUsageGuidelines
-      - type: UseCases
-        url: https://partner.thetradedesk.com/v3/portal/api/doc/ApiUseCases
-      - type: GraphQLDocs
-        url: https://partner.thetradedesk.com/v3/portal/api/doc/GqlApiCallsPlatform
-      - type: GraphQLHub
-        url: https://partner.thetradedesk.com/v3/portal/resources/doc/GqlApiHub
-      - type: CampaignGraphQL
-        url: https://partner.thetradedesk.com/v3/portal/api/doc/CampaignCreateGQL
-      - type: ActivityLog
-        url: https://partner.thetradedesk.com/v3/portal/api/doc/ActivityLog
-  - aid: the-trade-desk:the-trade-desk-data-api
-    name: The Trade Desk Data API
-    description: >-
-      The Trade Desk Data API enables data providers and advertisers to upload first-party and
-      third-party audience segments (CRM data), manage data integrations, access commerce solutions,
-      and retrieve reporting data. Supports uploading hashed contact lists (email, phone) via S3
-      signed URLs for audience targeting, and provides access to data segment management and
-      third-party data rate information.
-    image: https://kinlane-productions.s3.amazonaws.com/apis-json/apis-json-logo.jpg
-    humanURL: https://partner.thetradedesk.com/v3/portal/data/doc/DataApiReference
-    baseURL: https://api.thetradedesk.com/v3
-    tags:
-      - Data
-      - Audience Segments
-      - CRM Data
-      - First-Party Data
-      - Third-Party Data
-      - Commerce
-    properties:
-      - type: Documentation
-        url: https://partner.thetradedesk.com/v3/portal/data/doc/DataApiReference
-      - type: Reference
-        url: https://partner.thetradedesk.com/v3/portal/data/doc/DataApiReference
-      - type: DataIntegration
-        url: https://partner.thetradedesk.com/v3/portal/data/doc/DataApiReferenceIntegration
-      - type: CommerceSolutions
-        url: https://partner.thetradedesk.com/v3/portal/data/doc/CommerceSolutionsAPI
-      - type: DataRates
-        url: https://partner.thetradedesk.com/v3/portal/data/doc/DataRatesOverview
-      - type: OpenAPI
-        url: https://raw.githubusercontent.com/api-evangelist/the-trade-desk/refs/heads/main/openapi/ttd-data-api.yaml
-  - aid: the-trade-desk:the-trade-desk-real-time-conversions-api
-    name: The Trade Desk Real-Time Conversions API
-    description: >-
-      The Trade Desk Real-Time Conversions API (formerly the Real-Time Conversion Events API) allows
-      advertisers to send conversion events server-side in real time, enabling more accurate attribution,
-      cross-device measurement, and campaign optimization. It supports sending hashed email and phone
-      identifiers along with event data for impression-to-conversion tracking without relying on
-      browser cookies.
-    image: https://kinlane-productions.s3.amazonaws.com/apis-json/apis-json-logo.jpg
-    humanURL: https://partner.thetradedesk.com/v3/portal/api/overview
-    baseURL: https://api.thetradedesk.com/v3
-    tags:
-      - Conversions
-      - Attribution
-      - Real-Time
-      - Measurement
-      - Server-Side
-    properties:
-      - type: Documentation
-        url: https://partner.thetradedesk.com/v3/portal/api/overview
-      - type: AdobeExtensionDocs
-        url: https://experienceleague.adobe.com/en/docs/experience-platform/tags/extensions/server/thetradedesk/overview
-      - type: GitHubSDK
-        url: https://github.com/thetradedesk/conversion-events-sdk-for-googletagmanager
-  - aid: the-trade-desk:the-trade-desk-reporting-api
-    name: The Trade Desk Reporting API
-    description: >-
-      The Trade Desk Reporting API provides programmatic access to campaign performance data including
-      impressions, clicks, conversions, spend, win rates, viewability, effective CPM, completion rates,
-      and 200+ additional metrics and dimensions. Supports incremental data sync for campaign, ad group,
-      ad, creative, and targeting performance at configurable granularity levels.
-    image: https://kinlane-productions.s3.amazonaws.com/apis-json/apis-json-logo.jpg
-    humanURL: https://partner.thetradedesk.com/v3/portal/api/overview
-    baseURL: https://api.thetradedesk.com/v3
-    tags:
-      - Reporting
-      - Analytics
-      - Performance
-      - Metrics
-      - Campaign Analytics
-    properties:
-      - type: Documentation
-        url: https://partner.thetradedesk.com/v3/portal/api/overview
-      - type: Reference
-        url: https://partner.thetradedesk.com/v3/portal/api/doc/ApiReferencePlatform
-common:
-  - type: Portal
+- aid: the-trade-desk:the-trade-desk-platform-api
+  name: The Trade Desk Platform API
+  description: The Trade Desk Platform API provides REST and GraphQL interfaces for
+    programmatically managing all aspects of programmatic advertising campaigns. Key
+    resources include advertisers, campaigns, ad groups, creatives, bid lists, frequency
+    caps, activity logs, and targeting configurations. Authentication uses token-based
+    credentials obtained via POST to the /v3/authentication endpoint, with the token
+    passed as a TTD-Auth header or Bearer token in subsequent requests.
+  image: https://kinlane-productions.s3.amazonaws.com/apis-json/apis-json-logo.jpg
+  humanURL: https://partner.thetradedesk.com/v3/portal/api/overview
+  baseURL: https://api.thetradedesk.com/v3
+  tags:
+  - Advertising
+  - Campaign Management
+  - Ad Groups
+  - Creatives
+  - Programmatic
+  - REST
+  - GraphQL
+  properties:
+  - type: Documentation
     url: https://partner.thetradedesk.com/v3/portal/api/overview
-  - type: Website
-    url: https://www.thetradedesk.com
-  - type: EnterpriseAPIs
-    url: https://www.thetradedesk.com/us/our-platform/enterprise-apis
   - type: GettingStarted
     url: https://partner.thetradedesk.com/v3/portal/api/doc/ApiPlatformGetStarted
+  - type: Reference
+    url: https://partner.thetradedesk.com/v3/portal/api/doc/ApiReferencePlatform
   - type: Authentication
     url: https://partner.thetradedesk.com/v3/portal/api/area/Authentication
   - type: RateLimits
     url: https://partner.thetradedesk.com/v3/portal/api/doc/RateLimits
-  - type: AdditionalFees
-    url: https://partner.thetradedesk.com/v3/portal/api/area/Additional%20Fees
-  - type: PrivacyPolicy
-    url: https://www.thetradedesk.com/general/privacy
-  - type: Blog
-    url: https://www.thetradedesk.com/us/blog
-  - type: LinkedIn
-    url: https://www.linkedin.com/company/the-trade-desk
-  - type: GitHubOrganization
-    url: https://github.com/thetradedesk
-  - type: X
-    url: https://twitter.com/TheTradeDesk
-  - type: Plans
-    url: https://raw.githubusercontent.com/api-evangelist/the-trade-desk/refs/heads/main/plans/plans.md
-  - type: RateLimits
-    url: https://raw.githubusercontent.com/api-evangelist/the-trade-desk/refs/heads/main/rate-limits/rate-limits.md
-  - type: FinOps
-    url: https://raw.githubusercontent.com/api-evangelist/the-trade-desk/refs/heads/main/finops/finops.md
+  - type: UsageGuidelines
+    url: https://partner.thetradedesk.com/v3/portal/api/doc/ApiUsageGuidelines
+  - type: UseCases
+    url: https://partner.thetradedesk.com/v3/portal/api/doc/ApiUseCases
+  - type: GraphQLDocs
+    url: https://partner.thetradedesk.com/v3/portal/api/doc/GqlApiCallsPlatform
+  - type: GraphQLHub
+    url: https://partner.thetradedesk.com/v3/portal/resources/doc/GqlApiHub
+  - type: CampaignGraphQL
+    url: https://partner.thetradedesk.com/v3/portal/api/doc/CampaignCreateGQL
+  - type: ActivityLog
+    url: https://partner.thetradedesk.com/v3/portal/api/doc/ActivityLog
+  - url: graphql/the-trade-desk-graphql.md
+    type: GraphQL
+- aid: the-trade-desk:the-trade-desk-data-api
+  name: The Trade Desk Data API
+  description: The Trade Desk Data API enables data providers and advertisers to upload
+    first-party and third-party audience segments (CRM data), manage data integrations,
+    access commerce solutions, and retrieve reporting data. Supports uploading hashed
+    contact lists (email, phone) via S3 signed URLs for audience targeting, and provides
+    access to data segment management and third-party data rate information.
+  image: https://kinlane-productions.s3.amazonaws.com/apis-json/apis-json-logo.jpg
+  humanURL: https://partner.thetradedesk.com/v3/portal/data/doc/DataApiReference
+  baseURL: https://api.thetradedesk.com/v3
+  tags:
+  - Data
+  - Audience Segments
+  - CRM Data
+  - First-Party Data
+  - Third-Party Data
+  - Commerce
+  properties:
+  - type: Documentation
+    url: https://partner.thetradedesk.com/v3/portal/data/doc/DataApiReference
+  - type: Reference
+    url: https://partner.thetradedesk.com/v3/portal/data/doc/DataApiReference
+  - type: DataIntegration
+    url: https://partner.thetradedesk.com/v3/portal/data/doc/DataApiReferenceIntegration
+  - type: CommerceSolutions
+    url: https://partner.thetradedesk.com/v3/portal/data/doc/CommerceSolutionsAPI
+  - type: DataRates
+    url: https://partner.thetradedesk.com/v3/portal/data/doc/DataRatesOverview
+  - type: OpenAPI
+    url: https://raw.githubusercontent.com/api-evangelist/the-trade-desk/refs/heads/main/openapi/ttd-data-api.yaml
+- aid: the-trade-desk:the-trade-desk-real-time-conversions-api
+  name: The Trade Desk Real-Time Conversions API
+  description: The Trade Desk Real-Time Conversions API (formerly the Real-Time Conversion
+    Events API) allows advertisers to send conversion events server-side in real time,
+    enabling more accurate attribution, cross-device measurement, and campaign optimization.
+    It supports sending hashed email and phone identifiers along with event data for
+    impression-to-conversion tracking without relying on browser cookies.
+  image: https://kinlane-productions.s3.amazonaws.com/apis-json/apis-json-logo.jpg
+  humanURL: https://partner.thetradedesk.com/v3/portal/api/overview
+  baseURL: https://api.thetradedesk.com/v3
+  tags:
+  - Conversions
+  - Attribution
+  - Real-Time
+  - Measurement
+  - Server-Side
+  properties:
+  - type: Documentation
+    url: https://partner.thetradedesk.com/v3/portal/api/overview
+  - type: AdobeExtensionDocs
+    url: https://experienceleague.adobe.com/en/docs/experience-platform/tags/extensions/server/thetradedesk/overview
+  - type: GitHubSDK
+    url: https://github.com/thetradedesk/conversion-events-sdk-for-googletagmanager
+- aid: the-trade-desk:the-trade-desk-reporting-api
+  name: The Trade Desk Reporting API
+  description: The Trade Desk Reporting API provides programmatic access to campaign
+    performance data including impressions, clicks, conversions, spend, win rates,
+    viewability, effective CPM, completion rates, and 200+ additional metrics and
+    dimensions. Supports incremental data sync for campaign, ad group, ad, creative,
+    and targeting performance at configurable granularity levels.
+  image: https://kinlane-productions.s3.amazonaws.com/apis-json/apis-json-logo.jpg
+  humanURL: https://partner.thetradedesk.com/v3/portal/api/overview
+  baseURL: https://api.thetradedesk.com/v3
+  tags:
+  - Reporting
+  - Analytics
+  - Performance
+  - Metrics
+  - Campaign Analytics
+  properties:
+  - type: Documentation
+    url: https://partner.thetradedesk.com/v3/portal/api/overview
+  - type: Reference
+    url: https://partner.thetradedesk.com/v3/portal/api/doc/ApiReferencePlatform
+common:
+- type: Portal
+  url: https://partner.thetradedesk.com/v3/portal/api/overview
+- type: Website
+  url: https://www.thetradedesk.com
+- type: EnterpriseAPIs
+  url: https://www.thetradedesk.com/us/our-platform/enterprise-apis
+- type: GettingStarted
+  url: https://partner.thetradedesk.com/v3/portal/api/doc/ApiPlatformGetStarted
+- type: Authentication
+  url: https://partner.thetradedesk.com/v3/portal/api/area/Authentication
+- type: RateLimits
+  url: https://partner.thetradedesk.com/v3/portal/api/doc/RateLimits
+- type: AdditionalFees
+  url: https://partner.thetradedesk.com/v3/portal/api/area/Additional%20Fees
+- type: PrivacyPolicy
+  url: https://www.thetradedesk.com/general/privacy
+- type: Blog
+  url: https://www.thetradedesk.com/us/blog
+- type: LinkedIn
+  url: https://www.linkedin.com/company/the-trade-desk
+- type: GitHubOrganization
+  url: https://github.com/thetradedesk
+- type: X
+  url: https://twitter.com/TheTradeDesk
+- type: Plans
+  url: https://raw.githubusercontent.com/api-evangelist/the-trade-desk/refs/heads/main/plans/plans.md
+- type: RateLimits
+  url: https://raw.githubusercontent.com/api-evangelist/the-trade-desk/refs/heads/main/rate-limits/rate-limits.md
+- type: FinOps
+  url: https://raw.githubusercontent.com/api-evangelist/the-trade-desk/refs/heads/main/finops/finops.md
 maintainers:
-  - FN: Kin Lane
-    email: kin@apievangelist.com
-    url: https://apievangelist.com
+- FN: Kin Lane
+  email: kin@apievangelist.com
+  url: https://apievangelist.com
