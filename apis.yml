@@ -7,7 +7,7 @@ description: The Trade Desk is a global programmatic advertising platform and de
   for managing advertisers, campaigns, ad groups, creatives, targeting, bidding strategies,
   audience data segments, and campaign performance reporting at scale.
 type: Index
-image: https://kinlane-productions.s3.amazonaws.com/apis-json/apis-json-logo.jpg
+image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/apis-json-logo.jpg
 url: https://raw.githubusercontent.com/api-evangelist/the-trade-desk/refs/heads/main/apis.yml
 created: '2026-06-13'
 modified: '2026-06-13'
@@ -31,7 +31,7 @@ apis:
     caps, activity logs, and targeting configurations. Authentication uses token-based
     credentials obtained via POST to the /v3/authentication endpoint, with the token
     passed as a TTD-Auth header or Bearer token in subsequent requests.
-  image: https://kinlane-productions.s3.amazonaws.com/apis-json/apis-json-logo.jpg
+  image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/apis-json-logo.jpg
   humanURL: https://partner.thetradedesk.com/v3/portal/api/overview
   baseURL: https://api.thetradedesk.com/v3
   tags:
@@ -74,7 +74,7 @@ apis:
     access commerce solutions, and retrieve reporting data. Supports uploading hashed
     contact lists (email, phone) via S3 signed URLs for audience targeting, and provides
     access to data segment management and third-party data rate information.
-  image: https://kinlane-productions.s3.amazonaws.com/apis-json/apis-json-logo.jpg
+  image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/apis-json-logo.jpg
   humanURL: https://partner.thetradedesk.com/v3/portal/data/doc/DataApiReference
   baseURL: https://api.thetradedesk.com/v3
   tags:
@@ -104,7 +104,7 @@ apis:
     enabling more accurate attribution, cross-device measurement, and campaign optimization.
     It supports sending hashed email and phone identifiers along with event data for
     impression-to-conversion tracking without relying on browser cookies.
-  image: https://kinlane-productions.s3.amazonaws.com/apis-json/apis-json-logo.jpg
+  image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/apis-json-logo.jpg
   humanURL: https://partner.thetradedesk.com/v3/portal/api/overview
   baseURL: https://api.thetradedesk.com/v3
   tags:
@@ -127,7 +127,7 @@ apis:
     viewability, effective CPM, completion rates, and 200+ additional metrics and
     dimensions. Supports incremental data sync for campaign, ad group, ad, creative,
     and targeting performance at configurable granularity levels.
-  image: https://kinlane-productions.s3.amazonaws.com/apis-json/apis-json-logo.jpg
+  image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/apis-json-logo.jpg
   humanURL: https://partner.thetradedesk.com/v3/portal/api/overview
   baseURL: https://api.thetradedesk.com/v3
   tags:
