@@ -2,13 +2,13 @@
   "repo": "the-trade-desk",
   "feeds": [
     {
-      "source": "https://www.thetradedesk.com/general/privacy",
-      "feed_url": "https://www.thetradedesk.com/general/privacy",
-      "title": "",
-      "saved": 0,
-      "method": "none"
+      "source": "https://www.thetradedesk.com/us/blog",
+      "feed_url": "https://www.thetradedesk.com/news",
+      "saved": 1,
+      "method": "agent-scrape"
     }
   ],
-  "post_count": 0,
-  "fetched": "2026-06-14T20:42:17Z"
+  "post_count": 1,
+  "fetched": "2026-06-27T13:15:57Z",
+  "agent_pulled": "2026-06-27"
 }
