@@ -2,13 +2,18 @@
   "repo": "the-trade-desk",
   "feeds": [
     {
-      "source": "https://www.thetradedesk.com/us/blog",
+      "source": "https://www.thetradedesk.com/news",
       "feed_url": "https://www.thetradedesk.com/news",
-      "saved": 1,
-      "method": "agent-scrape"
+      "title": "",
+      "saved": 0,
+      "method": "none"
+    },
+    {
+      "source": "https://www.thetradedesk.com/general/privacy",
+      "error": "HTTPError"
     }
   ],
   "post_count": 1,
-  "fetched": "2026-06-27T13:15:57Z",
+  "fetched": "2026-07-11T11:50:51Z",
   "agent_pulled": "2026-06-27"
 }
