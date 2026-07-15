@@ -142,6 +142,8 @@ apis:
   - type: Reference
     url: https://partner.thetradedesk.com/v3/portal/api/doc/ApiReferencePlatform
 common:
+- type: AgenticAccess
+  url: agentic-access/the-trade-desk-agentic-access.yml
 - type: DomainSecurity
   url: security/the-trade-desk-domain-security.yml
 - type: Portal
