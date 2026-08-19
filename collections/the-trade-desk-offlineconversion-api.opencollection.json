@@ -1,0 +1,39 @@
+{
+  "opencollection": "1.0.0",
+  "info": {
+    "name": "TTD Data Advertiser OfflineConversion API",
+    "version": "v0.1"
+  },
+  "items": [
+    {
+      "info": {
+        "name": "OfflineConversion",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "Upload offline conversion data for the specified data provider.",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "{{baseUrl}}/providerapi/offlineconversion",
+            "headers": [
+              {
+                "name": "TTD-Auth",
+                "value": ""
+              }
+            ],
+            "body": {
+              "type": "json",
+              "data": "{}"
+            }
+          },
+          "docs": "Upload offline conversion data for the specified data provider."
+        }
+      ]
+    }
+  ],
+  "bundled": true
+}

@@ -1,0 +1,450 @@
+{
+  "item": [
+    {
+      "id": "95cf74dd-f571-4108-abcd-2ea2e829ad8d",
+      "name": "ThirdParty",
+      "description": {
+        "content": "",
+        "type": "text/plain"
+      },
+      "item": [
+        {
+          "id": "07ca887b-5bac-49a9-a101-a65d1bcd535a",
+          "name": "Upload third-party data for the specified data provider for use in audience targeting.",
+          "request": {
+            "name": "Upload third-party data for the specified data provider for use in audience targeting.",
+            "description": {},
+            "url": {
+              "protocol": "https",
+              "path": [
+                "data",
+                "thirdparty"
+              ],
+              "host": [
+                "bulk-data",
+                "adsrvr",
+                "org"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "header": [
+              {
+                "disabled": false,
+                "description": "(Required) Data API token for authentication.",
+                "key": "TTD-Auth",
+                "value": "<string>"
+              },
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              },
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "POST",
+            "auth": null,
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"DataProviderId\": \"<string>\",\n  \"Items\": [\n    {\n      \"Data\": [\n        {\n          \"Name\": \"<string>\",\n          \"TimestampUtc\": \"<dateTime>\",\n          \"TtlInMinutes\": \"<integer>\"\n        },\n        {\n          \"Name\": \"<string>\",\n          \"TimestampUtc\": \"<dateTime>\",\n          \"TtlInMinutes\": \"<integer>\"\n        }\n      ],\n      \"DataProviderUserId\": \"<string>\",\n      \"TDID\": \"<string>\",\n      \"DAID\": \"<string>\",\n      \"UID2\": \"<string>\",\n      \"UID2Token\": \"<string>\",\n      \"RampID\": \"<string>\",\n      \"CoreID\": \"<string>\",\n      \"EUID\": \"<string>\",\n      \"EUIDToken\": \"<string>\",\n      \"ID5\": \"<string>\",\n      \"NetID\": \"<string>\",\n      \"FirstID\": \"<string>\",\n      \"UtiqID\": \"<string>\",\n      \"MerkuryID\": \"<string>\",\n      \"IqviaPPID\": \"<string>\",\n      \"CookieMappingPartnerId\": \"<string>\"\n    },\n    {\n      \"Data\": [\n        {\n          \"Name\": \"<string>\",\n          \"TimestampUtc\": \"<dateTime>\",\n          \"TtlInMinutes\": \"<integer>\"\n        },\n        {\n          \"Name\": \"<string>\",\n          \"TimestampUtc\": \"<dateTime>\",\n          \"TtlInMinutes\": \"<integer>\"\n        }\n      ],\n      \"DataProviderUserId\": \"<string>\",\n      \"TDID\": \"<string>\",\n      \"DAID\": \"<string>\",\n      \"UID2\": \"<string>\",\n      \"UID2Token\": \"<string>\",\n      \"RampID\": \"<string>\",\n      \"CoreID\": \"<string>\",\n      \"EUID\": \"<string>\",\n      \"EUIDToken\": \"<string>\",\n      \"ID5\": \"<string>\",\n      \"NetID\": \"<string>\",\n      \"FirstID\": \"<string>\",\n      \"UtiqID\": \"<string>\",\n      \"MerkuryID\": \"<string>\",\n      \"IqviaPPID\": \"<string>\",\n      \"CookieMappingPartnerId\": \"<string>\"\n    }\n  ],\n  \"DataLoadTraceId\": \"<string>\",\n  \"IsUserIdAlreadyHashed\": false\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            }
+          },
+          "response": [
+            {
+              "id": "1e959771-49cc-421d-a7b8-20a977311e23",
+              "name": "Success",
+              "originalRequest": {
+                "url": {
+                  "protocol": "https",
+                  "path": [
+                    "data",
+                    "thirdparty"
+                  ],
+                  "host": [
+                    "bulk-data",
+                    "adsrvr",
+                    "org"
+                  ],
+                  "query": [],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "disabled": false,
+                    "description": "(Required) Data API token for authentication.",
+                    "key": "TTD-Auth",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "POST",
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"DataProviderId\": \"<string>\",\n  \"Items\": [\n    {\n      \"Data\": [\n        {\n          \"Name\": \"<string>\",\n          \"TimestampUtc\": \"<dateTime>\",\n          \"TtlInMinutes\": \"<integer>\"\n        },\n        {\n          \"Name\": \"<string>\",\n          \"TimestampUtc\": \"<dateTime>\",\n          \"TtlInMinutes\": \"<integer>\"\n        }\n      ],\n      \"DataProviderUserId\": \"<string>\",\n      \"TDID\": \"<string>\",\n      \"DAID\": \"<string>\",\n      \"UID2\": \"<string>\",\n      \"UID2Token\": \"<string>\",\n      \"RampID\": \"<string>\",\n      \"CoreID\": \"<string>\",\n      \"EUID\": \"<string>\",\n      \"EUIDToken\": \"<string>\",\n      \"ID5\": \"<string>\",\n      \"NetID\": \"<string>\",\n      \"FirstID\": \"<string>\",\n      \"UtiqID\": \"<string>\",\n      \"MerkuryID\": \"<string>\",\n      \"IqviaPPID\": \"<string>\",\n      \"CookieMappingPartnerId\": \"<string>\"\n    },\n    {\n      \"Data\": [\n        {\n          \"Name\": \"<string>\",\n          \"TimestampUtc\": \"<dateTime>\",\n          \"TtlInMinutes\": \"<integer>\"\n        },\n        {\n          \"Name\": \"<string>\",\n          \"TimestampUtc\": \"<dateTime>\",\n          \"TtlInMinutes\": \"<integer>\"\n        }\n      ],\n      \"DataProviderUserId\": \"<string>\",\n      \"TDID\": \"<string>\",\n      \"DAID\": \"<string>\",\n      \"UID2\": \"<string>\",\n      \"UID2Token\": \"<string>\",\n      \"RampID\": \"<string>\",\n      \"CoreID\": \"<string>\",\n      \"EUID\": \"<string>\",\n      \"EUIDToken\": \"<string>\",\n      \"ID5\": \"<string>\",\n      \"NetID\": \"<string>\",\n      \"FirstID\": \"<string>\",\n      \"UtiqID\": \"<string>\",\n      \"MerkuryID\": \"<string>\",\n      \"IqviaPPID\": \"<string>\",\n      \"CookieMappingPartnerId\": \"<string>\"\n    }\n  ],\n  \"DataLoadTraceId\": \"<string>\",\n  \"IsUserIdAlreadyHashed\": false\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"FailedLines\": [\n    {\n      \"DataProviderUserId\": \"string\",\n      \"TDID\": \"73149908-2fbc-b705-710c-a47bb6e3c09e\",\n      \"DataName\": \"string\",\n      \"ErrorCode\": \"TargetingDataDisabled\",\n      \"Message\": \"string\",\n      \"ItemNumber\": \"string\"\n    },\n    {\n      \"DataProviderUserId\": \"string\",\n      \"TDID\": \"8589d21b-6bb0-f99f-7ada-bf270e0ef462\",\n      \"DataName\": \"string\",\n      \"ErrorCode\": \"UserNotMapped\",\n      \"Message\": \"string\",\n      \"ItemNumber\": \"string\"\n    }\n  ]\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            },
+            {
+              "id": "c5477566-9db3-412f-a370-2114905cab5e",
+              "name": "Bad Request - Invalid JSON, missing items, data provider not configured, or policy restrictions",
+              "originalRequest": {
+                "url": {
+                  "protocol": "https",
+                  "path": [
+                    "data",
+                    "thirdparty"
+                  ],
+                  "host": [
+                    "bulk-data",
+                    "adsrvr",
+                    "org"
+                  ],
+                  "query": [],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "disabled": false,
+                    "description": "(Required) Data API token for authentication.",
+                    "key": "TTD-Auth",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "POST",
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"DataProviderId\": \"<string>\",\n  \"Items\": [\n    {\n      \"Data\": [\n        {\n          \"Name\": \"<string>\",\n          \"TimestampUtc\": \"<dateTime>\",\n          \"TtlInMinutes\": \"<integer>\"\n        },\n        {\n          \"Name\": \"<string>\",\n          \"TimestampUtc\": \"<dateTime>\",\n          \"TtlInMinutes\": \"<integer>\"\n        }\n      ],\n      \"DataProviderUserId\": \"<string>\",\n      \"TDID\": \"<string>\",\n      \"DAID\": \"<string>\",\n      \"UID2\": \"<string>\",\n      \"UID2Token\": \"<string>\",\n      \"RampID\": \"<string>\",\n      \"CoreID\": \"<string>\",\n      \"EUID\": \"<string>\",\n      \"EUIDToken\": \"<string>\",\n      \"ID5\": \"<string>\",\n      \"NetID\": \"<string>\",\n      \"FirstID\": \"<string>\",\n      \"UtiqID\": \"<string>\",\n      \"MerkuryID\": \"<string>\",\n      \"IqviaPPID\": \"<string>\",\n      \"CookieMappingPartnerId\": \"<string>\"\n    },\n    {\n      \"Data\": [\n        {\n          \"Name\": \"<string>\",\n          \"TimestampUtc\": \"<dateTime>\",\n          \"TtlInMinutes\": \"<integer>\"\n        },\n        {\n          \"Name\": \"<string>\",\n          \"TimestampUtc\": \"<dateTime>\",\n          \"TtlInMinutes\": \"<integer>\"\n        }\n      ],\n      \"DataProviderUserId\": \"<string>\",\n      \"TDID\": \"<string>\",\n      \"DAID\": \"<string>\",\n      \"UID2\": \"<string>\",\n      \"UID2Token\": \"<string>\",\n      \"RampID\": \"<string>\",\n      \"CoreID\": \"<string>\",\n      \"EUID\": \"<string>\",\n      \"EUIDToken\": \"<string>\",\n      \"ID5\": \"<string>\",\n      \"NetID\": \"<string>\",\n      \"FirstID\": \"<string>\",\n      \"UtiqID\": \"<string>\",\n      \"MerkuryID\": \"<string>\",\n      \"IqviaPPID\": \"<string>\",\n      \"CookieMappingPartnerId\": \"<string>\"\n    }\n  ],\n  \"DataLoadTraceId\": \"<string>\",\n  \"IsUserIdAlreadyHashed\": false\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                }
+              },
+              "status": "Bad Request",
+              "code": 400,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"FailedLines\": [\n    {\n      \"DataProviderUserId\": \"string\",\n      \"TDID\": \"af144704-6cce-0e49-e1f8-341793c41de0\",\n      \"DataName\": \"string\",\n      \"ErrorCode\": \"TenantRestrictionsExternalData\",\n      \"Message\": \"string\",\n      \"ItemNumber\": \"string\"\n    },\n    {\n      \"DataProviderUserId\": \"string\",\n      \"TDID\": \"c0786ecb-2286-4d23-52c0-322de143921a\",\n      \"DataName\": \"string\",\n      \"ErrorCode\": \"ItemDeserializationError\",\n      \"Message\": \"string\",\n      \"ItemNumber\": \"string\"\n    }\n  ]\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            },
+            {
+              "id": "3b35f063-e7be-4fc6-827d-8061e5af1c9d",
+              "name": "Forbidden - Cannot create new targeting data for this data provider",
+              "originalRequest": {
+                "url": {
+                  "protocol": "https",
+                  "path": [
+                    "data",
+                    "thirdparty"
+                  ],
+                  "host": [
+                    "bulk-data",
+                    "adsrvr",
+                    "org"
+                  ],
+                  "query": [],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "disabled": false,
+                    "description": "(Required) Data API token for authentication.",
+                    "key": "TTD-Auth",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "POST",
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"DataProviderId\": \"<string>\",\n  \"Items\": [\n    {\n      \"Data\": [\n        {\n          \"Name\": \"<string>\",\n          \"TimestampUtc\": \"<dateTime>\",\n          \"TtlInMinutes\": \"<integer>\"\n        },\n        {\n          \"Name\": \"<string>\",\n          \"TimestampUtc\": \"<dateTime>\",\n          \"TtlInMinutes\": \"<integer>\"\n        }\n      ],\n      \"DataProviderUserId\": \"<string>\",\n      \"TDID\": \"<string>\",\n      \"DAID\": \"<string>\",\n      \"UID2\": \"<string>\",\n      \"UID2Token\": \"<string>\",\n      \"RampID\": \"<string>\",\n      \"CoreID\": \"<string>\",\n      \"EUID\": \"<string>\",\n      \"EUIDToken\": \"<string>\",\n      \"ID5\": \"<string>\",\n      \"NetID\": \"<string>\",\n      \"FirstID\": \"<string>\",\n      \"UtiqID\": \"<string>\",\n      \"MerkuryID\": \"<string>\",\n      \"IqviaPPID\": \"<string>\",\n      \"CookieMappingPartnerId\": \"<string>\"\n    },\n    {\n      \"Data\": [\n        {\n          \"Name\": \"<string>\",\n          \"TimestampUtc\": \"<dateTime>\",\n          \"TtlInMinutes\": \"<integer>\"\n        },\n        {\n          \"Name\": \"<string>\",\n          \"TimestampUtc\": \"<dateTime>\",\n          \"TtlInMinutes\": \"<integer>\"\n        }\n      ],\n      \"DataProviderUserId\": \"<string>\",\n      \"TDID\": \"<string>\",\n      \"DAID\": \"<string>\",\n      \"UID2\": \"<string>\",\n      \"UID2Token\": \"<string>\",\n      \"RampID\": \"<string>\",\n      \"CoreID\": \"<string>\",\n      \"EUID\": \"<string>\",\n      \"EUIDToken\": \"<string>\",\n      \"ID5\": \"<string>\",\n      \"NetID\": \"<string>\",\n      \"FirstID\": \"<string>\",\n      \"UtiqID\": \"<string>\",\n      \"MerkuryID\": \"<string>\",\n      \"IqviaPPID\": \"<string>\",\n      \"CookieMappingPartnerId\": \"<string>\"\n    }\n  ],\n  \"DataLoadTraceId\": \"<string>\",\n  \"IsUserIdAlreadyHashed\": false\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                }
+              },
+              "status": "Forbidden",
+              "code": 403,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "\"string\"",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            },
+            {
+              "id": "d3830cfe-72f0-4920-8deb-288ae831cf74",
+              "name": "Request Entity Too Large - Request size exceeds the allowed limit",
+              "originalRequest": {
+                "url": {
+                  "protocol": "https",
+                  "path": [
+                    "data",
+                    "thirdparty"
+                  ],
+                  "host": [
+                    "bulk-data",
+                    "adsrvr",
+                    "org"
+                  ],
+                  "query": [],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "disabled": false,
+                    "description": "(Required) Data API token for authentication.",
+                    "key": "TTD-Auth",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "POST",
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"DataProviderId\": \"<string>\",\n  \"Items\": [\n    {\n      \"Data\": [\n        {\n          \"Name\": \"<string>\",\n          \"TimestampUtc\": \"<dateTime>\",\n          \"TtlInMinutes\": \"<integer>\"\n        },\n        {\n          \"Name\": \"<string>\",\n          \"TimestampUtc\": \"<dateTime>\",\n          \"TtlInMinutes\": \"<integer>\"\n        }\n      ],\n      \"DataProviderUserId\": \"<string>\",\n      \"TDID\": \"<string>\",\n      \"DAID\": \"<string>\",\n      \"UID2\": \"<string>\",\n      \"UID2Token\": \"<string>\",\n      \"RampID\": \"<string>\",\n      \"CoreID\": \"<string>\",\n      \"EUID\": \"<string>\",\n      \"EUIDToken\": \"<string>\",\n      \"ID5\": \"<string>\",\n      \"NetID\": \"<string>\",\n      \"FirstID\": \"<string>\",\n      \"UtiqID\": \"<string>\",\n      \"MerkuryID\": \"<string>\",\n      \"IqviaPPID\": \"<string>\",\n      \"CookieMappingPartnerId\": \"<string>\"\n    },\n    {\n      \"Data\": [\n        {\n          \"Name\": \"<string>\",\n          \"TimestampUtc\": \"<dateTime>\",\n          \"TtlInMinutes\": \"<integer>\"\n        },\n        {\n          \"Name\": \"<string>\",\n          \"TimestampUtc\": \"<dateTime>\",\n          \"TtlInMinutes\": \"<integer>\"\n        }\n      ],\n      \"DataProviderUserId\": \"<string>\",\n      \"TDID\": \"<string>\",\n      \"DAID\": \"<string>\",\n      \"UID2\": \"<string>\",\n      \"UID2Token\": \"<string>\",\n      \"RampID\": \"<string>\",\n      \"CoreID\": \"<string>\",\n      \"EUID\": \"<string>\",\n      \"EUIDToken\": \"<string>\",\n      \"ID5\": \"<string>\",\n      \"NetID\": \"<string>\",\n      \"FirstID\": \"<string>\",\n      \"UtiqID\": \"<string>\",\n      \"MerkuryID\": \"<string>\",\n      \"IqviaPPID\": \"<string>\",\n      \"CookieMappingPartnerId\": \"<string>\"\n    }\n  ],\n  \"DataLoadTraceId\": \"<string>\",\n  \"IsUserIdAlreadyHashed\": false\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                }
+              },
+              "status": "Request Entity Too Large",
+              "code": 413,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "\"string\"",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            },
+            {
+              "id": "ae984b8c-e20c-413b-8618-a1d01627eb78",
+              "name": "Too Many Requests - Rate limit exceeded",
+              "originalRequest": {
+                "url": {
+                  "protocol": "https",
+                  "path": [
+                    "data",
+                    "thirdparty"
+                  ],
+                  "host": [
+                    "bulk-data",
+                    "adsrvr",
+                    "org"
+                  ],
+                  "query": [],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "disabled": false,
+                    "description": "(Required) Data API token for authentication.",
+                    "key": "TTD-Auth",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "POST",
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"DataProviderId\": \"<string>\",\n  \"Items\": [\n    {\n      \"Data\": [\n        {\n          \"Name\": \"<string>\",\n          \"TimestampUtc\": \"<dateTime>\",\n          \"TtlInMinutes\": \"<integer>\"\n        },\n        {\n          \"Name\": \"<string>\",\n          \"TimestampUtc\": \"<dateTime>\",\n          \"TtlInMinutes\": \"<integer>\"\n        }\n      ],\n      \"DataProviderUserId\": \"<string>\",\n      \"TDID\": \"<string>\",\n      \"DAID\": \"<string>\",\n      \"UID2\": \"<string>\",\n      \"UID2Token\": \"<string>\",\n      \"RampID\": \"<string>\",\n      \"CoreID\": \"<string>\",\n      \"EUID\": \"<string>\",\n      \"EUIDToken\": \"<string>\",\n      \"ID5\": \"<string>\",\n      \"NetID\": \"<string>\",\n      \"FirstID\": \"<string>\",\n      \"UtiqID\": \"<string>\",\n      \"MerkuryID\": \"<string>\",\n      \"IqviaPPID\": \"<string>\",\n      \"CookieMappingPartnerId\": \"<string>\"\n    },\n    {\n      \"Data\": [\n        {\n          \"Name\": \"<string>\",\n          \"TimestampUtc\": \"<dateTime>\",\n          \"TtlInMinutes\": \"<integer>\"\n        },\n        {\n          \"Name\": \"<string>\",\n          \"TimestampUtc\": \"<dateTime>\",\n          \"TtlInMinutes\": \"<integer>\"\n        }\n      ],\n      \"DataProviderUserId\": \"<string>\",\n      \"TDID\": \"<string>\",\n      \"DAID\": \"<string>\",\n      \"UID2\": \"<string>\",\n      \"UID2Token\": \"<string>\",\n      \"RampID\": \"<string>\",\n      \"CoreID\": \"<string>\",\n      \"EUID\": \"<string>\",\n      \"EUIDToken\": \"<string>\",\n      \"ID5\": \"<string>\",\n      \"NetID\": \"<string>\",\n      \"FirstID\": \"<string>\",\n      \"UtiqID\": \"<string>\",\n      \"MerkuryID\": \"<string>\",\n      \"IqviaPPID\": \"<string>\",\n      \"CookieMappingPartnerId\": \"<string>\"\n    }\n  ],\n  \"DataLoadTraceId\": \"<string>\",\n  \"IsUserIdAlreadyHashed\": false\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                }
+              },
+              "status": "Too Many Requests",
+              "code": 429,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"FailedLines\": [\n    {\n      \"DataProviderUserId\": \"string\",\n      \"TDID\": \"af144704-6cce-0e49-e1f8-341793c41de0\",\n      \"DataName\": \"string\",\n      \"ErrorCode\": \"TenantRestrictionsExternalData\",\n      \"Message\": \"string\",\n      \"ItemNumber\": \"string\"\n    },\n    {\n      \"DataProviderUserId\": \"string\",\n      \"TDID\": \"c0786ecb-2286-4d23-52c0-322de143921a\",\n      \"DataName\": \"string\",\n      \"ErrorCode\": \"ItemDeserializationError\",\n      \"Message\": \"string\",\n      \"ItemNumber\": \"string\"\n    }\n  ]\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            },
+            {
+              "id": "57960446-02e9-4506-91eb-c9616964056b",
+              "name": "Internal Server Error - Unexpected server error",
+              "originalRequest": {
+                "url": {
+                  "protocol": "https",
+                  "path": [
+                    "data",
+                    "thirdparty"
+                  ],
+                  "host": [
+                    "bulk-data",
+                    "adsrvr",
+                    "org"
+                  ],
+                  "query": [],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "disabled": false,
+                    "description": "(Required) Data API token for authentication.",
+                    "key": "TTD-Auth",
+                    "value": "<string>"
+                  }
+                ],
+                "method": "POST",
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"DataProviderId\": \"<string>\",\n  \"Items\": [\n    {\n      \"Data\": [\n        {\n          \"Name\": \"<string>\",\n          \"TimestampUtc\": \"<dateTime>\",\n          \"TtlInMinutes\": \"<integer>\"\n        },\n        {\n          \"Name\": \"<string>\",\n          \"TimestampUtc\": \"<dateTime>\",\n          \"TtlInMinutes\": \"<integer>\"\n        }\n      ],\n      \"DataProviderUserId\": \"<string>\",\n      \"TDID\": \"<string>\",\n      \"DAID\": \"<string>\",\n      \"UID2\": \"<string>\",\n      \"UID2Token\": \"<string>\",\n      \"RampID\": \"<string>\",\n      \"CoreID\": \"<string>\",\n      \"EUID\": \"<string>\",\n      \"EUIDToken\": \"<string>\",\n      \"ID5\": \"<string>\",\n      \"NetID\": \"<string>\",\n      \"FirstID\": \"<string>\",\n      \"UtiqID\": \"<string>\",\n      \"MerkuryID\": \"<string>\",\n      \"IqviaPPID\": \"<string>\",\n      \"CookieMappingPartnerId\": \"<string>\"\n    },\n    {\n      \"Data\": [\n        {\n          \"Name\": \"<string>\",\n          \"TimestampUtc\": \"<dateTime>\",\n          \"TtlInMinutes\": \"<integer>\"\n        },\n        {\n          \"Name\": \"<string>\",\n          \"TimestampUtc\": \"<dateTime>\",\n          \"TtlInMinutes\": \"<integer>\"\n        }\n      ],\n      \"DataProviderUserId\": \"<string>\",\n      \"TDID\": \"<string>\",\n      \"DAID\": \"<string>\",\n      \"UID2\": \"<string>\",\n      \"UID2Token\": \"<string>\",\n      \"RampID\": \"<string>\",\n      \"CoreID\": \"<string>\",\n      \"EUID\": \"<string>\",\n      \"EUIDToken\": \"<string>\",\n      \"ID5\": \"<string>\",\n      \"NetID\": \"<string>\",\n      \"FirstID\": \"<string>\",\n      \"UtiqID\": \"<string>\",\n      \"MerkuryID\": \"<string>\",\n      \"IqviaPPID\": \"<string>\",\n      \"CookieMappingPartnerId\": \"<string>\"\n    }\n  ],\n  \"DataLoadTraceId\": \"<string>\",\n  \"IsUserIdAlreadyHashed\": false\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                }
+              },
+              "status": "Internal Server Error",
+              "code": 500,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            },
+            {
+              "id": "2b13680f-7ef9-4482-9917-053f09bc3ef2",
+              "name": "Service Unavailable - Handler disabled or request dropped",
+              "originalRequest": {
+                "url": {
+                  "protocol": "https",
+                  "path": [
+                    "data",
+                    "thirdparty"
+                  ],
+                  "host": [
+                    "bulk-data",
+                    "adsrvr",
+                    "org"
+                  ],
+                  "query": [],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "disabled": false,
+                    "description": "(Required) Data API token for authentication.",
+                    "key": "TTD-Auth",
+                    "value": "<string>"
+                  }
+                ],
+                "method": "POST",
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"DataProviderId\": \"<string>\",\n  \"Items\": [\n    {\n      \"Data\": [\n        {\n          \"Name\": \"<string>\",\n          \"TimestampUtc\": \"<dateTime>\",\n          \"TtlInMinutes\": \"<integer>\"\n        },\n        {\n          \"Name\": \"<string>\",\n          \"TimestampUtc\": \"<dateTime>\",\n          \"TtlInMinutes\": \"<integer>\"\n        }\n      ],\n      \"DataProviderUserId\": \"<string>\",\n      \"TDID\": \"<string>\",\n      \"DAID\": \"<string>\",\n      \"UID2\": \"<string>\",\n      \"UID2Token\": \"<string>\",\n      \"RampID\": \"<string>\",\n      \"CoreID\": \"<string>\",\n      \"EUID\": \"<string>\",\n      \"EUIDToken\": \"<string>\",\n      \"ID5\": \"<string>\",\n      \"NetID\": \"<string>\",\n      \"FirstID\": \"<string>\",\n      \"UtiqID\": \"<string>\",\n      \"MerkuryID\": \"<string>\",\n      \"IqviaPPID\": \"<string>\",\n      \"CookieMappingPartnerId\": \"<string>\"\n    },\n    {\n      \"Data\": [\n        {\n          \"Name\": \"<string>\",\n          \"TimestampUtc\": \"<dateTime>\",\n          \"TtlInMinutes\": \"<integer>\"\n        },\n        {\n          \"Name\": \"<string>\",\n          \"TimestampUtc\": \"<dateTime>\",\n          \"TtlInMinutes\": \"<integer>\"\n        }\n      ],\n      \"DataProviderUserId\": \"<string>\",\n      \"TDID\": \"<string>\",\n      \"DAID\": \"<string>\",\n      \"UID2\": \"<string>\",\n      \"UID2Token\": \"<string>\",\n      \"RampID\": \"<string>\",\n      \"CoreID\": \"<string>\",\n      \"EUID\": \"<string>\",\n      \"EUIDToken\": \"<string>\",\n      \"ID5\": \"<string>\",\n      \"NetID\": \"<string>\",\n      \"FirstID\": \"<string>\",\n      \"UtiqID\": \"<string>\",\n      \"MerkuryID\": \"<string>\",\n      \"IqviaPPID\": \"<string>\",\n      \"CookieMappingPartnerId\": \"<string>\"\n    }\n  ],\n  \"DataLoadTraceId\": \"<string>\",\n  \"IsUserIdAlreadyHashed\": false\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                }
+              },
+              "status": "Service Unavailable",
+              "code": 503,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        }
+      ],
+      "event": []
+    }
+  ],
+  "event": [],
+  "variable": [
+    {
+      "type": "string",
+      "value": "/",
+      "key": "baseUrl"
+    }
+  ],
+  "info": {
+    "_postman_id": "9c34a3c1-c173-4684-8380-eaae9de1f55c",
+    "name": "TTD Data Advertiser ThirdParty API",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "description": {
+      "content": "",
+      "type": "text/plain"
+    }
+  }
+}

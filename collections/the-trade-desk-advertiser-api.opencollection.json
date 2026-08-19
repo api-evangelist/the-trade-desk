@@ -1,0 +1,39 @@
+{
+  "opencollection": "1.0.0",
+  "info": {
+    "name": "TTD Data Advertiser API",
+    "version": "v0.1"
+  },
+  "items": [
+    {
+      "info": {
+        "name": "Advertiser",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "Upload first-party data for the specified ID for use in audience targeting.",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "{{baseUrl}}/data/advertiser",
+            "headers": [
+              {
+                "name": "TTD-Auth",
+                "value": ""
+              }
+            ],
+            "body": {
+              "type": "json",
+              "data": "{}"
+            }
+          },
+          "docs": "Upload first-party data for the specified ID for use in audience targeting."
+        }
+      ]
+    }
+  ],
+  "bundled": true
+}

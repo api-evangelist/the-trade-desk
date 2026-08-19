@@ -1,0 +1,450 @@
+{
+  "item": [
+    {
+      "id": "4959165c-fa44-42a7-a6dd-53ea082d85a1",
+      "name": "Advertiser",
+      "description": {
+        "content": "",
+        "type": "text/plain"
+      },
+      "item": [
+        {
+          "id": "8c05b893-6687-4a7a-ba5e-06e19bd7014c",
+          "name": "Upload first-party data for the specified ID for use in audience targeting.",
+          "request": {
+            "name": "Upload first-party data for the specified ID for use in audience targeting.",
+            "description": {},
+            "url": {
+              "protocol": "https",
+              "path": [
+                "data",
+                "advertiser"
+              ],
+              "host": [
+                "usw-data",
+                "adsrvr",
+                "org"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "header": [
+              {
+                "disabled": false,
+                "description": "(Required) Data API token for authentication.",
+                "key": "TTD-Auth",
+                "value": "<string>"
+              },
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              },
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "POST",
+            "auth": null,
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"AdvertiserId\": \"<string>\",\n  \"DataProviderId\": \"<string>\",\n  \"Items\": [\n    {\n      \"Data\": [\n        {\n          \"Name\": \"<string>\",\n          \"TimestampUtc\": \"<dateTime>\",\n          \"TtlInMinutes\": \"<integer>\",\n          \"BaseBidCPM\": \"<double>\",\n          \"BaseBidCPMMetadata\": \"<string>\",\n          \"BidFactor\": \"<double>\"\n        },\n        {\n          \"Name\": \"<string>\",\n          \"TimestampUtc\": \"<dateTime>\",\n          \"TtlInMinutes\": \"<integer>\",\n          \"BaseBidCPM\": \"<double>\",\n          \"BaseBidCPMMetadata\": \"<string>\",\n          \"BidFactor\": \"<double>\"\n        }\n      ],\n      \"TDID\": \"<string>\",\n      \"DAID\": \"<string>\",\n      \"UID2\": \"<string>\",\n      \"UID2Token\": \"<string>\",\n      \"RampID\": \"<string>\",\n      \"CoreID\": \"<string>\",\n      \"EUID\": \"<string>\",\n      \"EUIDToken\": \"<string>\",\n      \"ID5\": \"<string>\",\n      \"NetID\": \"<string>\",\n      \"FirstID\": \"<string>\",\n      \"UtiqID\": \"<string>\",\n      \"MerkuryID\": \"<string>\",\n      \"IqviaPPID\": \"<string>\",\n      \"CookieMappingPartnerId\": \"<string>\"\n    },\n    {\n      \"Data\": [\n        {\n          \"Name\": \"<string>\",\n          \"TimestampUtc\": \"<dateTime>\",\n          \"TtlInMinutes\": \"<integer>\",\n          \"BaseBidCPM\": \"<double>\",\n          \"BaseBidCPMMetadata\": \"<string>\",\n          \"BidFactor\": \"<double>\"\n        },\n        {\n          \"Name\": \"<string>\",\n          \"TimestampUtc\": \"<dateTime>\",\n          \"TtlInMinutes\": \"<integer>\",\n          \"BaseBidCPM\": \"<double>\",\n          \"BaseBidCPMMetadata\": \"<string>\",\n          \"BidFactor\": \"<double>\"\n        }\n      ],\n      \"TDID\": \"<string>\",\n      \"DAID\": \"<string>\",\n      \"UID2\": \"<string>\",\n      \"UID2Token\": \"<string>\",\n      \"RampID\": \"<string>\",\n      \"CoreID\": \"<string>\",\n      \"EUID\": \"<string>\",\n      \"EUIDToken\": \"<string>\",\n      \"ID5\": \"<string>\",\n      \"NetID\": \"<string>\",\n      \"FirstID\": \"<string>\",\n      \"UtiqID\": \"<string>\",\n      \"MerkuryID\": \"<string>\",\n      \"IqviaPPID\": \"<string>\",\n      \"CookieMappingPartnerId\": \"<string>\"\n    }\n  ],\n  \"DataLoadTraceId\": \"<string>\"\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            }
+          },
+          "response": [
+            {
+              "id": "e3685b7f-6ddc-488a-8b1c-3302d1799278",
+              "name": "Success",
+              "originalRequest": {
+                "url": {
+                  "protocol": "https",
+                  "path": [
+                    "data",
+                    "advertiser"
+                  ],
+                  "host": [
+                    "usw-data",
+                    "adsrvr",
+                    "org"
+                  ],
+                  "query": [],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "disabled": false,
+                    "description": "(Required) Data API token for authentication.",
+                    "key": "TTD-Auth",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "POST",
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"AdvertiserId\": \"<string>\",\n  \"DataProviderId\": \"<string>\",\n  \"Items\": [\n    {\n      \"Data\": [\n        {\n          \"Name\": \"<string>\",\n          \"TimestampUtc\": \"<dateTime>\",\n          \"TtlInMinutes\": \"<integer>\",\n          \"BaseBidCPM\": \"<double>\",\n          \"BaseBidCPMMetadata\": \"<string>\",\n          \"BidFactor\": \"<double>\"\n        },\n        {\n          \"Name\": \"<string>\",\n          \"TimestampUtc\": \"<dateTime>\",\n          \"TtlInMinutes\": \"<integer>\",\n          \"BaseBidCPM\": \"<double>\",\n          \"BaseBidCPMMetadata\": \"<string>\",\n          \"BidFactor\": \"<double>\"\n        }\n      ],\n      \"TDID\": \"<string>\",\n      \"DAID\": \"<string>\",\n      \"UID2\": \"<string>\",\n      \"UID2Token\": \"<string>\",\n      \"RampID\": \"<string>\",\n      \"CoreID\": \"<string>\",\n      \"EUID\": \"<string>\",\n      \"EUIDToken\": \"<string>\",\n      \"ID5\": \"<string>\",\n      \"NetID\": \"<string>\",\n      \"FirstID\": \"<string>\",\n      \"UtiqID\": \"<string>\",\n      \"MerkuryID\": \"<string>\",\n      \"IqviaPPID\": \"<string>\",\n      \"CookieMappingPartnerId\": \"<string>\"\n    },\n    {\n      \"Data\": [\n        {\n          \"Name\": \"<string>\",\n          \"TimestampUtc\": \"<dateTime>\",\n          \"TtlInMinutes\": \"<integer>\",\n          \"BaseBidCPM\": \"<double>\",\n          \"BaseBidCPMMetadata\": \"<string>\",\n          \"BidFactor\": \"<double>\"\n        },\n        {\n          \"Name\": \"<string>\",\n          \"TimestampUtc\": \"<dateTime>\",\n          \"TtlInMinutes\": \"<integer>\",\n          \"BaseBidCPM\": \"<double>\",\n          \"BaseBidCPMMetadata\": \"<string>\",\n          \"BidFactor\": \"<double>\"\n        }\n      ],\n      \"TDID\": \"<string>\",\n      \"DAID\": \"<string>\",\n      \"UID2\": \"<string>\",\n      \"UID2Token\": \"<string>\",\n      \"RampID\": \"<string>\",\n      \"CoreID\": \"<string>\",\n      \"EUID\": \"<string>\",\n      \"EUIDToken\": \"<string>\",\n      \"ID5\": \"<string>\",\n      \"NetID\": \"<string>\",\n      \"FirstID\": \"<string>\",\n      \"UtiqID\": \"<string>\",\n      \"MerkuryID\": \"<string>\",\n      \"IqviaPPID\": \"<string>\",\n      \"CookieMappingPartnerId\": \"<string>\"\n    }\n  ],\n  \"DataLoadTraceId\": \"<string>\"\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"FailedLines\": [\n    {\n      \"TDID\": \"cd8282f4-7831-40c3-4992-762aace75870\",\n      \"DataName\": \"string\",\n      \"ErrorCode\": \"TargetingDataCountLimitExceeded\",\n      \"Message\": \"string\",\n      \"ItemNumber\": \"string\"\n    },\n    {\n      \"TDID\": \"20712107-69d4-9679-8df4-4f524856c10c\",\n      \"DataName\": \"string\",\n      \"ErrorCode\": \"ItemDeserializationError\",\n      \"Message\": \"string\",\n      \"ItemNumber\": \"string\"\n    }\n  ]\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            },
+            {
+              "id": "0fbba0d2-03f7-48be-be82-1ff407d5e6a4",
+              "name": "Bad Request - Invalid JSON, missing items, advertiser not configured, or policy restrictions",
+              "originalRequest": {
+                "url": {
+                  "protocol": "https",
+                  "path": [
+                    "data",
+                    "advertiser"
+                  ],
+                  "host": [
+                    "usw-data",
+                    "adsrvr",
+                    "org"
+                  ],
+                  "query": [],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "disabled": false,
+                    "description": "(Required) Data API token for authentication.",
+                    "key": "TTD-Auth",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "POST",
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"AdvertiserId\": \"<string>\",\n  \"DataProviderId\": \"<string>\",\n  \"Items\": [\n    {\n      \"Data\": [\n        {\n          \"Name\": \"<string>\",\n          \"TimestampUtc\": \"<dateTime>\",\n          \"TtlInMinutes\": \"<integer>\",\n          \"BaseBidCPM\": \"<double>\",\n          \"BaseBidCPMMetadata\": \"<string>\",\n          \"BidFactor\": \"<double>\"\n        },\n        {\n          \"Name\": \"<string>\",\n          \"TimestampUtc\": \"<dateTime>\",\n          \"TtlInMinutes\": \"<integer>\",\n          \"BaseBidCPM\": \"<double>\",\n          \"BaseBidCPMMetadata\": \"<string>\",\n          \"BidFactor\": \"<double>\"\n        }\n      ],\n      \"TDID\": \"<string>\",\n      \"DAID\": \"<string>\",\n      \"UID2\": \"<string>\",\n      \"UID2Token\": \"<string>\",\n      \"RampID\": \"<string>\",\n      \"CoreID\": \"<string>\",\n      \"EUID\": \"<string>\",\n      \"EUIDToken\": \"<string>\",\n      \"ID5\": \"<string>\",\n      \"NetID\": \"<string>\",\n      \"FirstID\": \"<string>\",\n      \"UtiqID\": \"<string>\",\n      \"MerkuryID\": \"<string>\",\n      \"IqviaPPID\": \"<string>\",\n      \"CookieMappingPartnerId\": \"<string>\"\n    },\n    {\n      \"Data\": [\n        {\n          \"Name\": \"<string>\",\n          \"TimestampUtc\": \"<dateTime>\",\n          \"TtlInMinutes\": \"<integer>\",\n          \"BaseBidCPM\": \"<double>\",\n          \"BaseBidCPMMetadata\": \"<string>\",\n          \"BidFactor\": \"<double>\"\n        },\n        {\n          \"Name\": \"<string>\",\n          \"TimestampUtc\": \"<dateTime>\",\n          \"TtlInMinutes\": \"<integer>\",\n          \"BaseBidCPM\": \"<double>\",\n          \"BaseBidCPMMetadata\": \"<string>\",\n          \"BidFactor\": \"<double>\"\n        }\n      ],\n      \"TDID\": \"<string>\",\n      \"DAID\": \"<string>\",\n      \"UID2\": \"<string>\",\n      \"UID2Token\": \"<string>\",\n      \"RampID\": \"<string>\",\n      \"CoreID\": \"<string>\",\n      \"EUID\": \"<string>\",\n      \"EUIDToken\": \"<string>\",\n      \"ID5\": \"<string>\",\n      \"NetID\": \"<string>\",\n      \"FirstID\": \"<string>\",\n      \"UtiqID\": \"<string>\",\n      \"MerkuryID\": \"<string>\",\n      \"IqviaPPID\": \"<string>\",\n      \"CookieMappingPartnerId\": \"<string>\"\n    }\n  ],\n  \"DataLoadTraceId\": \"<string>\"\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                }
+              },
+              "status": "Bad Request",
+              "code": 400,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"FailedLines\": [\n    {\n      \"TDID\": \"240f092d-3bf2-3d84-486a-5eaf6745b016\",\n      \"DataName\": \"string\",\n      \"ErrorCode\": \"InvalidBaseBidCPM\",\n      \"Message\": \"string\",\n      \"ItemNumber\": \"string\"\n    },\n    {\n      \"TDID\": \"7b3236d9-453d-cc12-faca-78b51788f398\",\n      \"DataName\": \"string\",\n      \"ErrorCode\": \"BaseBidCPMMetadataTooLong\",\n      \"Message\": \"string\",\n      \"ItemNumber\": \"string\"\n    }\n  ]\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            },
+            {
+              "id": "8112787f-0f62-49c1-85e2-a28bd1dcfb67",
+              "name": "Forbidden - Cannot create new targeting data for this advertiser",
+              "originalRequest": {
+                "url": {
+                  "protocol": "https",
+                  "path": [
+                    "data",
+                    "advertiser"
+                  ],
+                  "host": [
+                    "usw-data",
+                    "adsrvr",
+                    "org"
+                  ],
+                  "query": [],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "disabled": false,
+                    "description": "(Required) Data API token for authentication.",
+                    "key": "TTD-Auth",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "POST",
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"AdvertiserId\": \"<string>\",\n  \"DataProviderId\": \"<string>\",\n  \"Items\": [\n    {\n      \"Data\": [\n        {\n          \"Name\": \"<string>\",\n          \"TimestampUtc\": \"<dateTime>\",\n          \"TtlInMinutes\": \"<integer>\",\n          \"BaseBidCPM\": \"<double>\",\n          \"BaseBidCPMMetadata\": \"<string>\",\n          \"BidFactor\": \"<double>\"\n        },\n        {\n          \"Name\": \"<string>\",\n          \"TimestampUtc\": \"<dateTime>\",\n          \"TtlInMinutes\": \"<integer>\",\n          \"BaseBidCPM\": \"<double>\",\n          \"BaseBidCPMMetadata\": \"<string>\",\n          \"BidFactor\": \"<double>\"\n        }\n      ],\n      \"TDID\": \"<string>\",\n      \"DAID\": \"<string>\",\n      \"UID2\": \"<string>\",\n      \"UID2Token\": \"<string>\",\n      \"RampID\": \"<string>\",\n      \"CoreID\": \"<string>\",\n      \"EUID\": \"<string>\",\n      \"EUIDToken\": \"<string>\",\n      \"ID5\": \"<string>\",\n      \"NetID\": \"<string>\",\n      \"FirstID\": \"<string>\",\n      \"UtiqID\": \"<string>\",\n      \"MerkuryID\": \"<string>\",\n      \"IqviaPPID\": \"<string>\",\n      \"CookieMappingPartnerId\": \"<string>\"\n    },\n    {\n      \"Data\": [\n        {\n          \"Name\": \"<string>\",\n          \"TimestampUtc\": \"<dateTime>\",\n          \"TtlInMinutes\": \"<integer>\",\n          \"BaseBidCPM\": \"<double>\",\n          \"BaseBidCPMMetadata\": \"<string>\",\n          \"BidFactor\": \"<double>\"\n        },\n        {\n          \"Name\": \"<string>\",\n          \"TimestampUtc\": \"<dateTime>\",\n          \"TtlInMinutes\": \"<integer>\",\n          \"BaseBidCPM\": \"<double>\",\n          \"BaseBidCPMMetadata\": \"<string>\",\n          \"BidFactor\": \"<double>\"\n        }\n      ],\n      \"TDID\": \"<string>\",\n      \"DAID\": \"<string>\",\n      \"UID2\": \"<string>\",\n      \"UID2Token\": \"<string>\",\n      \"RampID\": \"<string>\",\n      \"CoreID\": \"<string>\",\n      \"EUID\": \"<string>\",\n      \"EUIDToken\": \"<string>\",\n      \"ID5\": \"<string>\",\n      \"NetID\": \"<string>\",\n      \"FirstID\": \"<string>\",\n      \"UtiqID\": \"<string>\",\n      \"MerkuryID\": \"<string>\",\n      \"IqviaPPID\": \"<string>\",\n      \"CookieMappingPartnerId\": \"<string>\"\n    }\n  ],\n  \"DataLoadTraceId\": \"<string>\"\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                }
+              },
+              "status": "Forbidden",
+              "code": 403,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "\"string\"",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            },
+            {
+              "id": "553d1f72-f9c3-4fe5-8d88-ae3ace5e6125",
+              "name": "Request Entity Too Large - Request size exceeds the allowed limit",
+              "originalRequest": {
+                "url": {
+                  "protocol": "https",
+                  "path": [
+                    "data",
+                    "advertiser"
+                  ],
+                  "host": [
+                    "usw-data",
+                    "adsrvr",
+                    "org"
+                  ],
+                  "query": [],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "disabled": false,
+                    "description": "(Required) Data API token for authentication.",
+                    "key": "TTD-Auth",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "POST",
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"AdvertiserId\": \"<string>\",\n  \"DataProviderId\": \"<string>\",\n  \"Items\": [\n    {\n      \"Data\": [\n        {\n          \"Name\": \"<string>\",\n          \"TimestampUtc\": \"<dateTime>\",\n          \"TtlInMinutes\": \"<integer>\",\n          \"BaseBidCPM\": \"<double>\",\n          \"BaseBidCPMMetadata\": \"<string>\",\n          \"BidFactor\": \"<double>\"\n        },\n        {\n          \"Name\": \"<string>\",\n          \"TimestampUtc\": \"<dateTime>\",\n          \"TtlInMinutes\": \"<integer>\",\n          \"BaseBidCPM\": \"<double>\",\n          \"BaseBidCPMMetadata\": \"<string>\",\n          \"BidFactor\": \"<double>\"\n        }\n      ],\n      \"TDID\": \"<string>\",\n      \"DAID\": \"<string>\",\n      \"UID2\": \"<string>\",\n      \"UID2Token\": \"<string>\",\n      \"RampID\": \"<string>\",\n      \"CoreID\": \"<string>\",\n      \"EUID\": \"<string>\",\n      \"EUIDToken\": \"<string>\",\n      \"ID5\": \"<string>\",\n      \"NetID\": \"<string>\",\n      \"FirstID\": \"<string>\",\n      \"UtiqID\": \"<string>\",\n      \"MerkuryID\": \"<string>\",\n      \"IqviaPPID\": \"<string>\",\n      \"CookieMappingPartnerId\": \"<string>\"\n    },\n    {\n      \"Data\": [\n        {\n          \"Name\": \"<string>\",\n          \"TimestampUtc\": \"<dateTime>\",\n          \"TtlInMinutes\": \"<integer>\",\n          \"BaseBidCPM\": \"<double>\",\n          \"BaseBidCPMMetadata\": \"<string>\",\n          \"BidFactor\": \"<double>\"\n        },\n        {\n          \"Name\": \"<string>\",\n          \"TimestampUtc\": \"<dateTime>\",\n          \"TtlInMinutes\": \"<integer>\",\n          \"BaseBidCPM\": \"<double>\",\n          \"BaseBidCPMMetadata\": \"<string>\",\n          \"BidFactor\": \"<double>\"\n        }\n      ],\n      \"TDID\": \"<string>\",\n      \"DAID\": \"<string>\",\n      \"UID2\": \"<string>\",\n      \"UID2Token\": \"<string>\",\n      \"RampID\": \"<string>\",\n      \"CoreID\": \"<string>\",\n      \"EUID\": \"<string>\",\n      \"EUIDToken\": \"<string>\",\n      \"ID5\": \"<string>\",\n      \"NetID\": \"<string>\",\n      \"FirstID\": \"<string>\",\n      \"UtiqID\": \"<string>\",\n      \"MerkuryID\": \"<string>\",\n      \"IqviaPPID\": \"<string>\",\n      \"CookieMappingPartnerId\": \"<string>\"\n    }\n  ],\n  \"DataLoadTraceId\": \"<string>\"\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                }
+              },
+              "status": "Request Entity Too Large",
+              "code": 413,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "\"string\"",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            },
+            {
+              "id": "a616070f-5aea-444f-9c7a-105d09e1b48c",
+              "name": "Too Many Requests - Rate limit exceeded",
+              "originalRequest": {
+                "url": {
+                  "protocol": "https",
+                  "path": [
+                    "data",
+                    "advertiser"
+                  ],
+                  "host": [
+                    "usw-data",
+                    "adsrvr",
+                    "org"
+                  ],
+                  "query": [],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "disabled": false,
+                    "description": "(Required) Data API token for authentication.",
+                    "key": "TTD-Auth",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "POST",
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"AdvertiserId\": \"<string>\",\n  \"DataProviderId\": \"<string>\",\n  \"Items\": [\n    {\n      \"Data\": [\n        {\n          \"Name\": \"<string>\",\n          \"TimestampUtc\": \"<dateTime>\",\n          \"TtlInMinutes\": \"<integer>\",\n          \"BaseBidCPM\": \"<double>\",\n          \"BaseBidCPMMetadata\": \"<string>\",\n          \"BidFactor\": \"<double>\"\n        },\n        {\n          \"Name\": \"<string>\",\n          \"TimestampUtc\": \"<dateTime>\",\n          \"TtlInMinutes\": \"<integer>\",\n          \"BaseBidCPM\": \"<double>\",\n          \"BaseBidCPMMetadata\": \"<string>\",\n          \"BidFactor\": \"<double>\"\n        }\n      ],\n      \"TDID\": \"<string>\",\n      \"DAID\": \"<string>\",\n      \"UID2\": \"<string>\",\n      \"UID2Token\": \"<string>\",\n      \"RampID\": \"<string>\",\n      \"CoreID\": \"<string>\",\n      \"EUID\": \"<string>\",\n      \"EUIDToken\": \"<string>\",\n      \"ID5\": \"<string>\",\n      \"NetID\": \"<string>\",\n      \"FirstID\": \"<string>\",\n      \"UtiqID\": \"<string>\",\n      \"MerkuryID\": \"<string>\",\n      \"IqviaPPID\": \"<string>\",\n      \"CookieMappingPartnerId\": \"<string>\"\n    },\n    {\n      \"Data\": [\n        {\n          \"Name\": \"<string>\",\n          \"TimestampUtc\": \"<dateTime>\",\n          \"TtlInMinutes\": \"<integer>\",\n          \"BaseBidCPM\": \"<double>\",\n          \"BaseBidCPMMetadata\": \"<string>\",\n          \"BidFactor\": \"<double>\"\n        },\n        {\n          \"Name\": \"<string>\",\n          \"TimestampUtc\": \"<dateTime>\",\n          \"TtlInMinutes\": \"<integer>\",\n          \"BaseBidCPM\": \"<double>\",\n          \"BaseBidCPMMetadata\": \"<string>\",\n          \"BidFactor\": \"<double>\"\n        }\n      ],\n      \"TDID\": \"<string>\",\n      \"DAID\": \"<string>\",\n      \"UID2\": \"<string>\",\n      \"UID2Token\": \"<string>\",\n      \"RampID\": \"<string>\",\n      \"CoreID\": \"<string>\",\n      \"EUID\": \"<string>\",\n      \"EUIDToken\": \"<string>\",\n      \"ID5\": \"<string>\",\n      \"NetID\": \"<string>\",\n      \"FirstID\": \"<string>\",\n      \"UtiqID\": \"<string>\",\n      \"MerkuryID\": \"<string>\",\n      \"IqviaPPID\": \"<string>\",\n      \"CookieMappingPartnerId\": \"<string>\"\n    }\n  ],\n  \"DataLoadTraceId\": \"<string>\"\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                }
+              },
+              "status": "Too Many Requests",
+              "code": 429,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"FailedLines\": [\n    {\n      \"TDID\": \"240f092d-3bf2-3d84-486a-5eaf6745b016\",\n      \"DataName\": \"string\",\n      \"ErrorCode\": \"InvalidBaseBidCPM\",\n      \"Message\": \"string\",\n      \"ItemNumber\": \"string\"\n    },\n    {\n      \"TDID\": \"7b3236d9-453d-cc12-faca-78b51788f398\",\n      \"DataName\": \"string\",\n      \"ErrorCode\": \"BaseBidCPMMetadataTooLong\",\n      \"Message\": \"string\",\n      \"ItemNumber\": \"string\"\n    }\n  ]\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            },
+            {
+              "id": "cef5eccc-6e05-4ba5-b6f0-7d2c70b2273b",
+              "name": "Internal Server Error - Unexpected server error",
+              "originalRequest": {
+                "url": {
+                  "protocol": "https",
+                  "path": [
+                    "data",
+                    "advertiser"
+                  ],
+                  "host": [
+                    "usw-data",
+                    "adsrvr",
+                    "org"
+                  ],
+                  "query": [],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "disabled": false,
+                    "description": "(Required) Data API token for authentication.",
+                    "key": "TTD-Auth",
+                    "value": "<string>"
+                  }
+                ],
+                "method": "POST",
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"AdvertiserId\": \"<string>\",\n  \"DataProviderId\": \"<string>\",\n  \"Items\": [\n    {\n      \"Data\": [\n        {\n          \"Name\": \"<string>\",\n          \"TimestampUtc\": \"<dateTime>\",\n          \"TtlInMinutes\": \"<integer>\",\n          \"BaseBidCPM\": \"<double>\",\n          \"BaseBidCPMMetadata\": \"<string>\",\n          \"BidFactor\": \"<double>\"\n        },\n        {\n          \"Name\": \"<string>\",\n          \"TimestampUtc\": \"<dateTime>\",\n          \"TtlInMinutes\": \"<integer>\",\n          \"BaseBidCPM\": \"<double>\",\n          \"BaseBidCPMMetadata\": \"<string>\",\n          \"BidFactor\": \"<double>\"\n        }\n      ],\n      \"TDID\": \"<string>\",\n      \"DAID\": \"<string>\",\n      \"UID2\": \"<string>\",\n      \"UID2Token\": \"<string>\",\n      \"RampID\": \"<string>\",\n      \"CoreID\": \"<string>\",\n      \"EUID\": \"<string>\",\n      \"EUIDToken\": \"<string>\",\n      \"ID5\": \"<string>\",\n      \"NetID\": \"<string>\",\n      \"FirstID\": \"<string>\",\n      \"UtiqID\": \"<string>\",\n      \"MerkuryID\": \"<string>\",\n      \"IqviaPPID\": \"<string>\",\n      \"CookieMappingPartnerId\": \"<string>\"\n    },\n    {\n      \"Data\": [\n        {\n          \"Name\": \"<string>\",\n          \"TimestampUtc\": \"<dateTime>\",\n          \"TtlInMinutes\": \"<integer>\",\n          \"BaseBidCPM\": \"<double>\",\n          \"BaseBidCPMMetadata\": \"<string>\",\n          \"BidFactor\": \"<double>\"\n        },\n        {\n          \"Name\": \"<string>\",\n          \"TimestampUtc\": \"<dateTime>\",\n          \"TtlInMinutes\": \"<integer>\",\n          \"BaseBidCPM\": \"<double>\",\n          \"BaseBidCPMMetadata\": \"<string>\",\n          \"BidFactor\": \"<double>\"\n        }\n      ],\n      \"TDID\": \"<string>\",\n      \"DAID\": \"<string>\",\n      \"UID2\": \"<string>\",\n      \"UID2Token\": \"<string>\",\n      \"RampID\": \"<string>\",\n      \"CoreID\": \"<string>\",\n      \"EUID\": \"<string>\",\n      \"EUIDToken\": \"<string>\",\n      \"ID5\": \"<string>\",\n      \"NetID\": \"<string>\",\n      \"FirstID\": \"<string>\",\n      \"UtiqID\": \"<string>\",\n      \"MerkuryID\": \"<string>\",\n      \"IqviaPPID\": \"<string>\",\n      \"CookieMappingPartnerId\": \"<string>\"\n    }\n  ],\n  \"DataLoadTraceId\": \"<string>\"\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                }
+              },
+              "status": "Internal Server Error",
+              "code": 500,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            },
+            {
+              "id": "9dabb3ca-a086-42bc-9aba-113af3968099",
+              "name": "Service Unavailable - Handler disabled or request dropped",
+              "originalRequest": {
+                "url": {
+                  "protocol": "https",
+                  "path": [
+                    "data",
+                    "advertiser"
+                  ],
+                  "host": [
+                    "usw-data",
+                    "adsrvr",
+                    "org"
+                  ],
+                  "query": [],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "disabled": false,
+                    "description": "(Required) Data API token for authentication.",
+                    "key": "TTD-Auth",
+                    "value": "<string>"
+                  }
+                ],
+                "method": "POST",
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"AdvertiserId\": \"<string>\",\n  \"DataProviderId\": \"<string>\",\n  \"Items\": [\n    {\n      \"Data\": [\n        {\n          \"Name\": \"<string>\",\n          \"TimestampUtc\": \"<dateTime>\",\n          \"TtlInMinutes\": \"<integer>\",\n          \"BaseBidCPM\": \"<double>\",\n          \"BaseBidCPMMetadata\": \"<string>\",\n          \"BidFactor\": \"<double>\"\n        },\n        {\n          \"Name\": \"<string>\",\n          \"TimestampUtc\": \"<dateTime>\",\n          \"TtlInMinutes\": \"<integer>\",\n          \"BaseBidCPM\": \"<double>\",\n          \"BaseBidCPMMetadata\": \"<string>\",\n          \"BidFactor\": \"<double>\"\n        }\n      ],\n      \"TDID\": \"<string>\",\n      \"DAID\": \"<string>\",\n      \"UID2\": \"<string>\",\n      \"UID2Token\": \"<string>\",\n      \"RampID\": \"<string>\",\n      \"CoreID\": \"<string>\",\n      \"EUID\": \"<string>\",\n      \"EUIDToken\": \"<string>\",\n      \"ID5\": \"<string>\",\n      \"NetID\": \"<string>\",\n      \"FirstID\": \"<string>\",\n      \"UtiqID\": \"<string>\",\n      \"MerkuryID\": \"<string>\",\n      \"IqviaPPID\": \"<string>\",\n      \"CookieMappingPartnerId\": \"<string>\"\n    },\n    {\n      \"Data\": [\n        {\n          \"Name\": \"<string>\",\n          \"TimestampUtc\": \"<dateTime>\",\n          \"TtlInMinutes\": \"<integer>\",\n          \"BaseBidCPM\": \"<double>\",\n          \"BaseBidCPMMetadata\": \"<string>\",\n          \"BidFactor\": \"<double>\"\n        },\n        {\n          \"Name\": \"<string>\",\n          \"TimestampUtc\": \"<dateTime>\",\n          \"TtlInMinutes\": \"<integer>\",\n          \"BaseBidCPM\": \"<double>\",\n          \"BaseBidCPMMetadata\": \"<string>\",\n          \"BidFactor\": \"<double>\"\n        }\n      ],\n      \"TDID\": \"<string>\",\n      \"DAID\": \"<string>\",\n      \"UID2\": \"<string>\",\n      \"UID2Token\": \"<string>\",\n      \"RampID\": \"<string>\",\n      \"CoreID\": \"<string>\",\n      \"EUID\": \"<string>\",\n      \"EUIDToken\": \"<string>\",\n      \"ID5\": \"<string>\",\n      \"NetID\": \"<string>\",\n      \"FirstID\": \"<string>\",\n      \"UtiqID\": \"<string>\",\n      \"MerkuryID\": \"<string>\",\n      \"IqviaPPID\": \"<string>\",\n      \"CookieMappingPartnerId\": \"<string>\"\n    }\n  ],\n  \"DataLoadTraceId\": \"<string>\"\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                }
+              },
+              "status": "Service Unavailable",
+              "code": 503,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        }
+      ],
+      "event": []
+    }
+  ],
+  "event": [],
+  "variable": [
+    {
+      "type": "string",
+      "value": "/",
+      "key": "baseUrl"
+    }
+  ],
+  "info": {
+    "_postman_id": "8aed1d96-0177-487a-bd55-e20d1aaa781c",
+    "name": "TTD Data Advertiser API",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "description": {
+      "content": "",
+      "type": "text/plain"
+    }
+  }
+}

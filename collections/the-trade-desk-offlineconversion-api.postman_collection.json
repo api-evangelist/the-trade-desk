@@ -1,0 +1,450 @@
+{
+  "item": [
+    {
+      "id": "d417d9d8-7fc1-4cae-b6ce-8680bdd6aaf8",
+      "name": "OfflineConversion",
+      "description": {
+        "content": "",
+        "type": "text/plain"
+      },
+      "item": [
+        {
+          "id": "a4c0c420-f3f1-47bf-8243-8230e885de65",
+          "name": "Upload offline conversion data for the specified data provider.",
+          "request": {
+            "name": "Upload offline conversion data for the specified data provider.",
+            "description": {},
+            "url": {
+              "protocol": "https",
+              "path": [
+                "providerapi",
+                "offlineconversion"
+              ],
+              "host": [
+                "offlineattrib",
+                "adsrvr",
+                "org"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "header": [
+              {
+                "disabled": false,
+                "description": "(Required) Data API token for authentication.",
+                "key": "TTD-Auth",
+                "value": "<string>"
+              },
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              },
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "POST",
+            "auth": null,
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"DataProviderId\": \"<string>\",\n  \"UserIdArrayMetadataFormat\": [\n    \"<string>\",\n    \"<string>\"\n  ],\n  \"Items\": [\n    {\n      \"TimestampUtc\": \"<dateTime>\",\n      \"TrackingTagId\": \"<string>\",\n      \"TDID\": \"<string>\",\n      \"DAID\": \"<string>\",\n      \"UID2\": \"<string>\",\n      \"UID2Token\": \"<string>\",\n      \"RampID\": \"<string>\",\n      \"EUID\": \"<string>\",\n      \"EUIDToken\": \"<string>\",\n      \"DataProviderUserId\": \"<string>\",\n      \"UserIdArray\": [\n        [\n          \"<string>\",\n          \"<string>\"\n        ],\n        [\n          \"<string>\",\n          \"<string>\"\n        ]\n      ],\n      \"CookieMappingPartnerId\": \"<string>\",\n      \"OrderId\": \"<string>\",\n      \"ImpressionId\": \"<string>\",\n      \"Value\": \"<string>\",\n      \"ValueCurrency\": \"<string>\",\n      \"Country\": \"<string>\",\n      \"Region\": \"<string>\",\n      \"Metro\": \"<string>\",\n      \"City\": \"<string>\",\n      \"MerchantId\": \"<string>\",\n      \"EventName\": \"<string>\",\n      \"LineItems\": [\n        {\n          \"item_code\": \"<string>\",\n          \"name\": \"<string>\",\n          \"qty\": \"<string>\",\n          \"price\": \"<string>\",\n          \"cat\": \"<string>\"\n        },\n        {\n          \"item_code\": \"<string>\",\n          \"name\": \"<string>\",\n          \"qty\": \"<string>\",\n          \"price\": \"<string>\",\n          \"cat\": \"<string>\"\n        }\n      ],\n      \"PrivacySettings\": [\n        {\n          \"privacy_type\": \"<string>\",\n          \"is_applicable\": \"<string>\",\n          \"consent_string\": \"<string>\"\n        },\n        {\n          \"privacy_type\": \"<string>\",\n          \"is_applicable\": \"<string>\",\n          \"consent_string\": \"<string>\"\n        }\n      ],\n      \"TD1\": \"<string>\",\n      \"TD2\": \"<string>\",\n      \"TD3\": \"<string>\",\n      \"TD4\": \"<string>\",\n      \"TD5\": \"<string>\",\n      \"TD6\": \"<string>\",\n      \"TD7\": \"<string>\",\n      \"TD8\": \"<string>\",\n      \"TD9\": \"<string>\",\n      \"TD10\": \"<string>\"\n    },\n    {\n      \"TimestampUtc\": \"<dateTime>\",\n      \"TrackingTagId\": \"<string>\",\n      \"TDID\": \"<string>\",\n      \"DAID\": \"<string>\",\n      \"UID2\": \"<string>\",\n      \"UID2Token\": \"<string>\",\n      \"RampID\": \"<string>\",\n      \"EUID\": \"<string>\",\n      \"EUIDToken\": \"<string>\",\n      \"DataProviderUserId\": \"<string>\",\n      \"UserIdArray\": [\n        [\n          \"<string>\",\n          \"<string>\"\n        ],\n        [\n          \"<string>\",\n          \"<string>\"\n        ]\n      ],\n      \"CookieMappingPartnerId\": \"<string>\",\n      \"OrderId\": \"<string>\",\n      \"ImpressionId\": \"<string>\",\n      \"Value\": \"<string>\",\n      \"ValueCurrency\": \"<string>\",\n      \"Country\": \"<string>\",\n      \"Region\": \"<string>\",\n      \"Metro\": \"<string>\",\n      \"City\": \"<string>\",\n      \"MerchantId\": \"<string>\",\n      \"EventName\": \"<string>\",\n      \"LineItems\": [\n        {\n          \"item_code\": \"<string>\",\n          \"name\": \"<string>\",\n          \"qty\": \"<string>\",\n          \"price\": \"<string>\",\n          \"cat\": \"<string>\"\n        },\n        {\n          \"item_code\": \"<string>\",\n          \"name\": \"<string>\",\n          \"qty\": \"<string>\",\n          \"price\": \"<string>\",\n          \"cat\": \"<string>\"\n        }\n      ],\n      \"PrivacySettings\": [\n        {\n          \"privacy_type\": \"<string>\",\n          \"is_applicable\": \"<string>\",\n          \"consent_string\": \"<string>\"\n        },\n        {\n          \"privacy_type\": \"<string>\",\n          \"is_applicable\": \"<string>\",\n          \"consent_string\": \"<string>\"\n        }\n      ],\n      \"TD1\": \"<string>\",\n      \"TD2\": \"<string>\",\n      \"TD3\": \"<string>\",\n      \"TD4\": \"<string>\",\n      \"TD5\": \"<string>\",\n      \"TD6\": \"<string>\",\n      \"TD7\": \"<string>\",\n      \"TD8\": \"<string>\",\n      \"TD9\": \"<string>\",\n      \"TD10\": \"<string>\"\n    }\n  ],\n  \"DataLoadTraceId\": \"<string>\"\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            }
+          },
+          "response": [
+            {
+              "id": "bf37ad09-969b-4a5b-80e5-fac6a49b1da6",
+              "name": "Success",
+              "originalRequest": {
+                "url": {
+                  "protocol": "https",
+                  "path": [
+                    "providerapi",
+                    "offlineconversion"
+                  ],
+                  "host": [
+                    "offlineattrib",
+                    "adsrvr",
+                    "org"
+                  ],
+                  "query": [],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "disabled": false,
+                    "description": "(Required) Data API token for authentication.",
+                    "key": "TTD-Auth",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "POST",
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"DataProviderId\": \"<string>\",\n  \"UserIdArrayMetadataFormat\": [\n    \"<string>\",\n    \"<string>\"\n  ],\n  \"Items\": [\n    {\n      \"TimestampUtc\": \"<dateTime>\",\n      \"TrackingTagId\": \"<string>\",\n      \"TDID\": \"<string>\",\n      \"DAID\": \"<string>\",\n      \"UID2\": \"<string>\",\n      \"UID2Token\": \"<string>\",\n      \"RampID\": \"<string>\",\n      \"EUID\": \"<string>\",\n      \"EUIDToken\": \"<string>\",\n      \"DataProviderUserId\": \"<string>\",\n      \"UserIdArray\": [\n        [\n          \"<string>\",\n          \"<string>\"\n        ],\n        [\n          \"<string>\",\n          \"<string>\"\n        ]\n      ],\n      \"CookieMappingPartnerId\": \"<string>\",\n      \"OrderId\": \"<string>\",\n      \"ImpressionId\": \"<string>\",\n      \"Value\": \"<string>\",\n      \"ValueCurrency\": \"<string>\",\n      \"Country\": \"<string>\",\n      \"Region\": \"<string>\",\n      \"Metro\": \"<string>\",\n      \"City\": \"<string>\",\n      \"MerchantId\": \"<string>\",\n      \"EventName\": \"<string>\",\n      \"LineItems\": [\n        {\n          \"item_code\": \"<string>\",\n          \"name\": \"<string>\",\n          \"qty\": \"<string>\",\n          \"price\": \"<string>\",\n          \"cat\": \"<string>\"\n        },\n        {\n          \"item_code\": \"<string>\",\n          \"name\": \"<string>\",\n          \"qty\": \"<string>\",\n          \"price\": \"<string>\",\n          \"cat\": \"<string>\"\n        }\n      ],\n      \"PrivacySettings\": [\n        {\n          \"privacy_type\": \"<string>\",\n          \"is_applicable\": \"<string>\",\n          \"consent_string\": \"<string>\"\n        },\n        {\n          \"privacy_type\": \"<string>\",\n          \"is_applicable\": \"<string>\",\n          \"consent_string\": \"<string>\"\n        }\n      ],\n      \"TD1\": \"<string>\",\n      \"TD2\": \"<string>\",\n      \"TD3\": \"<string>\",\n      \"TD4\": \"<string>\",\n      \"TD5\": \"<string>\",\n      \"TD6\": \"<string>\",\n      \"TD7\": \"<string>\",\n      \"TD8\": \"<string>\",\n      \"TD9\": \"<string>\",\n      \"TD10\": \"<string>\"\n    },\n    {\n      \"TimestampUtc\": \"<dateTime>\",\n      \"TrackingTagId\": \"<string>\",\n      \"TDID\": \"<string>\",\n      \"DAID\": \"<string>\",\n      \"UID2\": \"<string>\",\n      \"UID2Token\": \"<string>\",\n      \"RampID\": \"<string>\",\n      \"EUID\": \"<string>\",\n      \"EUIDToken\": \"<string>\",\n      \"DataProviderUserId\": \"<string>\",\n      \"UserIdArray\": [\n        [\n          \"<string>\",\n          \"<string>\"\n        ],\n        [\n          \"<string>\",\n          \"<string>\"\n        ]\n      ],\n      \"CookieMappingPartnerId\": \"<string>\",\n      \"OrderId\": \"<string>\",\n      \"ImpressionId\": \"<string>\",\n      \"Value\": \"<string>\",\n      \"ValueCurrency\": \"<string>\",\n      \"Country\": \"<string>\",\n      \"Region\": \"<string>\",\n      \"Metro\": \"<string>\",\n      \"City\": \"<string>\",\n      \"MerchantId\": \"<string>\",\n      \"EventName\": \"<string>\",\n      \"LineItems\": [\n        {\n          \"item_code\": \"<string>\",\n          \"name\": \"<string>\",\n          \"qty\": \"<string>\",\n          \"price\": \"<string>\",\n          \"cat\": \"<string>\"\n        },\n        {\n          \"item_code\": \"<string>\",\n          \"name\": \"<string>\",\n          \"qty\": \"<string>\",\n          \"price\": \"<string>\",\n          \"cat\": \"<string>\"\n        }\n      ],\n      \"PrivacySettings\": [\n        {\n          \"privacy_type\": \"<string>\",\n          \"is_applicable\": \"<string>\",\n          \"consent_string\": \"<string>\"\n        },\n        {\n          \"privacy_type\": \"<string>\",\n          \"is_applicable\": \"<string>\",\n          \"consent_string\": \"<string>\"\n        }\n      ],\n      \"TD1\": \"<string>\",\n      \"TD2\": \"<string>\",\n      \"TD3\": \"<string>\",\n      \"TD4\": \"<string>\",\n      \"TD5\": \"<string>\",\n      \"TD6\": \"<string>\",\n      \"TD7\": \"<string>\",\n      \"TD8\": \"<string>\",\n      \"TD9\": \"<string>\",\n      \"TD10\": \"<string>\"\n    }\n  ],\n  \"DataLoadTraceId\": \"<string>\"\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"FailedLines\": [\n    {\n      \"OrderId\": \"string\",\n      \"ImpressionId\": \"string\",\n      \"TDID\": \"string\",\n      \"TrackingTagId\": \"string\",\n      \"TimestampUtc\": \"1990-12-22T15:34:53.224Z\",\n      \"ErrorCode\": \"MissingOrInvalidTrackingTagId\",\n      \"Message\": \"string\",\n      \"ItemNumber\": \"string\",\n      \"OriginalRequest\": {\n        \"TimestampUtc\": \"<dateTime>\",\n        \"TrackingTagId\": \"<string>\",\n        \"TDID\": \"<string>\",\n        \"DAID\": \"<string>\",\n        \"UID2\": \"<string>\",\n        \"UID2Token\": \"<string>\",\n        \"RampID\": \"<string>\",\n        \"EUID\": \"<string>\",\n        \"EUIDToken\": \"<string>\",\n        \"DataProviderUserId\": \"<string>\",\n        \"UserIdArray\": [\n          [\n            \"<string>\",\n            \"<string>\"\n          ],\n          [\n            \"<string>\",\n            \"<string>\"\n          ]\n        ],\n        \"CookieMappingPartnerId\": \"<string>\",\n        \"OrderId\": \"<string>\",\n        \"ImpressionId\": \"<string>\",\n        \"Value\": \"<string>\",\n        \"ValueCurrency\": \"<string>\",\n        \"Country\": \"<string>\",\n        \"Region\": \"<string>\",\n        \"Metro\": \"<string>\",\n        \"City\": \"<string>\",\n        \"MerchantId\": \"<string>\",\n        \"EventName\": \"<string>\",\n        \"LineItems\": [\n          {\n            \"item_code\": \"<string>\",\n            \"name\": \"<string>\",\n            \"qty\": \"<string>\",\n            \"price\": \"<string>\",\n            \"cat\": \"<string>\"\n          },\n          {\n            \"item_code\": \"<string>\",\n            \"name\": \"<string>\",\n            \"qty\": \"<string>\",\n            \"price\": \"<string>\",\n            \"cat\": \"<string>\"\n          }\n        ],\n        \"PrivacySettings\": [\n          {\n            \"privacy_type\": \"<string>\",\n            \"is_applicable\": \"<string>\",\n            \"consent_string\": \"<string>\"\n          },\n          {\n            \"privacy_type\": \"<string>\",\n            \"is_applicable\": \"<string>\",\n            \"consent_string\": \"<string>\"\n          }\n        ],\n        \"TD1\": \"<string>\",\n        \"TD2\": \"<string>\",\n        \"TD3\": \"<string>\",\n        \"TD4\": \"<string>\",\n        \"TD5\": \"<string>\",\n        \"TD6\": \"<string>\",\n        \"TD7\": \"<string>\",\n        \"TD8\": \"<string>\",\n        \"TD9\": \"<string>\",\n        \"TD10\": \"<string>\"\n      }\n    },\n    {\n      \"OrderId\": \"string\",\n      \"ImpressionId\": \"string\",\n      \"TDID\": \"string\",\n      \"TrackingTagId\": \"string\",\n      \"TimestampUtc\": \"1952-11-14T16:47:17.819Z\",\n      \"ErrorCode\": \"MissingOrInvalidTDIDAndImpressionId\",\n      \"Message\": \"string\",\n      \"ItemNumber\": \"string\",\n      \"OriginalRequest\": {\n        \"TimestampUtc\": \"<dateTime>\",\n        \"TrackingTagId\": \"<string>\",\n        \"TDID\": \"<string>\",\n        \"DAID\": \"<string>\",\n        \"UID2\": \"<string>\",\n        \"UID2Token\": \"<string>\",\n        \"RampID\": \"<string>\",\n        \"EUID\": \"<string>\",\n        \"EUIDToken\": \"<string>\",\n        \"DataProviderUserId\": \"<string>\",\n        \"UserIdArray\": [\n          [\n            \"<string>\",\n            \"<string>\"\n          ],\n          [\n            \"<string>\",\n            \"<string>\"\n          ]\n        ],\n        \"CookieMappingPartnerId\": \"<string>\",\n        \"OrderId\": \"<string>\",\n        \"ImpressionId\": \"<string>\",\n        \"Value\": \"<string>\",\n        \"ValueCurrency\": \"<string>\",\n        \"Country\": \"<string>\",\n        \"Region\": \"<string>\",\n        \"Metro\": \"<string>\",\n        \"City\": \"<string>\",\n        \"MerchantId\": \"<string>\",\n        \"EventName\": \"<string>\",\n        \"LineItems\": [\n          {\n            \"item_code\": \"<string>\",\n            \"name\": \"<string>\",\n            \"qty\": \"<string>\",\n            \"price\": \"<string>\",\n            \"cat\": \"<string>\"\n          },\n          {\n            \"item_code\": \"<string>\",\n            \"name\": \"<string>\",\n            \"qty\": \"<string>\",\n            \"price\": \"<string>\",\n            \"cat\": \"<string>\"\n          }\n        ],\n        \"PrivacySettings\": [\n          {\n            \"privacy_type\": \"<string>\",\n            \"is_applicable\": \"<string>\",\n            \"consent_string\": \"<string>\"\n          },\n          {\n            \"privacy_type\": \"<string>\",\n            \"is_applicable\": \"<string>\",\n            \"consent_string\": \"<string>\"\n          }\n        ],\n        \"TD1\": \"<string>\",\n        \"TD2\": \"<string>\",\n        \"TD3\": \"<string>\",\n        \"TD4\": \"<string>\",\n        \"TD5\": \"<string>\",\n        \"TD6\": \"<string>\",\n        \"TD7\": \"<string>\",\n        \"TD8\": \"<string>\",\n        \"TD9\": \"<string>\",\n        \"TD10\": \"<string>\"\n      }\n    }\n  ]\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            },
+            {
+              "id": "e18a0833-c986-479c-824a-8e6af3501a01",
+              "name": "Bad Request - Invalid JSON, missing items, data provider not configured, or policy restrictions",
+              "originalRequest": {
+                "url": {
+                  "protocol": "https",
+                  "path": [
+                    "providerapi",
+                    "offlineconversion"
+                  ],
+                  "host": [
+                    "offlineattrib",
+                    "adsrvr",
+                    "org"
+                  ],
+                  "query": [],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "disabled": false,
+                    "description": "(Required) Data API token for authentication.",
+                    "key": "TTD-Auth",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "POST",
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"DataProviderId\": \"<string>\",\n  \"UserIdArrayMetadataFormat\": [\n    \"<string>\",\n    \"<string>\"\n  ],\n  \"Items\": [\n    {\n      \"TimestampUtc\": \"<dateTime>\",\n      \"TrackingTagId\": \"<string>\",\n      \"TDID\": \"<string>\",\n      \"DAID\": \"<string>\",\n      \"UID2\": \"<string>\",\n      \"UID2Token\": \"<string>\",\n      \"RampID\": \"<string>\",\n      \"EUID\": \"<string>\",\n      \"EUIDToken\": \"<string>\",\n      \"DataProviderUserId\": \"<string>\",\n      \"UserIdArray\": [\n        [\n          \"<string>\",\n          \"<string>\"\n        ],\n        [\n          \"<string>\",\n          \"<string>\"\n        ]\n      ],\n      \"CookieMappingPartnerId\": \"<string>\",\n      \"OrderId\": \"<string>\",\n      \"ImpressionId\": \"<string>\",\n      \"Value\": \"<string>\",\n      \"ValueCurrency\": \"<string>\",\n      \"Country\": \"<string>\",\n      \"Region\": \"<string>\",\n      \"Metro\": \"<string>\",\n      \"City\": \"<string>\",\n      \"MerchantId\": \"<string>\",\n      \"EventName\": \"<string>\",\n      \"LineItems\": [\n        {\n          \"item_code\": \"<string>\",\n          \"name\": \"<string>\",\n          \"qty\": \"<string>\",\n          \"price\": \"<string>\",\n          \"cat\": \"<string>\"\n        },\n        {\n          \"item_code\": \"<string>\",\n          \"name\": \"<string>\",\n          \"qty\": \"<string>\",\n          \"price\": \"<string>\",\n          \"cat\": \"<string>\"\n        }\n      ],\n      \"PrivacySettings\": [\n        {\n          \"privacy_type\": \"<string>\",\n          \"is_applicable\": \"<string>\",\n          \"consent_string\": \"<string>\"\n        },\n        {\n          \"privacy_type\": \"<string>\",\n          \"is_applicable\": \"<string>\",\n          \"consent_string\": \"<string>\"\n        }\n      ],\n      \"TD1\": \"<string>\",\n      \"TD2\": \"<string>\",\n      \"TD3\": \"<string>\",\n      \"TD4\": \"<string>\",\n      \"TD5\": \"<string>\",\n      \"TD6\": \"<string>\",\n      \"TD7\": \"<string>\",\n      \"TD8\": \"<string>\",\n      \"TD9\": \"<string>\",\n      \"TD10\": \"<string>\"\n    },\n    {\n      \"TimestampUtc\": \"<dateTime>\",\n      \"TrackingTagId\": \"<string>\",\n      \"TDID\": \"<string>\",\n      \"DAID\": \"<string>\",\n      \"UID2\": \"<string>\",\n      \"UID2Token\": \"<string>\",\n      \"RampID\": \"<string>\",\n      \"EUID\": \"<string>\",\n      \"EUIDToken\": \"<string>\",\n      \"DataProviderUserId\": \"<string>\",\n      \"UserIdArray\": [\n        [\n          \"<string>\",\n          \"<string>\"\n        ],\n        [\n          \"<string>\",\n          \"<string>\"\n        ]\n      ],\n      \"CookieMappingPartnerId\": \"<string>\",\n      \"OrderId\": \"<string>\",\n      \"ImpressionId\": \"<string>\",\n      \"Value\": \"<string>\",\n      \"ValueCurrency\": \"<string>\",\n      \"Country\": \"<string>\",\n      \"Region\": \"<string>\",\n      \"Metro\": \"<string>\",\n      \"City\": \"<string>\",\n      \"MerchantId\": \"<string>\",\n      \"EventName\": \"<string>\",\n      \"LineItems\": [\n        {\n          \"item_code\": \"<string>\",\n          \"name\": \"<string>\",\n          \"qty\": \"<string>\",\n          \"price\": \"<string>\",\n          \"cat\": \"<string>\"\n        },\n        {\n          \"item_code\": \"<string>\",\n          \"name\": \"<string>\",\n          \"qty\": \"<string>\",\n          \"price\": \"<string>\",\n          \"cat\": \"<string>\"\n        }\n      ],\n      \"PrivacySettings\": [\n        {\n          \"privacy_type\": \"<string>\",\n          \"is_applicable\": \"<string>\",\n          \"consent_string\": \"<string>\"\n        },\n        {\n          \"privacy_type\": \"<string>\",\n          \"is_applicable\": \"<string>\",\n          \"consent_string\": \"<string>\"\n        }\n      ],\n      \"TD1\": \"<string>\",\n      \"TD2\": \"<string>\",\n      \"TD3\": \"<string>\",\n      \"TD4\": \"<string>\",\n      \"TD5\": \"<string>\",\n      \"TD6\": \"<string>\",\n      \"TD7\": \"<string>\",\n      \"TD8\": \"<string>\",\n      \"TD9\": \"<string>\",\n      \"TD10\": \"<string>\"\n    }\n  ],\n  \"DataLoadTraceId\": \"<string>\"\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                }
+              },
+              "status": "Bad Request",
+              "code": 400,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"FailedLines\": [\n    {\n      \"OrderId\": \"string\",\n      \"ImpressionId\": \"string\",\n      \"TDID\": \"string\",\n      \"TrackingTagId\": \"string\",\n      \"TimestampUtc\": \"2020-09-27T18:30:07.962Z\",\n      \"ErrorCode\": \"ItemDeserializationError\",\n      \"Message\": \"string\",\n      \"ItemNumber\": \"string\",\n      \"OriginalRequest\": {\n        \"TimestampUtc\": \"<dateTime>\",\n        \"TrackingTagId\": \"<string>\",\n        \"TDID\": \"<string>\",\n        \"DAID\": \"<string>\",\n        \"UID2\": \"<string>\",\n        \"UID2Token\": \"<string>\",\n        \"RampID\": \"<string>\",\n        \"EUID\": \"<string>\",\n        \"EUIDToken\": \"<string>\",\n        \"DataProviderUserId\": \"<string>\",\n        \"UserIdArray\": [\n          [\n            \"<string>\",\n            \"<string>\"\n          ],\n          [\n            \"<string>\",\n            \"<string>\"\n          ]\n        ],\n        \"CookieMappingPartnerId\": \"<string>\",\n        \"OrderId\": \"<string>\",\n        \"ImpressionId\": \"<string>\",\n        \"Value\": \"<string>\",\n        \"ValueCurrency\": \"<string>\",\n        \"Country\": \"<string>\",\n        \"Region\": \"<string>\",\n        \"Metro\": \"<string>\",\n        \"City\": \"<string>\",\n        \"MerchantId\": \"<string>\",\n        \"EventName\": \"<string>\",\n        \"LineItems\": [\n          {\n            \"item_code\": \"<string>\",\n            \"name\": \"<string>\",\n            \"qty\": \"<string>\",\n            \"price\": \"<string>\",\n            \"cat\": \"<string>\"\n          },\n          {\n            \"item_code\": \"<string>\",\n            \"name\": \"<string>\",\n            \"qty\": \"<string>\",\n            \"price\": \"<string>\",\n            \"cat\": \"<string>\"\n          }\n        ],\n        \"PrivacySettings\": [\n          {\n            \"privacy_type\": \"<string>\",\n            \"is_applicable\": \"<string>\",\n            \"consent_string\": \"<string>\"\n          },\n          {\n            \"privacy_type\": \"<string>\",\n            \"is_applicable\": \"<string>\",\n            \"consent_string\": \"<string>\"\n          }\n        ],\n        \"TD1\": \"<string>\",\n        \"TD2\": \"<string>\",\n        \"TD3\": \"<string>\",\n        \"TD4\": \"<string>\",\n        \"TD5\": \"<string>\",\n        \"TD6\": \"<string>\",\n        \"TD7\": \"<string>\",\n        \"TD8\": \"<string>\",\n        \"TD9\": \"<string>\",\n        \"TD10\": \"<string>\"\n      }\n    },\n    {\n      \"OrderId\": \"string\",\n      \"ImpressionId\": \"string\",\n      \"TDID\": \"string\",\n      \"TrackingTagId\": \"string\",\n      \"TimestampUtc\": \"2020-01-26T22:01:20.665Z\",\n      \"ErrorCode\": \"Unknown\",\n      \"Message\": \"string\",\n      \"ItemNumber\": \"string\",\n      \"OriginalRequest\": {\n        \"TimestampUtc\": \"<dateTime>\",\n        \"TrackingTagId\": \"<string>\",\n        \"TDID\": \"<string>\",\n        \"DAID\": \"<string>\",\n        \"UID2\": \"<string>\",\n        \"UID2Token\": \"<string>\",\n        \"RampID\": \"<string>\",\n        \"EUID\": \"<string>\",\n        \"EUIDToken\": \"<string>\",\n        \"DataProviderUserId\": \"<string>\",\n        \"UserIdArray\": [\n          [\n            \"<string>\",\n            \"<string>\"\n          ],\n          [\n            \"<string>\",\n            \"<string>\"\n          ]\n        ],\n        \"CookieMappingPartnerId\": \"<string>\",\n        \"OrderId\": \"<string>\",\n        \"ImpressionId\": \"<string>\",\n        \"Value\": \"<string>\",\n        \"ValueCurrency\": \"<string>\",\n        \"Country\": \"<string>\",\n        \"Region\": \"<string>\",\n        \"Metro\": \"<string>\",\n        \"City\": \"<string>\",\n        \"MerchantId\": \"<string>\",\n        \"EventName\": \"<string>\",\n        \"LineItems\": [\n          {\n            \"item_code\": \"<string>\",\n            \"name\": \"<string>\",\n            \"qty\": \"<string>\",\n            \"price\": \"<string>\",\n            \"cat\": \"<string>\"\n          },\n          {\n            \"item_code\": \"<string>\",\n            \"name\": \"<string>\",\n            \"qty\": \"<string>\",\n            \"price\": \"<string>\",\n            \"cat\": \"<string>\"\n          }\n        ],\n        \"PrivacySettings\": [\n          {\n            \"privacy_type\": \"<string>\",\n            \"is_applicable\": \"<string>\",\n            \"consent_string\": \"<string>\"\n          },\n          {\n            \"privacy_type\": \"<string>\",\n            \"is_applicable\": \"<string>\",\n            \"consent_string\": \"<string>\"\n          }\n        ],\n        \"TD1\": \"<string>\",\n        \"TD2\": \"<string>\",\n        \"TD3\": \"<string>\",\n        \"TD4\": \"<string>\",\n        \"TD5\": \"<string>\",\n        \"TD6\": \"<string>\",\n        \"TD7\": \"<string>\",\n        \"TD8\": \"<string>\",\n        \"TD9\": \"<string>\",\n        \"TD10\": \"<string>\"\n      }\n    }\n  ]\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            },
+            {
+              "id": "9cd9a818-a8ab-4d94-b63f-9c279ed2dd03",
+              "name": "Forbidden - Cannot create offline conversion data for this data provider",
+              "originalRequest": {
+                "url": {
+                  "protocol": "https",
+                  "path": [
+                    "providerapi",
+                    "offlineconversion"
+                  ],
+                  "host": [
+                    "offlineattrib",
+                    "adsrvr",
+                    "org"
+                  ],
+                  "query": [],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "disabled": false,
+                    "description": "(Required) Data API token for authentication.",
+                    "key": "TTD-Auth",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "POST",
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"DataProviderId\": \"<string>\",\n  \"UserIdArrayMetadataFormat\": [\n    \"<string>\",\n    \"<string>\"\n  ],\n  \"Items\": [\n    {\n      \"TimestampUtc\": \"<dateTime>\",\n      \"TrackingTagId\": \"<string>\",\n      \"TDID\": \"<string>\",\n      \"DAID\": \"<string>\",\n      \"UID2\": \"<string>\",\n      \"UID2Token\": \"<string>\",\n      \"RampID\": \"<string>\",\n      \"EUID\": \"<string>\",\n      \"EUIDToken\": \"<string>\",\n      \"DataProviderUserId\": \"<string>\",\n      \"UserIdArray\": [\n        [\n          \"<string>\",\n          \"<string>\"\n        ],\n        [\n          \"<string>\",\n          \"<string>\"\n        ]\n      ],\n      \"CookieMappingPartnerId\": \"<string>\",\n      \"OrderId\": \"<string>\",\n      \"ImpressionId\": \"<string>\",\n      \"Value\": \"<string>\",\n      \"ValueCurrency\": \"<string>\",\n      \"Country\": \"<string>\",\n      \"Region\": \"<string>\",\n      \"Metro\": \"<string>\",\n      \"City\": \"<string>\",\n      \"MerchantId\": \"<string>\",\n      \"EventName\": \"<string>\",\n      \"LineItems\": [\n        {\n          \"item_code\": \"<string>\",\n          \"name\": \"<string>\",\n          \"qty\": \"<string>\",\n          \"price\": \"<string>\",\n          \"cat\": \"<string>\"\n        },\n        {\n          \"item_code\": \"<string>\",\n          \"name\": \"<string>\",\n          \"qty\": \"<string>\",\n          \"price\": \"<string>\",\n          \"cat\": \"<string>\"\n        }\n      ],\n      \"PrivacySettings\": [\n        {\n          \"privacy_type\": \"<string>\",\n          \"is_applicable\": \"<string>\",\n          \"consent_string\": \"<string>\"\n        },\n        {\n          \"privacy_type\": \"<string>\",\n          \"is_applicable\": \"<string>\",\n          \"consent_string\": \"<string>\"\n        }\n      ],\n      \"TD1\": \"<string>\",\n      \"TD2\": \"<string>\",\n      \"TD3\": \"<string>\",\n      \"TD4\": \"<string>\",\n      \"TD5\": \"<string>\",\n      \"TD6\": \"<string>\",\n      \"TD7\": \"<string>\",\n      \"TD8\": \"<string>\",\n      \"TD9\": \"<string>\",\n      \"TD10\": \"<string>\"\n    },\n    {\n      \"TimestampUtc\": \"<dateTime>\",\n      \"TrackingTagId\": \"<string>\",\n      \"TDID\": \"<string>\",\n      \"DAID\": \"<string>\",\n      \"UID2\": \"<string>\",\n      \"UID2Token\": \"<string>\",\n      \"RampID\": \"<string>\",\n      \"EUID\": \"<string>\",\n      \"EUIDToken\": \"<string>\",\n      \"DataProviderUserId\": \"<string>\",\n      \"UserIdArray\": [\n        [\n          \"<string>\",\n          \"<string>\"\n        ],\n        [\n          \"<string>\",\n          \"<string>\"\n        ]\n      ],\n      \"CookieMappingPartnerId\": \"<string>\",\n      \"OrderId\": \"<string>\",\n      \"ImpressionId\": \"<string>\",\n      \"Value\": \"<string>\",\n      \"ValueCurrency\": \"<string>\",\n      \"Country\": \"<string>\",\n      \"Region\": \"<string>\",\n      \"Metro\": \"<string>\",\n      \"City\": \"<string>\",\n      \"MerchantId\": \"<string>\",\n      \"EventName\": \"<string>\",\n      \"LineItems\": [\n        {\n          \"item_code\": \"<string>\",\n          \"name\": \"<string>\",\n          \"qty\": \"<string>\",\n          \"price\": \"<string>\",\n          \"cat\": \"<string>\"\n        },\n        {\n          \"item_code\": \"<string>\",\n          \"name\": \"<string>\",\n          \"qty\": \"<string>\",\n          \"price\": \"<string>\",\n          \"cat\": \"<string>\"\n        }\n      ],\n      \"PrivacySettings\": [\n        {\n          \"privacy_type\": \"<string>\",\n          \"is_applicable\": \"<string>\",\n          \"consent_string\": \"<string>\"\n        },\n        {\n          \"privacy_type\": \"<string>\",\n          \"is_applicable\": \"<string>\",\n          \"consent_string\": \"<string>\"\n        }\n      ],\n      \"TD1\": \"<string>\",\n      \"TD2\": \"<string>\",\n      \"TD3\": \"<string>\",\n      \"TD4\": \"<string>\",\n      \"TD5\": \"<string>\",\n      \"TD6\": \"<string>\",\n      \"TD7\": \"<string>\",\n      \"TD8\": \"<string>\",\n      \"TD9\": \"<string>\",\n      \"TD10\": \"<string>\"\n    }\n  ],\n  \"DataLoadTraceId\": \"<string>\"\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                }
+              },
+              "status": "Forbidden",
+              "code": 403,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "\"string\"",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            },
+            {
+              "id": "4564e18e-6e26-4c22-af72-b8b9d174b7c8",
+              "name": "Request Entity Too Large - Request size exceeds the allowed limit",
+              "originalRequest": {
+                "url": {
+                  "protocol": "https",
+                  "path": [
+                    "providerapi",
+                    "offlineconversion"
+                  ],
+                  "host": [
+                    "offlineattrib",
+                    "adsrvr",
+                    "org"
+                  ],
+                  "query": [],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "disabled": false,
+                    "description": "(Required) Data API token for authentication.",
+                    "key": "TTD-Auth",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "POST",
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"DataProviderId\": \"<string>\",\n  \"UserIdArrayMetadataFormat\": [\n    \"<string>\",\n    \"<string>\"\n  ],\n  \"Items\": [\n    {\n      \"TimestampUtc\": \"<dateTime>\",\n      \"TrackingTagId\": \"<string>\",\n      \"TDID\": \"<string>\",\n      \"DAID\": \"<string>\",\n      \"UID2\": \"<string>\",\n      \"UID2Token\": \"<string>\",\n      \"RampID\": \"<string>\",\n      \"EUID\": \"<string>\",\n      \"EUIDToken\": \"<string>\",\n      \"DataProviderUserId\": \"<string>\",\n      \"UserIdArray\": [\n        [\n          \"<string>\",\n          \"<string>\"\n        ],\n        [\n          \"<string>\",\n          \"<string>\"\n        ]\n      ],\n      \"CookieMappingPartnerId\": \"<string>\",\n      \"OrderId\": \"<string>\",\n      \"ImpressionId\": \"<string>\",\n      \"Value\": \"<string>\",\n      \"ValueCurrency\": \"<string>\",\n      \"Country\": \"<string>\",\n      \"Region\": \"<string>\",\n      \"Metro\": \"<string>\",\n      \"City\": \"<string>\",\n      \"MerchantId\": \"<string>\",\n      \"EventName\": \"<string>\",\n      \"LineItems\": [\n        {\n          \"item_code\": \"<string>\",\n          \"name\": \"<string>\",\n          \"qty\": \"<string>\",\n          \"price\": \"<string>\",\n          \"cat\": \"<string>\"\n        },\n        {\n          \"item_code\": \"<string>\",\n          \"name\": \"<string>\",\n          \"qty\": \"<string>\",\n          \"price\": \"<string>\",\n          \"cat\": \"<string>\"\n        }\n      ],\n      \"PrivacySettings\": [\n        {\n          \"privacy_type\": \"<string>\",\n          \"is_applicable\": \"<string>\",\n          \"consent_string\": \"<string>\"\n        },\n        {\n          \"privacy_type\": \"<string>\",\n          \"is_applicable\": \"<string>\",\n          \"consent_string\": \"<string>\"\n        }\n      ],\n      \"TD1\": \"<string>\",\n      \"TD2\": \"<string>\",\n      \"TD3\": \"<string>\",\n      \"TD4\": \"<string>\",\n      \"TD5\": \"<string>\",\n      \"TD6\": \"<string>\",\n      \"TD7\": \"<string>\",\n      \"TD8\": \"<string>\",\n      \"TD9\": \"<string>\",\n      \"TD10\": \"<string>\"\n    },\n    {\n      \"TimestampUtc\": \"<dateTime>\",\n      \"TrackingTagId\": \"<string>\",\n      \"TDID\": \"<string>\",\n      \"DAID\": \"<string>\",\n      \"UID2\": \"<string>\",\n      \"UID2Token\": \"<string>\",\n      \"RampID\": \"<string>\",\n      \"EUID\": \"<string>\",\n      \"EUIDToken\": \"<string>\",\n      \"DataProviderUserId\": \"<string>\",\n      \"UserIdArray\": [\n        [\n          \"<string>\",\n          \"<string>\"\n        ],\n        [\n          \"<string>\",\n          \"<string>\"\n        ]\n      ],\n      \"CookieMappingPartnerId\": \"<string>\",\n      \"OrderId\": \"<string>\",\n      \"ImpressionId\": \"<string>\",\n      \"Value\": \"<string>\",\n      \"ValueCurrency\": \"<string>\",\n      \"Country\": \"<string>\",\n      \"Region\": \"<string>\",\n      \"Metro\": \"<string>\",\n      \"City\": \"<string>\",\n      \"MerchantId\": \"<string>\",\n      \"EventName\": \"<string>\",\n      \"LineItems\": [\n        {\n          \"item_code\": \"<string>\",\n          \"name\": \"<string>\",\n          \"qty\": \"<string>\",\n          \"price\": \"<string>\",\n          \"cat\": \"<string>\"\n        },\n        {\n          \"item_code\": \"<string>\",\n          \"name\": \"<string>\",\n          \"qty\": \"<string>\",\n          \"price\": \"<string>\",\n          \"cat\": \"<string>\"\n        }\n      ],\n      \"PrivacySettings\": [\n        {\n          \"privacy_type\": \"<string>\",\n          \"is_applicable\": \"<string>\",\n          \"consent_string\": \"<string>\"\n        },\n        {\n          \"privacy_type\": \"<string>\",\n          \"is_applicable\": \"<string>\",\n          \"consent_string\": \"<string>\"\n        }\n      ],\n      \"TD1\": \"<string>\",\n      \"TD2\": \"<string>\",\n      \"TD3\": \"<string>\",\n      \"TD4\": \"<string>\",\n      \"TD5\": \"<string>\",\n      \"TD6\": \"<string>\",\n      \"TD7\": \"<string>\",\n      \"TD8\": \"<string>\",\n      \"TD9\": \"<string>\",\n      \"TD10\": \"<string>\"\n    }\n  ],\n  \"DataLoadTraceId\": \"<string>\"\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                }
+              },
+              "status": "Request Entity Too Large",
+              "code": 413,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "\"string\"",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            },
+            {
+              "id": "6bf375a5-e3fa-4861-b2f2-5cc2f11f0246",
+              "name": "Too Many Requests - Rate limit exceeded",
+              "originalRequest": {
+                "url": {
+                  "protocol": "https",
+                  "path": [
+                    "providerapi",
+                    "offlineconversion"
+                  ],
+                  "host": [
+                    "offlineattrib",
+                    "adsrvr",
+                    "org"
+                  ],
+                  "query": [],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "disabled": false,
+                    "description": "(Required) Data API token for authentication.",
+                    "key": "TTD-Auth",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "POST",
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"DataProviderId\": \"<string>\",\n  \"UserIdArrayMetadataFormat\": [\n    \"<string>\",\n    \"<string>\"\n  ],\n  \"Items\": [\n    {\n      \"TimestampUtc\": \"<dateTime>\",\n      \"TrackingTagId\": \"<string>\",\n      \"TDID\": \"<string>\",\n      \"DAID\": \"<string>\",\n      \"UID2\": \"<string>\",\n      \"UID2Token\": \"<string>\",\n      \"RampID\": \"<string>\",\n      \"EUID\": \"<string>\",\n      \"EUIDToken\": \"<string>\",\n      \"DataProviderUserId\": \"<string>\",\n      \"UserIdArray\": [\n        [\n          \"<string>\",\n          \"<string>\"\n        ],\n        [\n          \"<string>\",\n          \"<string>\"\n        ]\n      ],\n      \"CookieMappingPartnerId\": \"<string>\",\n      \"OrderId\": \"<string>\",\n      \"ImpressionId\": \"<string>\",\n      \"Value\": \"<string>\",\n      \"ValueCurrency\": \"<string>\",\n      \"Country\": \"<string>\",\n      \"Region\": \"<string>\",\n      \"Metro\": \"<string>\",\n      \"City\": \"<string>\",\n      \"MerchantId\": \"<string>\",\n      \"EventName\": \"<string>\",\n      \"LineItems\": [\n        {\n          \"item_code\": \"<string>\",\n          \"name\": \"<string>\",\n          \"qty\": \"<string>\",\n          \"price\": \"<string>\",\n          \"cat\": \"<string>\"\n        },\n        {\n          \"item_code\": \"<string>\",\n          \"name\": \"<string>\",\n          \"qty\": \"<string>\",\n          \"price\": \"<string>\",\n          \"cat\": \"<string>\"\n        }\n      ],\n      \"PrivacySettings\": [\n        {\n          \"privacy_type\": \"<string>\",\n          \"is_applicable\": \"<string>\",\n          \"consent_string\": \"<string>\"\n        },\n        {\n          \"privacy_type\": \"<string>\",\n          \"is_applicable\": \"<string>\",\n          \"consent_string\": \"<string>\"\n        }\n      ],\n      \"TD1\": \"<string>\",\n      \"TD2\": \"<string>\",\n      \"TD3\": \"<string>\",\n      \"TD4\": \"<string>\",\n      \"TD5\": \"<string>\",\n      \"TD6\": \"<string>\",\n      \"TD7\": \"<string>\",\n      \"TD8\": \"<string>\",\n      \"TD9\": \"<string>\",\n      \"TD10\": \"<string>\"\n    },\n    {\n      \"TimestampUtc\": \"<dateTime>\",\n      \"TrackingTagId\": \"<string>\",\n      \"TDID\": \"<string>\",\n      \"DAID\": \"<string>\",\n      \"UID2\": \"<string>\",\n      \"UID2Token\": \"<string>\",\n      \"RampID\": \"<string>\",\n      \"EUID\": \"<string>\",\n      \"EUIDToken\": \"<string>\",\n      \"DataProviderUserId\": \"<string>\",\n      \"UserIdArray\": [\n        [\n          \"<string>\",\n          \"<string>\"\n        ],\n        [\n          \"<string>\",\n          \"<string>\"\n        ]\n      ],\n      \"CookieMappingPartnerId\": \"<string>\",\n      \"OrderId\": \"<string>\",\n      \"ImpressionId\": \"<string>\",\n      \"Value\": \"<string>\",\n      \"ValueCurrency\": \"<string>\",\n      \"Country\": \"<string>\",\n      \"Region\": \"<string>\",\n      \"Metro\": \"<string>\",\n      \"City\": \"<string>\",\n      \"MerchantId\": \"<string>\",\n      \"EventName\": \"<string>\",\n      \"LineItems\": [\n        {\n          \"item_code\": \"<string>\",\n          \"name\": \"<string>\",\n          \"qty\": \"<string>\",\n          \"price\": \"<string>\",\n          \"cat\": \"<string>\"\n        },\n        {\n          \"item_code\": \"<string>\",\n          \"name\": \"<string>\",\n          \"qty\": \"<string>\",\n          \"price\": \"<string>\",\n          \"cat\": \"<string>\"\n        }\n      ],\n      \"PrivacySettings\": [\n        {\n          \"privacy_type\": \"<string>\",\n          \"is_applicable\": \"<string>\",\n          \"consent_string\": \"<string>\"\n        },\n        {\n          \"privacy_type\": \"<string>\",\n          \"is_applicable\": \"<string>\",\n          \"consent_string\": \"<string>\"\n        }\n      ],\n      \"TD1\": \"<string>\",\n      \"TD2\": \"<string>\",\n      \"TD3\": \"<string>\",\n      \"TD4\": \"<string>\",\n      \"TD5\": \"<string>\",\n      \"TD6\": \"<string>\",\n      \"TD7\": \"<string>\",\n      \"TD8\": \"<string>\",\n      \"TD9\": \"<string>\",\n      \"TD10\": \"<string>\"\n    }\n  ],\n  \"DataLoadTraceId\": \"<string>\"\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                }
+              },
+              "status": "Too Many Requests",
+              "code": 429,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"FailedLines\": [\n    {\n      \"OrderId\": \"string\",\n      \"ImpressionId\": \"string\",\n      \"TDID\": \"string\",\n      \"TrackingTagId\": \"string\",\n      \"TimestampUtc\": \"2020-09-27T18:30:07.962Z\",\n      \"ErrorCode\": \"ItemDeserializationError\",\n      \"Message\": \"string\",\n      \"ItemNumber\": \"string\",\n      \"OriginalRequest\": {\n        \"TimestampUtc\": \"<dateTime>\",\n        \"TrackingTagId\": \"<string>\",\n        \"TDID\": \"<string>\",\n        \"DAID\": \"<string>\",\n        \"UID2\": \"<string>\",\n        \"UID2Token\": \"<string>\",\n        \"RampID\": \"<string>\",\n        \"EUID\": \"<string>\",\n        \"EUIDToken\": \"<string>\",\n        \"DataProviderUserId\": \"<string>\",\n        \"UserIdArray\": [\n          [\n            \"<string>\",\n            \"<string>\"\n          ],\n          [\n            \"<string>\",\n            \"<string>\"\n          ]\n        ],\n        \"CookieMappingPartnerId\": \"<string>\",\n        \"OrderId\": \"<string>\",\n        \"ImpressionId\": \"<string>\",\n        \"Value\": \"<string>\",\n        \"ValueCurrency\": \"<string>\",\n        \"Country\": \"<string>\",\n        \"Region\": \"<string>\",\n        \"Metro\": \"<string>\",\n        \"City\": \"<string>\",\n        \"MerchantId\": \"<string>\",\n        \"EventName\": \"<string>\",\n        \"LineItems\": [\n          {\n            \"item_code\": \"<string>\",\n            \"name\": \"<string>\",\n            \"qty\": \"<string>\",\n            \"price\": \"<string>\",\n            \"cat\": \"<string>\"\n          },\n          {\n            \"item_code\": \"<string>\",\n            \"name\": \"<string>\",\n            \"qty\": \"<string>\",\n            \"price\": \"<string>\",\n            \"cat\": \"<string>\"\n          }\n        ],\n        \"PrivacySettings\": [\n          {\n            \"privacy_type\": \"<string>\",\n            \"is_applicable\": \"<string>\",\n            \"consent_string\": \"<string>\"\n          },\n          {\n            \"privacy_type\": \"<string>\",\n            \"is_applicable\": \"<string>\",\n            \"consent_string\": \"<string>\"\n          }\n        ],\n        \"TD1\": \"<string>\",\n        \"TD2\": \"<string>\",\n        \"TD3\": \"<string>\",\n        \"TD4\": \"<string>\",\n        \"TD5\": \"<string>\",\n        \"TD6\": \"<string>\",\n        \"TD7\": \"<string>\",\n        \"TD8\": \"<string>\",\n        \"TD9\": \"<string>\",\n        \"TD10\": \"<string>\"\n      }\n    },\n    {\n      \"OrderId\": \"string\",\n      \"ImpressionId\": \"string\",\n      \"TDID\": \"string\",\n      \"TrackingTagId\": \"string\",\n      \"TimestampUtc\": \"2020-01-26T22:01:20.665Z\",\n      \"ErrorCode\": \"Unknown\",\n      \"Message\": \"string\",\n      \"ItemNumber\": \"string\",\n      \"OriginalRequest\": {\n        \"TimestampUtc\": \"<dateTime>\",\n        \"TrackingTagId\": \"<string>\",\n        \"TDID\": \"<string>\",\n        \"DAID\": \"<string>\",\n        \"UID2\": \"<string>\",\n        \"UID2Token\": \"<string>\",\n        \"RampID\": \"<string>\",\n        \"EUID\": \"<string>\",\n        \"EUIDToken\": \"<string>\",\n        \"DataProviderUserId\": \"<string>\",\n        \"UserIdArray\": [\n          [\n            \"<string>\",\n            \"<string>\"\n          ],\n          [\n            \"<string>\",\n            \"<string>\"\n          ]\n        ],\n        \"CookieMappingPartnerId\": \"<string>\",\n        \"OrderId\": \"<string>\",\n        \"ImpressionId\": \"<string>\",\n        \"Value\": \"<string>\",\n        \"ValueCurrency\": \"<string>\",\n        \"Country\": \"<string>\",\n        \"Region\": \"<string>\",\n        \"Metro\": \"<string>\",\n        \"City\": \"<string>\",\n        \"MerchantId\": \"<string>\",\n        \"EventName\": \"<string>\",\n        \"LineItems\": [\n          {\n            \"item_code\": \"<string>\",\n            \"name\": \"<string>\",\n            \"qty\": \"<string>\",\n            \"price\": \"<string>\",\n            \"cat\": \"<string>\"\n          },\n          {\n            \"item_code\": \"<string>\",\n            \"name\": \"<string>\",\n            \"qty\": \"<string>\",\n            \"price\": \"<string>\",\n            \"cat\": \"<string>\"\n          }\n        ],\n        \"PrivacySettings\": [\n          {\n            \"privacy_type\": \"<string>\",\n            \"is_applicable\": \"<string>\",\n            \"consent_string\": \"<string>\"\n          },\n          {\n            \"privacy_type\": \"<string>\",\n            \"is_applicable\": \"<string>\",\n            \"consent_string\": \"<string>\"\n          }\n        ],\n        \"TD1\": \"<string>\",\n        \"TD2\": \"<string>\",\n        \"TD3\": \"<string>\",\n        \"TD4\": \"<string>\",\n        \"TD5\": \"<string>\",\n        \"TD6\": \"<string>\",\n        \"TD7\": \"<string>\",\n        \"TD8\": \"<string>\",\n        \"TD9\": \"<string>\",\n        \"TD10\": \"<string>\"\n      }\n    }\n  ]\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            },
+            {
+              "id": "4a55228f-e341-4164-bfa4-9c6806cc2fa4",
+              "name": "Internal Server Error - Unexpected server error",
+              "originalRequest": {
+                "url": {
+                  "protocol": "https",
+                  "path": [
+                    "providerapi",
+                    "offlineconversion"
+                  ],
+                  "host": [
+                    "offlineattrib",
+                    "adsrvr",
+                    "org"
+                  ],
+                  "query": [],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "disabled": false,
+                    "description": "(Required) Data API token for authentication.",
+                    "key": "TTD-Auth",
+                    "value": "<string>"
+                  }
+                ],
+                "method": "POST",
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"DataProviderId\": \"<string>\",\n  \"UserIdArrayMetadataFormat\": [\n    \"<string>\",\n    \"<string>\"\n  ],\n  \"Items\": [\n    {\n      \"TimestampUtc\": \"<dateTime>\",\n      \"TrackingTagId\": \"<string>\",\n      \"TDID\": \"<string>\",\n      \"DAID\": \"<string>\",\n      \"UID2\": \"<string>\",\n      \"UID2Token\": \"<string>\",\n      \"RampID\": \"<string>\",\n      \"EUID\": \"<string>\",\n      \"EUIDToken\": \"<string>\",\n      \"DataProviderUserId\": \"<string>\",\n      \"UserIdArray\": [\n        [\n          \"<string>\",\n          \"<string>\"\n        ],\n        [\n          \"<string>\",\n          \"<string>\"\n        ]\n      ],\n      \"CookieMappingPartnerId\": \"<string>\",\n      \"OrderId\": \"<string>\",\n      \"ImpressionId\": \"<string>\",\n      \"Value\": \"<string>\",\n      \"ValueCurrency\": \"<string>\",\n      \"Country\": \"<string>\",\n      \"Region\": \"<string>\",\n      \"Metro\": \"<string>\",\n      \"City\": \"<string>\",\n      \"MerchantId\": \"<string>\",\n      \"EventName\": \"<string>\",\n      \"LineItems\": [\n        {\n          \"item_code\": \"<string>\",\n          \"name\": \"<string>\",\n          \"qty\": \"<string>\",\n          \"price\": \"<string>\",\n          \"cat\": \"<string>\"\n        },\n        {\n          \"item_code\": \"<string>\",\n          \"name\": \"<string>\",\n          \"qty\": \"<string>\",\n          \"price\": \"<string>\",\n          \"cat\": \"<string>\"\n        }\n      ],\n      \"PrivacySettings\": [\n        {\n          \"privacy_type\": \"<string>\",\n          \"is_applicable\": \"<string>\",\n          \"consent_string\": \"<string>\"\n        },\n        {\n          \"privacy_type\": \"<string>\",\n          \"is_applicable\": \"<string>\",\n          \"consent_string\": \"<string>\"\n        }\n      ],\n      \"TD1\": \"<string>\",\n      \"TD2\": \"<string>\",\n      \"TD3\": \"<string>\",\n      \"TD4\": \"<string>\",\n      \"TD5\": \"<string>\",\n      \"TD6\": \"<string>\",\n      \"TD7\": \"<string>\",\n      \"TD8\": \"<string>\",\n      \"TD9\": \"<string>\",\n      \"TD10\": \"<string>\"\n    },\n    {\n      \"TimestampUtc\": \"<dateTime>\",\n      \"TrackingTagId\": \"<string>\",\n      \"TDID\": \"<string>\",\n      \"DAID\": \"<string>\",\n      \"UID2\": \"<string>\",\n      \"UID2Token\": \"<string>\",\n      \"RampID\": \"<string>\",\n      \"EUID\": \"<string>\",\n      \"EUIDToken\": \"<string>\",\n      \"DataProviderUserId\": \"<string>\",\n      \"UserIdArray\": [\n        [\n          \"<string>\",\n          \"<string>\"\n        ],\n        [\n          \"<string>\",\n          \"<string>\"\n        ]\n      ],\n      \"CookieMappingPartnerId\": \"<string>\",\n      \"OrderId\": \"<string>\",\n      \"ImpressionId\": \"<string>\",\n      \"Value\": \"<string>\",\n      \"ValueCurrency\": \"<string>\",\n      \"Country\": \"<string>\",\n      \"Region\": \"<string>\",\n      \"Metro\": \"<string>\",\n      \"City\": \"<string>\",\n      \"MerchantId\": \"<string>\",\n      \"EventName\": \"<string>\",\n      \"LineItems\": [\n        {\n          \"item_code\": \"<string>\",\n          \"name\": \"<string>\",\n          \"qty\": \"<string>\",\n          \"price\": \"<string>\",\n          \"cat\": \"<string>\"\n        },\n        {\n          \"item_code\": \"<string>\",\n          \"name\": \"<string>\",\n          \"qty\": \"<string>\",\n          \"price\": \"<string>\",\n          \"cat\": \"<string>\"\n        }\n      ],\n      \"PrivacySettings\": [\n        {\n          \"privacy_type\": \"<string>\",\n          \"is_applicable\": \"<string>\",\n          \"consent_string\": \"<string>\"\n        },\n        {\n          \"privacy_type\": \"<string>\",\n          \"is_applicable\": \"<string>\",\n          \"consent_string\": \"<string>\"\n        }\n      ],\n      \"TD1\": \"<string>\",\n      \"TD2\": \"<string>\",\n      \"TD3\": \"<string>\",\n      \"TD4\": \"<string>\",\n      \"TD5\": \"<string>\",\n      \"TD6\": \"<string>\",\n      \"TD7\": \"<string>\",\n      \"TD8\": \"<string>\",\n      \"TD9\": \"<string>\",\n      \"TD10\": \"<string>\"\n    }\n  ],\n  \"DataLoadTraceId\": \"<string>\"\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                }
+              },
+              "status": "Internal Server Error",
+              "code": 500,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            },
+            {
+              "id": "4b85e8a3-c2cd-42e1-b915-e36440c18012",
+              "name": "Service Unavailable - Handler disabled or request dropped",
+              "originalRequest": {
+                "url": {
+                  "protocol": "https",
+                  "path": [
+                    "providerapi",
+                    "offlineconversion"
+                  ],
+                  "host": [
+                    "offlineattrib",
+                    "adsrvr",
+                    "org"
+                  ],
+                  "query": [],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "disabled": false,
+                    "description": "(Required) Data API token for authentication.",
+                    "key": "TTD-Auth",
+                    "value": "<string>"
+                  }
+                ],
+                "method": "POST",
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"DataProviderId\": \"<string>\",\n  \"UserIdArrayMetadataFormat\": [\n    \"<string>\",\n    \"<string>\"\n  ],\n  \"Items\": [\n    {\n      \"TimestampUtc\": \"<dateTime>\",\n      \"TrackingTagId\": \"<string>\",\n      \"TDID\": \"<string>\",\n      \"DAID\": \"<string>\",\n      \"UID2\": \"<string>\",\n      \"UID2Token\": \"<string>\",\n      \"RampID\": \"<string>\",\n      \"EUID\": \"<string>\",\n      \"EUIDToken\": \"<string>\",\n      \"DataProviderUserId\": \"<string>\",\n      \"UserIdArray\": [\n        [\n          \"<string>\",\n          \"<string>\"\n        ],\n        [\n          \"<string>\",\n          \"<string>\"\n        ]\n      ],\n      \"CookieMappingPartnerId\": \"<string>\",\n      \"OrderId\": \"<string>\",\n      \"ImpressionId\": \"<string>\",\n      \"Value\": \"<string>\",\n      \"ValueCurrency\": \"<string>\",\n      \"Country\": \"<string>\",\n      \"Region\": \"<string>\",\n      \"Metro\": \"<string>\",\n      \"City\": \"<string>\",\n      \"MerchantId\": \"<string>\",\n      \"EventName\": \"<string>\",\n      \"LineItems\": [\n        {\n          \"item_code\": \"<string>\",\n          \"name\": \"<string>\",\n          \"qty\": \"<string>\",\n          \"price\": \"<string>\",\n          \"cat\": \"<string>\"\n        },\n        {\n          \"item_code\": \"<string>\",\n          \"name\": \"<string>\",\n          \"qty\": \"<string>\",\n          \"price\": \"<string>\",\n          \"cat\": \"<string>\"\n        }\n      ],\n      \"PrivacySettings\": [\n        {\n          \"privacy_type\": \"<string>\",\n          \"is_applicable\": \"<string>\",\n          \"consent_string\": \"<string>\"\n        },\n        {\n          \"privacy_type\": \"<string>\",\n          \"is_applicable\": \"<string>\",\n          \"consent_string\": \"<string>\"\n        }\n      ],\n      \"TD1\": \"<string>\",\n      \"TD2\": \"<string>\",\n      \"TD3\": \"<string>\",\n      \"TD4\": \"<string>\",\n      \"TD5\": \"<string>\",\n      \"TD6\": \"<string>\",\n      \"TD7\": \"<string>\",\n      \"TD8\": \"<string>\",\n      \"TD9\": \"<string>\",\n      \"TD10\": \"<string>\"\n    },\n    {\n      \"TimestampUtc\": \"<dateTime>\",\n      \"TrackingTagId\": \"<string>\",\n      \"TDID\": \"<string>\",\n      \"DAID\": \"<string>\",\n      \"UID2\": \"<string>\",\n      \"UID2Token\": \"<string>\",\n      \"RampID\": \"<string>\",\n      \"EUID\": \"<string>\",\n      \"EUIDToken\": \"<string>\",\n      \"DataProviderUserId\": \"<string>\",\n      \"UserIdArray\": [\n        [\n          \"<string>\",\n          \"<string>\"\n        ],\n        [\n          \"<string>\",\n          \"<string>\"\n        ]\n      ],\n      \"CookieMappingPartnerId\": \"<string>\",\n      \"OrderId\": \"<string>\",\n      \"ImpressionId\": \"<string>\",\n      \"Value\": \"<string>\",\n      \"ValueCurrency\": \"<string>\",\n      \"Country\": \"<string>\",\n      \"Region\": \"<string>\",\n      \"Metro\": \"<string>\",\n      \"City\": \"<string>\",\n      \"MerchantId\": \"<string>\",\n      \"EventName\": \"<string>\",\n      \"LineItems\": [\n        {\n          \"item_code\": \"<string>\",\n          \"name\": \"<string>\",\n          \"qty\": \"<string>\",\n          \"price\": \"<string>\",\n          \"cat\": \"<string>\"\n        },\n        {\n          \"item_code\": \"<string>\",\n          \"name\": \"<string>\",\n          \"qty\": \"<string>\",\n          \"price\": \"<string>\",\n          \"cat\": \"<string>\"\n        }\n      ],\n      \"PrivacySettings\": [\n        {\n          \"privacy_type\": \"<string>\",\n          \"is_applicable\": \"<string>\",\n          \"consent_string\": \"<string>\"\n        },\n        {\n          \"privacy_type\": \"<string>\",\n          \"is_applicable\": \"<string>\",\n          \"consent_string\": \"<string>\"\n        }\n      ],\n      \"TD1\": \"<string>\",\n      \"TD2\": \"<string>\",\n      \"TD3\": \"<string>\",\n      \"TD4\": \"<string>\",\n      \"TD5\": \"<string>\",\n      \"TD6\": \"<string>\",\n      \"TD7\": \"<string>\",\n      \"TD8\": \"<string>\",\n      \"TD9\": \"<string>\",\n      \"TD10\": \"<string>\"\n    }\n  ],\n  \"DataLoadTraceId\": \"<string>\"\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                }
+              },
+              "status": "Service Unavailable",
+              "code": 503,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        }
+      ],
+      "event": []
+    }
+  ],
+  "event": [],
+  "variable": [
+    {
+      "type": "string",
+      "value": "/",
+      "key": "baseUrl"
+    }
+  ],
+  "info": {
+    "_postman_id": "899e01e0-db6c-43e8-a080-47f47b9bb9f3",
+    "name": "TTD Data Advertiser OfflineConversion API",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "description": {
+      "content": "",
+      "type": "text/plain"
+    }
+  }
+}
