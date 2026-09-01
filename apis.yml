@@ -207,7 +207,7 @@ apis:
   humanURL: https://partner.thetradedesk.com/v3/portal/api/overview
   baseURL: https://api.thetradedesk.com/v3
   tags:
-  - Third-Party
+  - Third Party
   tags_raw:
   - ThirdParty
   properties:
