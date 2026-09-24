@@ -1,7 +1,10 @@
-openapi: 3.0.4
+openapi: 3.2.0
 info:
-  title: TTD Data Advertiser OfflineConversion API
+  title: TTD Data Advertiser Offline Conversion API
   version: v0.1
+servers:
+- url: https://api.thetradedesk.com/v3
+  description: Base URL declared by the provider in apis.yml (roadmap#122).
 tags:
 - name: OfflineConversion
 paths:
@@ -67,29 +70,60 @@ components:
       type: object
       properties:
         item_code:
-          type: string
-          nullable: true
+          type:
+          - string
+          - 'null'
         name:
-          type: string
-          nullable: true
+          type:
+          - string
+          - 'null'
         qty:
-          type: string
-          nullable: true
+          type:
+          - string
+          - 'null'
         price:
-          type: string
-          nullable: true
+          type:
+          - string
+          - 'null'
         cat:
-          type: string
-          nullable: true
+          type:
+          - string
+          - 'null'
       additionalProperties: false
-    OfflineConversionDataServerResponse:
+    OfflineConversionDataServerResponseLine:
       type: object
       properties:
-        FailedLines:
-          type: array
-          items:
-            $ref: '#/components/schemas/OfflineConversionDataServerResponseLine'
-          nullable: true
+        OrderId:
+          type:
+          - string
+          - 'null'
+        ImpressionId:
+          type:
+          - string
+          - 'null'
+        TDID:
+          type:
+          - string
+          - 'null'
+        TrackingTagId:
+          type:
+          - string
+          - 'null'
+        TimestampUtc:
+          type: string
+          format: date-time
+        ErrorCode:
+          $ref: '#/components/schemas/OfflineConversionDataResponseErrorCode'
+        Message:
+          type:
+          - string
+          - 'null'
+        ItemNumber:
+          type:
+          - string
+          - 'null'
+        OriginalRequest:
+          $ref: '#/components/schemas/OfflineConversionDataItem'
       additionalProperties: false
     OfflineConversionDataItem:
       required:
@@ -98,31 +132,41 @@ components:
       type: object
       properties:
         TDID:
-          type: string
-          nullable: true
+          type:
+          - string
+          - 'null'
         DAID:
-          type: string
-          nullable: true
+          type:
+          - string
+          - 'null'
         UID2:
-          type: string
-          nullable: true
+          type:
+          - string
+          - 'null'
         UID2Token:
-          type: string
-          nullable: true
+          type:
+          - string
+          - 'null'
         RampID:
-          type: string
-          nullable: true
+          type:
+          - string
+          - 'null'
         EUID:
-          type: string
-          nullable: true
+          type:
+          - string
+          - 'null'
         EUIDToken:
-          type: string
-          nullable: true
+          type:
+          - string
+          - 'null'
         DataProviderUserId:
-          type: string
-          nullable: true
+          type:
+          - string
+          - 'null'
         UserIdArray:
-          type: array
+          type:
+          - array
+          - 'null'
           items:
             maxItems: 2
             minItems: 2
@@ -130,85 +174,107 @@ components:
             items:
               type: string
           description: Array of [type, id] pairs.
-          nullable: true
         CookieMappingPartnerId:
-          type: string
-          nullable: true
+          type:
+          - string
+          - 'null'
         OrderId:
-          type: string
-          nullable: true
+          type:
+          - string
+          - 'null'
         ImpressionId:
-          type: string
-          nullable: true
+          type:
+          - string
+          - 'null'
         TrackingTagId:
           type: string
         TimestampUtc:
           type: string
           format: date-time
         Value:
-          type: string
-          nullable: true
+          type:
+          - string
+          - 'null'
         ValueCurrency:
-          type: string
-          nullable: true
+          type:
+          - string
+          - 'null'
         Country:
-          type: string
-          nullable: true
+          type:
+          - string
+          - 'null'
         Region:
-          type: string
-          nullable: true
+          type:
+          - string
+          - 'null'
         Metro:
-          type: string
-          nullable: true
+          type:
+          - string
+          - 'null'
         City:
-          type: string
-          nullable: true
+          type:
+          - string
+          - 'null'
         MerchantId:
-          type: string
-          nullable: true
+          type:
+          - string
+          - 'null'
         EventName:
-          type: string
-          nullable: true
+          type:
+          - string
+          - 'null'
         LineItems:
-          type: array
+          type:
+          - array
+          - 'null'
           items:
             $ref: '#/components/schemas/RealTimeConversionEventLineItem'
-          nullable: true
         PrivacySettings:
-          type: array
+          type:
+          - array
+          - 'null'
           items:
             $ref: '#/components/schemas/RealTimeConversionEventsPrivacySetting'
-          nullable: true
         TD1:
-          type: string
-          nullable: true
+          type:
+          - string
+          - 'null'
         TD2:
-          type: string
-          nullable: true
+          type:
+          - string
+          - 'null'
         TD3:
-          type: string
-          nullable: true
+          type:
+          - string
+          - 'null'
         TD4:
-          type: string
-          nullable: true
+          type:
+          - string
+          - 'null'
         TD5:
-          type: string
-          nullable: true
+          type:
+          - string
+          - 'null'
         TD6:
-          type: string
-          nullable: true
+          type:
+          - string
+          - 'null'
         TD7:
-          type: string
-          nullable: true
+          type:
+          - string
+          - 'null'
         TD8:
-          type: string
-          nullable: true
+          type:
+          - string
+          - 'null'
         TD9:
-          type: string
-          nullable: true
+          type:
+          - string
+          - 'null'
         TD10:
-          type: string
-          nullable: true
+          type:
+          - string
+          - 'null'
       additionalProperties: false
     OfflineConversionDataRequest:
       required:
@@ -218,47 +284,47 @@ components:
         DataProviderId:
           type: string
         UserIdArrayMetadataFormat:
-          type: array
+          type:
+          - array
+          - 'null'
           items:
             type: string
-          nullable: true
         Items:
-          type: array
+          type:
+          - array
+          - 'null'
           items:
             $ref: '#/components/schemas/OfflineConversionDataItem'
-          nullable: true
         DataLoadTraceId:
-          type: string
-          nullable: true
+          type:
+          - string
+          - 'null'
       additionalProperties: false
-    OfflineConversionDataServerResponseLine:
+    RealTimeConversionEventsPrivacySetting:
       type: object
       properties:
-        OrderId:
-          type: string
-          nullable: true
-        ImpressionId:
-          type: string
-          nullable: true
-        TDID:
-          type: string
-          nullable: true
-        TrackingTagId:
-          type: string
-          nullable: true
-        TimestampUtc:
-          type: string
-          format: date-time
-        ErrorCode:
-          $ref: '#/components/schemas/OfflineConversionDataResponseErrorCode'
-        Message:
-          type: string
-          nullable: true
-        ItemNumber:
-          type: string
-          nullable: true
-        OriginalRequest:
-          $ref: '#/components/schemas/OfflineConversionDataItem'
+        privacy_type:
+          type:
+          - string
+          - 'null'
+        is_applicable:
+          type:
+          - string
+          - 'null'
+        consent_string:
+          type:
+          - string
+          - 'null'
+      additionalProperties: false
+    OfflineConversionDataServerResponse:
+      type: object
+      properties:
+        FailedLines:
+          type:
+          - array
+          - 'null'
+          items:
+            $ref: '#/components/schemas/OfflineConversionDataServerResponseLine'
       additionalProperties: false
     OfflineConversionDataResponseErrorCode:
       enum:
@@ -272,16 +338,3 @@ components:
       - Unauthorized
       - ItemDeserializationError
       type: string
-    RealTimeConversionEventsPrivacySetting:
-      type: object
-      properties:
-        privacy_type:
-          type: string
-          nullable: true
-        is_applicable:
-          type: string
-          nullable: true
-        consent_string:
-          type: string
-          nullable: true
-      additionalProperties: false
